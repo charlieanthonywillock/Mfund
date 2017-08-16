@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="dataSource"
+	class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+	<property name="url" value="jdbc:sqlserver://mssql4.gear.host;DatabaseName=Mfunds;" />
+	<property name="username" value="mfunds" />
+	<property name="password" value="mfunds@gearhost" />
+    </bean>
+
+</beans>
