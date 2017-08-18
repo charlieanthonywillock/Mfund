@@ -3,5 +3,7 @@ C:\Users\Administrator\eclipse-workspace\MutualFundsWebApp\src\main\java\com\cha
 C:\Users\Administrator\eclipse-workspace\MutualFundsWebApp\src\main\java\com\charlie1\funds\dao\impl\JdbcFundsDAO.java
 C:\Users\Administrator\eclipse-workspace\MutualFundsWebApp\src\main\java\com\charlie1\controller\HelloWorldController.java
 C:\Users\Administrator\eclipse-workspace\MutualFundsWebApp\src\main\java\com\charlie1\MutualFundsWebApp\App.java
+C:\Users\Administrator\eclipse-workspace\MutualFundsWebApp\src\main\java\com\charlie1\controller\JSONController.java
 C:\Users\Administrator\eclipse-workspace\MutualFundsWebApp\src\main\java\com\charlie1\funds\model\jFundsRowMapper.java
+C:\Users\Administrator\eclipse-workspace\MutualFundsWebApp\src\main\java\com\charlie1\funds\model\jRisk.java
 C:\Users\Administrator\eclipse-workspace\MutualFundsWebApp\src\main\java\com\charlie1\funds\dao\FundsDAO.java
