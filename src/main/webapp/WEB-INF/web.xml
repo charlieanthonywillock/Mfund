@@ -13,10 +13,9 @@
 
 	<servlet-mapping>
 		<servlet-name>mvc-dispatcher</servlet-name>
-	    <url-pattern>/rest/*</url-pattern>
-		
+		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
-		
+
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/mvc-dispatcher-servlet.xml</param-value>
@@ -25,8 +24,5 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-	
-	
-	
 
 </web-app>

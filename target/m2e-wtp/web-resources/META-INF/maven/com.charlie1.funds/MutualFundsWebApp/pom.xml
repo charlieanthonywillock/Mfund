@@ -12,10 +12,12 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   	
-		<spring.version>2.5.6</spring.version>
+	
+		<spring.version>4.3.10.RELEASE</spring.version>
 		<jstl.version>1.2</jstl.version>
 		<servletapi.version>2.5</servletapi.version>
 		<jackson.version>1.9.10</jackson.version>
+		<jdk.version>1.8</jdk.version>
 		
 	</properties>
   
@@ -94,6 +96,9 @@
 			<version>${servletapi.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		
+		
     
     
     
@@ -125,6 +130,30 @@
                 </execution>
             </executions>
         </plugin>
+  
+  
+  
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+					<wtpversion>2.0</wtpversion>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+		
+  
   
   
   
