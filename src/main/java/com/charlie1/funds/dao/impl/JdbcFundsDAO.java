@@ -40,10 +40,10 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 			jperform.setAlpha((Double)row.get("Alpha_"));
 			jperform.setAssets((Double)row.get("Assets_"));
 			jperform.setBeta((Double)row.get("Beta_"));
-			jperform.setDividend((Double)row.get("Dividend"));
+			jperform.setDividend((Double)row.get("Dividend_"));
 			jperform.setFees((Double)row.get("Fees_"));
 			jperform.setFundName((String)row.get("FundName_"));
-			jperform.setInceptionDate((Date)row.get("InceptionDate_"));
+			//jperform.setInceptionDate((Date)row.get("InceptionDate_"));
 			jperform.setLoad((String)row.get("Load_"));
 			jperform.setManagers((String)row.get("Managers_"));
 			jperform.setMaxBackEnd((Double)row.get("MaxBackEnd_"));
