@@ -33,8 +33,9 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 	               " from PerformanceData P where  P.volatilerank_ >= '" + risk1 + "' and P.volatilerank_ <= '" + risk2 + "'";
 
 	
-		List <Map> rows = getJdbcTemplate().queryForList(performancestr);
-		for (Map row : rows) {
+	//	List <Map> rows = getJdbcTemplate().queryForList(performancestr);
+		 List <Map <String,Object>> rows = getJdbcTemplate().queryForList(performancestr);
+		for (Map<String,Object> row : rows) {
 			jPerformanceData jperform = new jPerformanceData();
 			
 			jperform.setAlpha((Double)row.get("Alpha_"));
