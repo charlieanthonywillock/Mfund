@@ -26,10 +26,7 @@ public class Shop {
 	
 	public Shop() {}
 
-	@Override
-	public String toString() {
-		return "Shop [name=" + name + ", staffName=" + Arrays.toString(staffName) + "]";
-	}
+	
 	
 	
 	
