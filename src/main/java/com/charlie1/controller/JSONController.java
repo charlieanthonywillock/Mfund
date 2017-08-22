@@ -42,9 +42,9 @@ public class JSONController {
 		JSONObject jsonObj = new JSONObject(name);
         String risk1 = jsonObj.getString("risk1");
         String risk2 = jsonObj.getString("risk2");
-        selectFundsByRisk risk = new selectFundsByRisk(risk1,risk2);
+        selectFundsByRisk fundsByRisk = new selectFundsByRisk(risk1,risk2);
         
-        String strRisk = risk.getjsonStr();
+        String strRisk = fundsByRisk.getjsonStr();
         
         
 		      
