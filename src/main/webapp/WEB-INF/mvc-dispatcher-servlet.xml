@@ -13,8 +13,8 @@
 
 	<mvc:annotation-driven />
 	
-	<bean name="/welcome.htm"
-		class="com.mkyong.common.controller.HelloWorldController" />
+	<bean name="/MutualFunds.htm"
+		class="com.charlie1.controller.FundController" />
 
     <bean id="viewResolver"
     	class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
