@@ -19,7 +19,7 @@ import org.json.JSONObject;
 
 
 @Controller
-@RequestMapping("/apiSelectFundsByRisk")
+@RequestMapping("/rest/apiSelectFundsByRisk")
 public class JSONController {
 
 	@RequestMapping(value = "{name}", method = RequestMethod.GET)
