@@ -2,6 +2,7 @@ package com.charlie1.funds.dao.impl;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -36,6 +37,9 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 	public String buildStrPeformanceData(String risk1, String risk2){
 		
 		
+		SimpleDateFormat SDF = new SimpleDateFormat("yy-MM-dd");
+		// SimpleDateFormat SDF = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		
 		
 		 String jsonstr = "";
 		
@@ -56,7 +60,6 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 			jperform.setDividend((Double)row.get("Dividend_"));
 			jperform.setFees((Double)row.get("Fees_"));
 			jperform.setFundName((String)row.get("FundName_"));
-			//jperform.setInceptionDate((Date)row.get("InceptionDate_"));
 			jperform.setLoad((String)row.get("Load_"));
 			jperform.setManagers((String)row.get("Managers_"));
 			jperform.setMaxBackEnd((Double)row.get("MaxBackEnd_"));
@@ -74,10 +77,20 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 			jperform.setYield((Double)row.get("Yield_"));
 			
 			
+			try {
+				
+				jperform.setInceptionDate(SDF.parse((String)row.get("InceptionDate_")));
+				
+				
+			}
+			catch(Exception ex) {
+				
+				ex.printStackTrace();
+			}
 			
 			
 			
-			 jsonstr += jperform.toString();
+		     jsonstr += jperform.toString();
              jsonstr += ",";
 
 			
@@ -171,6 +184,8 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 	 public String buildStrHistoricalData(String risk1, String risk2){
 		
 		
+		 SimpleDateFormat SDF = new SimpleDateFormat("yy-MM-dd");
+			
 		
 		 String jsonstr = "";
 		
@@ -191,6 +206,22 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 			stats.setClose((Double)row.get("close_"));
 			stats.setClose_adj((Double)row.get("close_adj"));
 			stats.setVolume((int)row.get("volume_"));
+			
+			
+			
+			try {
+				
+				stats.setEpoch(SDF.parse((String)row.get("epoch_")));
+				
+				
+			}
+			catch(Exception ex) {
+				
+				ex.printStackTrace();
+			}
+			
+			
+			
 			
 					
 			
@@ -320,6 +351,7 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 			
 			
 		 String jsonstr = "";
+		 SimpleDateFormat SDF = new SimpleDateFormat("yy-MM-dd");
 		
 		 String query = "select c.Year_,c.Symbol_,c.NavPS_ from PerformanceCalander c left join performancedata d on c.symbol_ = d.symid where d.volatilerank_ >='" + risk1 +"' and d.volatilerank_ <= '"+risk2+"'";
 
@@ -337,7 +369,21 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 			cal.setNavPS((Double)row.get("NavPS_"));
 			
 			
+			
+			try {
+				
+				cal.setDate(SDF.parse((String)row.get("Year_")));
+				
+				
+			}
+			catch(Exception ex) {
+				
+				ex.printStackTrace();
+			}
 					
+			
+			
+			
 			
 			
 			
@@ -360,6 +406,7 @@ public Iterator getFundsbyRisk(String risk1, String risk2)
 		
 	
 			ArrayList<String> jlist = new ArrayList<String>();
+		
 			
 			
 			 String jsonstr = "";
@@ -380,14 +427,14 @@ public Iterator getFundsbyRisk(String risk1, String risk2)
 				jPerformanceData data = new jPerformanceData();
 				
 				
-				//cal.setDate((Date)row.get("Year_"));
+			
 				data.setSymID((String)row.get("SymID"));
 				
 				   buildstr+= data + " ";
 				   jlist.add(buildstr);
 
                    
-						
+
 				
 				
 				
@@ -417,10 +464,10 @@ public Iterator getFundsbyRisk(String risk1, String risk2)
 public	  String buildStrIDX() {
 		
 			
-			 String jsonstr = "";
-			
-			 String symbolstr = "select * from  PerformanceCalander where symbol_ like '^%'";
-
+			SimpleDateFormat SDF = new SimpleDateFormat("yy-MM-dd");
+	 		String jsonstr = "";
+			String symbolstr = "select * from  PerformanceCalander where symbol_ like '^%'";
+			 
 
 
 		
@@ -433,6 +480,22 @@ public	  String buildStrIDX() {
 				//cal.setDate((Date)row.get("Year_"));
 				cal.setSymbol((String)row.get("Symbol_"));
 				cal.setNavPS((Double)row.get("NavPS_"));
+				
+				
+				
+
+				try {
+					
+					cal.setDate(SDF.parse((String)row.get("Year_")));
+					
+					
+				}
+				catch(Exception ex) {
+					
+					ex.printStackTrace();
+				}
+					
+				
 				
 				
 						

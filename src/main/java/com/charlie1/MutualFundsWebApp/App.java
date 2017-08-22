@@ -34,7 +34,7 @@ public class App
         	 //FundsDAO customerDAO = (FundsDAO) context.getBean("FundsDAO");
              //str =  customerDAO.buildStrPeformanceData(risk1, risk2);
         
-   /*
+   
         String name = "{'Risk1': '1', 'Risk2': '4'}";
           
         
@@ -44,7 +44,7 @@ public class App
         selectFundsByRisk risk = new selectFundsByRisk(risk1,risk2);
         
         String strRisk = risk.getjsonStr();
-     */   
+        
         
              
         
