@@ -12,6 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.charlie1.funds.dao.FundsDAO;
 import com.charlie1.funds.model.Shop;
 import com.charlie1.funds.model.selectFundsByRisk;
+import com.charlie1.funds.model.jRisk;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -23,7 +24,7 @@ public class JSONController {
 
 	@RequestMapping(value = "{name}", method = RequestMethod.GET)
 	public @ResponseBody
-	Shop getShopInJSON(@PathVariable String name) {
+	jRisk getRiskJSON(@PathVariable String name) {
 		
 		
 		// String risk1 = "1";
@@ -46,13 +47,17 @@ public class JSONController {
         String strRisk = risk.getjsonStr();
         
         
-		        
+		        strRisk = "is valid";
          
-		Shop shop = new Shop();
-		shop.setName(strRisk);
+	//	Shop shop = new Shop();
+	//	shop.setName(strRisk);
+		
+		jRisk jrisk = new jRisk();
+		jrisk.setRisk(strRisk);
+		
 		//shop.setStaffName(new String[] { "mkyong1", "mkyong2" });
 
-		return shop;
+		return jrisk;
 
 	}
 	
