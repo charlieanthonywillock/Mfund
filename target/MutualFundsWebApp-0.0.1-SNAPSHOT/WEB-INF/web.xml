@@ -18,7 +18,10 @@
 	</servlet-mapping>
 	
 	
-	
+	<servlet-mapping>
+ 	<servlet-name>mvc-dispatcher</servlet-name>
+        <url-pattern>*.htm</url-pattern>
+    </servlet-mapping>
 	
 	
 	
