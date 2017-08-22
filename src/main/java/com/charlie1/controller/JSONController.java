@@ -19,7 +19,7 @@ import org.json.JSONObject;
 
 
 @Controller
-@RequestMapping("/kfc/brands")
+@RequestMapping("/apiSelectFundsByRisk")
 public class JSONController {
 
 	@RequestMapping(value = "{name}", method = RequestMethod.GET)
@@ -47,7 +47,7 @@ public class JSONController {
         String strRisk = risk.getjsonStr();
         
         
-		        strRisk = "is valid";
+		      
          
 	//	Shop shop = new Shop();
 	//	shop.setName(strRisk);
