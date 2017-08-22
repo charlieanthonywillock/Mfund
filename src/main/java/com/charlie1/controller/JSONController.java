@@ -24,7 +24,7 @@ public class JSONController {
 
 	@RequestMapping(value = "{name}", method = RequestMethod.GET)
 	public @ResponseBody
-	jRisk getFundsByRiskJSON(@PathVariable String name) {
+	jRisk getTestJSON(@PathVariable String name) {
 		
 		
 		// String risk1 = "1";
