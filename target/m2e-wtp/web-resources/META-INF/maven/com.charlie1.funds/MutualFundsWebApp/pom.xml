@@ -165,6 +165,7 @@
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>false</downloadJavadocs>
 					<wtpversion>2.0</wtpversion>
+					<wtpContextName>spring2</wtpContextName>
 				</configuration>
 			</plugin>
 			<plugin>
