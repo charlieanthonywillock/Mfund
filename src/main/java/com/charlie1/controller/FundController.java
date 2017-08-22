@@ -13,7 +13,7 @@ public class FundController extends AbstractController{
 		// TODO Auto-generated method stub
 		
 		
-		ModelAndView model = new ModelAndView("FundPage");
+		ModelAndView model = new ModelAndView("Fund");
 		model.addObject("msg", "Test Fund");
 
 		return model;
