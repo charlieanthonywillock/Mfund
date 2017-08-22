@@ -1,6 +1,7 @@
 package com.charlie1.funds.dao.impl;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -11,6 +12,9 @@ import java.util.Map;
 
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowCallbackHandler;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
 import com.charlie1.funds.dao.FundsDAO;
@@ -37,7 +41,7 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 	public String buildStrPeformanceData(String risk1, String risk2){
 		
 		
-		SimpleDateFormat SDF = new SimpleDateFormat("yy-MM-dd");
+	//	SimpleDateFormat SDF = new SimpleDateFormat("yyyy-MM-dd");
 		// SimpleDateFormat SDF = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		
 		
@@ -48,7 +52,8 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 	               "P.NetAsset_,P.Yield_,P.Dividend_,P.Managers_,P.Fees_,P.FundName_" +
 	               " from PerformanceData P where  P.volatilerank_ >= '" + risk1 + "' and P.volatilerank_ <= '" + risk2 + "'";
 
-	
+		 jPerformanceData jperform = new jPerformanceData();
+	/*
 
 		 List <Map <String,Object>> rows = getJdbcTemplate().queryForList(performancestr);
 		for (Map<String,Object> row : rows) {
@@ -97,6 +102,67 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 			
 		}
 		
+		
+		*/
+		 
+		 
+		 
+ List<String> data = getJdbcTemplate().query(performancestr, new RowMapper<String>(){
+			 
+			 String jsonstr = "";
+             public String mapRow(ResultSet rs, int rowNum) 
+                                          throws SQLException {
+            	 
+            	   
+            	              
+                     
+                    jperform.setInceptionDate(rs.getDate("InceptionDate_"));
+                    jperform.setAlpha(rs.getDouble("Alpha_"));
+         			jperform.setAssets(rs.getDouble("Assets_"));
+         			jperform.setBeta(rs.getDouble("Beta_"));
+         			jperform.setDividend(rs.getDouble("Dividend_"));
+         			jperform.setFees(rs.getDouble("Fees_"));
+         			jperform.setFundName(rs.getString("FundName_"));
+         			jperform.setLoad(rs.getString("Load_"));
+         			jperform.setManagers(rs.getString("Managers_"));
+         			jperform.setMaxBackEnd(rs.getDouble("MaxBackEnd_"));
+         			jperform.setMER(rs.getDouble("MER_"));
+         			jperform.setMstarRating(rs.getDouble("MstarRating_"));
+         			jperform.setMstarRisk(rs.getDouble("MstarRisk_"));
+         			jperform.setNavPS(rs.getDouble("NavPS_"));
+         			jperform.setRank(rs.getDouble("Rank_"));
+         			jperform.setRRSPEligibility(rs.getString("RRSPEligibility_"));
+         			jperform.setRsquared(rs.getDouble("Rsquared_"));
+         			jperform.setSaleOpen(rs.getString("SaleOpen_"));
+         			jperform.setStdDev(rs.getDouble("StdDev_"));
+         			jperform.setSymID(rs.getString("SymID"));
+         			jperform.setVolatileRank(rs.getDouble("VolatileRank_"));
+         			jperform.setYield(rs.getDouble("Yield_"));
+                     
+                 
+                     
+                     jsonstr += jperform.toString();
+                     jsonstr += ",";
+                     
+                     
+                     return jsonstr;
+                     
+                     
+                     
+             }
+             
+        });
+			
+			
+		Iterator itemIterator = data.iterator();
+				
+		while(itemIterator.hasNext()){
+			
+			jsonstr+= (String)itemIterator.next();
+			
+		}
+		 
+		 
 		return jsonstr;
 		
 		
@@ -183,8 +249,11 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 	
 	 public String buildStrHistoricalData(String risk1, String risk2){
 		
+		 
+		 
+		 /*
 		
-		 SimpleDateFormat SDF = new SimpleDateFormat("yy-MM-dd");
+		 SimpleDateFormat SDF = new SimpleDateFormat("yyyy-MM-dd");
 			
 		
 		 String jsonstr = "";
@@ -220,20 +289,58 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 				ex.printStackTrace();
 			}
 			
+			*/
+		 
+		 jHDstats stats = new jHDstats();
+		 
+		 String jsonstr = "";
 			
-			
-			
-					
-			
-			
-			
-			jsonstr += stats.toString();
-          jsonstr += ",";
+		 String symbolstr = "select S.symbol_,S.Epoch_,S.Open_,S.High_,S.Low_ ,S.Close_,S.Close_Adj,S.Volume_  from PerformanceData P " +
+		            "left join Symbols S on substring(s.symbol_, 1, LEN(S.symbol_) - 2) = P.SymID where P.volatilerank_ >= '" + risk1 + "' and P.volatilerank_ <= '" + risk2 + "' and symbol_ != ''";
 
+		 List<String> data = getJdbcTemplate().query(symbolstr, new RowMapper<String>(){
+			 
+			 String jsonstr = "";
+             public String mapRow(ResultSet rs, int rowNum) 
+                                          throws SQLException {
+            	 
+            	   
+            	     stats.setSymbol(rs.getString("symbol_"));
+            	    
+                     stats.setEpoch(rs.getDate("epoch_"));
+                     stats.setOpen(rs.getDouble("open_"));
+                     stats.setHigh(rs.getDouble("high_"));
+                     stats.setLow(rs.getDouble("low_"));
+                     stats.setClose(rs.getDouble("close_"));
+                     stats.setClose_adj(rs.getDouble("close_adj"));
+                     stats.setVolume(rs.getDouble("volume_"));
+                     
+                     
+                     
+                     
+                     jsonstr += stats.toString();
+                     jsonstr += ",";
+                     
+                     
+                     return jsonstr;
+                     
+                     
+                     
+             }
+             
+        });
 			
+			
+		Iterator itemIterator = data.iterator();
+				
+		while(itemIterator.hasNext()){
+			
+			jsonstr+= (String)itemIterator.next();
 			
 		}
 		
+		
+			
 		return jsonstr;
 		
 		
@@ -351,12 +458,12 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 			
 			
 		 String jsonstr = "";
-		 SimpleDateFormat SDF = new SimpleDateFormat("yy-MM-dd");
+
 		
 		 String query = "select c.Year_,c.Symbol_,c.NavPS_ from PerformanceCalander c left join performancedata d on c.symbol_ = d.symid where d.volatilerank_ >='" + risk1 +"' and d.volatilerank_ <= '"+risk2+"'";
+		 jPerfCalender cal = new jPerfCalender();
 
-
-
+/*
 	
 		 List <Map <String,Object>> rows = getJdbcTemplate().queryForList(query);
 		for (Map<String,Object> row : rows) {
@@ -393,7 +500,49 @@ public class JdbcFundsDAO extends JdbcDaoSupport implements FundsDAO
 			
 			
 		}
+	*/
+		 
+		 
+		 
+		 
+			
+		 List<String> data = getJdbcTemplate().query(query, new RowMapper<String>(){
+			 
+			 String jsonstr = "";
+             public String mapRow(ResultSet rs, int rowNum) 
+                                          throws SQLException {
+            	 
+            	   
+            	     cal.setDate(rs.getDate("Year_"));
+            	     cal.setSymbol(rs.getString("Symbol_"));
+                     cal.setNavPS(rs.getDouble("NavPS_"));
+                 
+                     
+                     
+                     
+                     
+                     jsonstr += cal.toString();
+                     jsonstr += ",";
+                     
+                     
+                     return jsonstr;
+                     
+                     
+                     
+             }
+             
+        });
+			
+			
+		Iterator itemIterator = data.iterator();
+				
+		while(itemIterator.hasNext()){
+			
+			jsonstr+= (String)itemIterator.next();
+			
+		}
 		
+		 
 		return jsonstr;
 		
 		
@@ -464,13 +613,13 @@ public Iterator getFundsbyRisk(String risk1, String risk2)
 public	  String buildStrIDX() {
 		
 			
-			SimpleDateFormat SDF = new SimpleDateFormat("yy-MM-dd");
+			
 	 		String jsonstr = "";
 			String symbolstr = "select * from  PerformanceCalander where symbol_ like '^%'";
-			 
+			jPerfCalender cal = new jPerfCalender();
 
 
-		
+	/*	
 			 List <Map <String,Object>> rows = getJdbcTemplate().queryForList(symbolstr);
 			for (Map<String,Object> row : rows) {
 				jPerfCalender cal = new jPerfCalender();
@@ -508,8 +657,47 @@ public	  String buildStrIDX() {
 				
 				
 			}
+			*/
 			
-			return jsonstr;
+			
+			 List<String> data = getJdbcTemplate().query(symbolstr, new RowMapper<String>(){
+				 
+				 String jsonstr = "";
+	             public String mapRow(ResultSet rs, int rowNum) 
+	                                          throws SQLException {
+	            	 
+	            	   
+	            	     cal.setDate(rs.getDate("Year_"));
+	            	     cal.setSymbol(rs.getString("Symbol_"));
+	                     cal.setNavPS(rs.getDouble("NavPS_"));
+	                 
+	                     
+	                     
+	                     
+	                     
+	                     jsonstr += cal.toString();
+	                     jsonstr += ",";
+	                     
+	                     
+	                     return jsonstr;
+	                     
+	                     
+	                     
+	             }
+	             
+	        });
+				
+				
+			Iterator itemIterator = data.iterator();
+					
+			while(itemIterator.hasNext()){
+				
+				jsonstr+= (String)itemIterator.next();
+				
+			}
+			
+			
+		return jsonstr;
 			
 			
 		} 
