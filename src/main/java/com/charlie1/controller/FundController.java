@@ -14,7 +14,7 @@ public class FundController extends AbstractController{
 		
 		
 		ModelAndView model = new ModelAndView("Fund");
-		model.addObject("msg", "Test Fund");
+		model.addObject("msg", "WebSite UnderConstruction");
 
 		return model;
 		

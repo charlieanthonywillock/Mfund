@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Spring MVC Fund Example</h1>
+<h1>Spring MVC Mutual Funds</h1>
 
 	<h2>${msg}</h2>
 
@@ -109,6 +109,123 @@
 </td>
 
 </table>
+
+<table  border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tr>
+<td>
+
+<div class="temp2">
+             Growth of $10,000
+                   <span style="font-size: 9px; font-weight: normal;">
+                    <span id="Stemp2">(As of&nbsp;July 31, 2017)</span></span></div>
+                            </div>
+                            
+                            <div>
+                                <img id="imagtemp" src="/MutualFunds/" alt="" style="border-width:0px;" />
+</div>
+
+
+</td>
+<td>
+
+ <td valign="top" style="padding-top: 40px; padding-left: 10px;">
+                            <table cellpadding="0" cellspacing="0" class="Table1" style="width: 100%;">
+                                <tr>
+                                    <td class="Fund" style="width: 160px;">
+                                        MER
+                                    </td>
+                                    <td class="Fund">
+                                        <span id="txtMER">1.70 %</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Fund">
+                                        Assets ($mil)
+                                    </td>
+                                    <td class="Fund">
+                                        <span id="txtAssets">$0.17</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Fund">
+                                        Rank (1Yr)
+                                    </td>
+                                    <td class="Fund">
+                                        <span id="txtRank">-</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Fund">
+                                        Std Dev (3Yr)
+                                    </td>
+                                    <td class="Fund">
+                                        <span id="txtStdDev">21.06 %</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Fund">
+                                        Volatility Ranking (3Yr)
+                                    </td>
+                                    <td class="Fund">
+                                        <span id="ctl00_MainContent_txtVolatilityRank">10/10</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Fund">
+                                        RRSP Eligibility
+                                    </td>
+                                    <td class="Fund">
+                                        <span id="txtRRSP">Yes</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Fund">
+                                        Load
+                                    </td>
+                                    <td class="Fund">
+                                        <span id="txtLoad">No Load</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Fund">
+                                        Max Front End
+                                    </td>
+                                    <td class="Fund">
+                                        <span id="txtFeesFront">-</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Fund">
+                                        Max Back End
+                                    </td>
+                                    <td class="Fund">
+                                        <span id="txtFeesBack">-</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Fund">
+                                        Sales Status
+                                    </td>
+                                    <td class="Fund">
+                                        <span id="txtSalesStatus">Open</span>
+                                    </td>
+                                </tr>
+                            </table>
+
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
 
 
 </div>
