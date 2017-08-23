@@ -562,6 +562,56 @@
 
 <div style="text-align: right; padding: 10px 0px; font-size: 11px">
     
+     <table style="width: 100%;">
+            <tr>
+                <td valign="top" style="padding: 20px; font-size: 12px;">
+                    
+
+<p><a href="http://www.charlie1.com" id="logo"><img src="" id="Logo" /></a></p>
+                    <p style="font-size: 10px; padding-top: 10px; text-align: justify;">
+                        
+            Website powered by <a href="http://www.charlie1data.com" >
+                                    &copy; Charlie1.
+                               </a>
+            <br />
+            Mutual Fund Data provided by Charlie1. | <a href="http://www.charlie1.com/TermsOfUse.aspx">
+                                                        View Terms and Conditions of Use
+                                                    </a>.
+            <br />
+            Charlie1 Data Indexes used with permission.
+            <br />
+            © 2017 Charlie1 Data. All rights reserved. | 
+                <a href="http://www.charlie1data.com/PrivacyPolicy.aspx">
+                    View Privacy Policy
+                </a> | 
+                <a href="http://www.charlie1data.com/contact.aspx">
+                    Contact Us
+                </a>.
+        
+                    </p>
+                    <p style="font-size: 10px; padding-top: 10px; text-align: justify;">
+                        
+                    </p>
+                </td>
+                <td style="text-align:center;">
+                   
+                </td>
+            </tr>
+        </table>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </div>
 
 </body>
