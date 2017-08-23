@@ -33,6 +33,36 @@
 <span id="2"> 2.52  </span></td>
 
 </tr>
+
+
+<tr>
+
+<td style="height:30px; vertical-align:top;"> Nav Ps<br /> </td>
+
+<td style="height: 30px; vertical-align: top; white-space: nowrap;">
+<span id="1"> 9.7 </span>
+
+ </td>
+</tr>
+
+
+<tr>
+<td style="height:30px; vertical-align:middle;"> Change </td>
+
+<td style="height: 30px; vertical-align: moddle; white-space: nowrap;"> 
+<span id="2"> 2.52  </span></td>
+
+</tr>
+
+
+
+
+
+
+
+
+
+
 </table>
 
 
