@@ -13,7 +13,7 @@ var myObj =  '{"risk":[' +
    '{"Return":[{"firstName":"John","lastName":"Black" },{"firstName":"Charlie","lastName":"One"}]},{"Holdings":[{"Chart":"Brown"}]}      ]}'
 
 
-var ctrjson = ${JSON};
+var ctrjson = ${perfJSON};
 obj = JSON.parse(text2);
 obj2 = JSON.parse(myObj);
 
@@ -21,7 +21,7 @@ obj2 = JSON.parse(myObj);
 
 
 document.getElementById("demo").innerHTML =  ctrjson;
-<--document.getElementById("demoooooo").innerHTML = obj.employees[1].lastName -->
+
 
 var x="";
 var str = JSON.stringify(obj2.risk[2].Holdings[0].Chart);
