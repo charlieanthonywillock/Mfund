@@ -5,11 +5,64 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+
+<script>
+
+
+var myObj =  '{"risk":[' +
+   '{"Return":[{"firstName":"John","lastName":"Black" },{"firstName":"Charlie","lastName":"One"}]},{"Holdings":[{"Chart":"Brown"}]}      ]}'
+
+
+var ctrjson = ${JSON};
+obj = JSON.parse(text2);
+obj2 = JSON.parse(myObj);
+
+
+
+
+document.getElementById("demo").innerHTML =  ctrjson;
+<--document.getElementById("demoooooo").innerHTML = obj.employees[1].lastName -->
+
+var x="";
+var str = JSON.stringify(obj2.risk[2].Holdings[0].Chart);
+
+for (i in str) {
+    x += str[i] ;
+}
+
+
+
+
+document.getElementById("json").innerHTML = str;
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
 </head>
 <body>
 <h1>Spring MVC Mutual Funds</h1>
 
 	<h2>${msg}</h2>
+	
+	
+	<p id="demo"></p>
+	<p id="json"></p>
 
 <div>
 

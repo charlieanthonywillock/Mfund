@@ -32,7 +32,7 @@ public class jIndexes {
 
 	@Override
 	public String toString() {
-		return "jIndexes [Symbol=" + Symbol + ", FullName=" + FullName + "]";
+		return "[Symbol=" + Symbol + ", FullName=" + FullName + "]";
 	}
 	
 	

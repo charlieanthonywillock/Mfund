@@ -98,7 +98,7 @@ public class jPerformanceReturns {
 
 				@Override
 				public String toString() {
-					return "jPerformanceReturns [Return=" + Return + ", OneMonth=" + OneMonth + ", ThreeMonth="
+					return "[Return=" + Return + ", OneMonth=" + OneMonth + ", ThreeMonth="
 							+ ThreeMonth + ", SixMonth=" + SixMonth + ", YTD=" + YTD + ", OneYear=" + OneYear
 							+ ", ThreeYear=" + ThreeYear + ", FiveYear=" + FiveYear + ", TenYear=" + TenYear + "]";
 				}

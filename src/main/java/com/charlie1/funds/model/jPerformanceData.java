@@ -336,7 +336,7 @@ public class jPerformanceData {
 
     @Override
 public String toString() {
-return "jPerformanceData [SymID=" + SymID + ", InceptionDate=" + InceptionDate + ", MER=" + MER + ", Assets="
+return "[SymID=" + SymID + ", InceptionDate=" + InceptionDate + ", MER=" + MER + ", Assets="
 	+ Assets + ", Rank=" + Rank + ", MstarRating=" + MstarRating + ", StdDev=" + StdDev + ", VolatileRank="
 	+ VolatileRank + ", MstarRisk=" + MstarRisk + ", Alpha=" + Alpha + ", Beta=" + Beta + ", Rsquared="
 	+ Rsquared + ", RRSPEligibility=" + RRSPEligibility + ", Load=" + Load + ", MaxBackEnd=" + MaxBackEnd

@@ -48,7 +48,7 @@ public class jChartGeography {
 
 	@Override
 	public String toString() {
-		return "jChartGeography [Fund=" + Fund + ", Geograph=" + Geograph + ", Count=" + Count + ", Percent=" + Percent
+		return "[Fund=" + Fund + ", Geograph=" + Geograph + ", Count=" + Count + ", Percent=" + Percent
 				+ "]";
 	}
 	

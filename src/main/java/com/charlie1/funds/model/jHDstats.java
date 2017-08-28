@@ -91,7 +91,7 @@ public class jHDstats {
 
 			@Override
 			public String toString() {
-				return "jHDstats [symbol=" + symbol + ", epoch=" + epoch + ", open=" + open + ", high=" + high
+				return "[symbol=" + symbol + ", epoch=" + epoch + ", open=" + open + ", high=" + high
 						+ ", low=" + low + ", close=" + close + ", close_adj=" + close_adj + ", volume=" + volume + "]";
 			}
 	

@@ -48,7 +48,7 @@ public class jChartAsset {
 
 	@Override
 	public String toString() {
-		return "jChartAsset [Fund=" + Fund + ", Asset=" + Asset + ", Count=" + Count + ", Percent=" + Percent + "]";
+		return "[Fund=" + Fund + ", Asset=" + Asset + ", Count=" + Count + ", Percent=" + Percent + "]";
 	}
     
     

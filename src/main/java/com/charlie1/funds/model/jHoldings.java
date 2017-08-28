@@ -98,7 +98,7 @@ public class jHoldings {
 
 	@Override
 	public String toString() {
-		return "jHoldings [FundSymID=" + FundSymID + ", SymID=" + SymID + ", Name=" + Name + ", Asset=" + Asset
+		return "[FundSymID=" + FundSymID + ", SymID=" + SymID + ", Name=" + Name + ", Asset=" + Asset
 				+ ", Sector=" + Sector + ", Geograph=" + Geograph + ", Percentage=" + Percentage + "]";
 	}
 	
