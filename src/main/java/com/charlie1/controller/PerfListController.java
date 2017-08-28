@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
+import org.springframework.ui.ModelMap;
 
 import com.charlie1.funds.model.jRisk;
 import com.charlie1.funds.model.selectFundsByRisk;
@@ -22,12 +23,12 @@ import com.charlie1.funds.model.selectFundsByRisk;
 
 @Controller
 @RequestMapping("/rest/SelectFundsByRisk")
-public class PerfListController extends AbstractController {
+public class PerfListController  {
 	
 	
 	@RequestMapping(value = "{name}", method = RequestMethod.GET)
 	public @ResponseBody
-	jRisk getPerfData(@PathVariable String name) {
+	String getPerfData(@PathVariable String name, ModelMap model) {
 		
 		
 		// String risk1 = "1";
@@ -59,8 +60,17 @@ public class PerfListController extends AbstractController {
 		jrisk.setRisk(strRisk);
 		
 		//shop.setStaffName(new String[] { "mkyong1", "mkyong2" });
+		
+		
+		
+		model.addAttribute("perfJSON",strRisk);
+	
 
-		return jrisk;
+		
+		
+		
+
+		return "list";
 
 	}
 	
@@ -70,20 +80,6 @@ public class PerfListController extends AbstractController {
 	
 	
 	
-	
-	@Override
-	protected ModelAndView handleRequestInternal(HttpServletRequest arg0, HttpServletResponse arg1) throws Exception {
-		// TODO Auto-generated method stub
-		
-		
-		
-		ModelAndView model = new ModelAndView("Fund");
-		model.addObject("msg", "Website UnderConstruction!!");
-	
-
-		return model;
-	
-	}
 }
 	
 	
