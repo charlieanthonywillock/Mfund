@@ -70,7 +70,7 @@ public class PerfListController  {
 		
 		
 
-		return "list";
+		return "Fund";
 
 	}
 	
