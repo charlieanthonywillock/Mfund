@@ -41,7 +41,7 @@ var myObj =  '{"risk":[' +
 
 
    
-var test = ${perfJSON};
+var test = "${perfJSON}";
 
    
    
