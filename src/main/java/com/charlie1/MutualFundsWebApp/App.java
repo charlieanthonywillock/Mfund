@@ -38,7 +38,7 @@ public class App
         String strRisk = risk.getjsonStr();
      */
         
-       
+      
         String fundtmp = "{'Fund': 'PGMIX'}";
         JSONObject jsonObj = new JSONObject(fundtmp);
         String fund = jsonObj.getString("Fund");

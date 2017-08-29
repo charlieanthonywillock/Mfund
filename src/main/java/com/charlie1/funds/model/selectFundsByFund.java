@@ -322,7 +322,7 @@ public class selectFundsByFund {
 	//        jsonstr += "],";
 	//        jsonstr += "Holdings: [";
 	//        jsonstr += HoldingsData + "],";
-	        jsonstr += "{Performance: [";
+	        jsonstr += "{\"Performance\": [";
 	        jsonstr += PerformanceData + "]}";
 	//        jsonstr += PerformanceData + "],";
 	//        jsonstr += "Symbols: [";

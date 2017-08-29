@@ -41,6 +41,9 @@ var myObj =  '{"risk":[' +
 
 
    
+var test = {Performance: [{"symID":"PGMIX","fees":0.3,"fundName":"JPMorgan Market Expansion Enh Idx I","inceptionDate":"1998-01-01","mer":1.36,"assets":250.0,"rank":8.0,"mstarRating":5.0,"stdDev":16.0,"volatileRank":8.0,"mstarRisk":3.0,"alpha":0.0,"beta":0.0,"rsquared":0.0,"rrspeligibility":"yes","load":"no load","maxBackEnd":0.0,"maxFrontEnd":0.0,"saleOpen":"open","navPS":15.0,"netAsset":0.0,"yield":4.2,"dividend":2.0,"managers":"Dennis S. Ruhl"}]};   
+   
+   
 obj2 = JSON.parse(myObj);
 obj3 = JSON.parse(perfJSON);
 
