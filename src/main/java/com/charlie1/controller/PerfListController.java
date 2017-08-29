@@ -27,7 +27,6 @@ public class PerfListController  {
 	
 	
 	@RequestMapping(value = "{name}", method = RequestMethod.GET)
-	public @ResponseBody
 	String getPerfData(@PathVariable String name, ModelMap model) {
 		
 		
@@ -56,8 +55,8 @@ public class PerfListController  {
 	//	Shop shop = new Shop();
 	//	shop.setName(strRisk);
 		
-		jRisk jrisk = new jRisk();
-		jrisk.setRisk(strRisk);
+		//jRisk jrisk = new jRisk();
+		//jrisk.setRisk(strRisk);
 		
 		//shop.setStaffName(new String[] { "mkyong1", "mkyong2" });
 		
