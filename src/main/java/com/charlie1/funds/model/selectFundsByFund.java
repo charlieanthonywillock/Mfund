@@ -14,7 +14,7 @@ public class selectFundsByFund {
 	
 	
 
-	private String jsonstr;
+	private String jsonstr="";
 	private String fund;
 
 	
@@ -52,7 +52,7 @@ public class selectFundsByFund {
     	 
     	 
     	 FundsDAO customerDAO = (FundsDAO) context.getBean("FundsDAO");
-         str =  customerDAO.buildStrPeformanceDataByFund(fund);
+      //   str =  customerDAO.buildStrPeformanceDataByFund(fund);
 		
 	
 		
@@ -322,7 +322,7 @@ public class selectFundsByFund {
 	//        jsonstr += "],";
 	//        jsonstr += "Holdings: [";
 	//        jsonstr += HoldingsData + "],";
-	        jsonstr += "Performance: [";
+	        jsonstr += "{Performance: [";
 	        jsonstr += PerformanceData + "]}";
 	//        jsonstr += PerformanceData + "],";
 	//        jsonstr += "Symbols: [";

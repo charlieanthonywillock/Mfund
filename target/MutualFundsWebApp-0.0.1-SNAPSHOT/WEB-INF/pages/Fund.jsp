@@ -42,7 +42,7 @@ var myObj =  '{"risk":[' +
 
    
 obj2 = JSON.parse(myObj);
-<!--obj3 = JSON.parse(myObj3); -->
+obj3 = JSON.parse(perfJSON);
 
 
 
@@ -60,7 +60,7 @@ for (i in str) {
 
 
 document.getElementById("json").innerHTML = x;
-<!--document.getElementById("demo").innerHTML = obj3; -->
+document.getElementById("demo").innerHTML = obj3;
 
 
 
