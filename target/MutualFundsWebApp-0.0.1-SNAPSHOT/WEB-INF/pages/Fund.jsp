@@ -39,10 +39,10 @@
 var myObj =  '{"risk":[' +
    '{"Return":[{"firstName":"John","lastName":"Black" },{"firstName":"Charlie","lastName":"One"}]},{"Holdings":[{"Chart":"Brown"}]}      ]}'
 
-var myObj3 = ${perfJSON}
+
    
 obj2 = JSON.parse(myObj);
-obj3 = JSON.parse(myObj3);
+<!--obj3 = JSON.parse(myObj3); -->
 
 
 
@@ -60,7 +60,7 @@ for (i in str) {
 
 
 document.getElementById("json").innerHTML = x;
-document.getElementById("demo").innerHTML = obj3;
+<!--document.getElementById("demo").innerHTML = obj3; -->
 
 
 
@@ -76,6 +76,10 @@ document.getElementById("demo").innerHTML = obj3;
 
 
 <div>
+
+<p>${perfJSON} </p>    
+
+
 
 
 <div id="Snapshot">

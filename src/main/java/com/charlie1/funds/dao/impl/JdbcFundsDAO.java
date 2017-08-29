@@ -16,6 +16,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import com.charlie1.funds.dao.FundsDAO;
 import com.charlie1.funds.model.jPerformanceData;
@@ -630,7 +633,26 @@ public	  String buildStrIDX() {
                       
                   
                       
-                      jsonstr += jperform.toString();
+          			ObjectMapper ob = new ObjectMapper();
+          			String jkson="";
+          			
+          			try {
+          				
+          				jkson = ob.writeValueAsString(jperform);
+          				
+          				
+          				
+          			}catch(JsonProcessingException ex) {
+          				
+          				ex.printStackTrace();
+          				
+          				
+          			}
+          			
+          			
+          			  jsonstr += jkson;
+          			
+                    //  jsonstr += jperform.toString();
                       jsonstr += ",";
                       
                       
