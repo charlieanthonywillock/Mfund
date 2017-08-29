@@ -16,6 +16,7 @@ import org.springframework.web.servlet.mvc.AbstractController;
 import org.springframework.ui.ModelMap;
 
 import com.charlie1.funds.model.jRisk;
+import com.charlie1.funds.model.selectFundsByFund;
 import com.charlie1.funds.model.selectFundsByRisk;
 
 
@@ -26,49 +27,29 @@ import com.charlie1.funds.model.selectFundsByRisk;
 public class PerfListController  {
 	
 	
-	@RequestMapping(value = "{name}", method = RequestMethod.GET)
-	String getPerfData(@PathVariable String name, ModelMap model) {
+	@RequestMapping(value = "{fund}", method = RequestMethod.GET)
+	String getPerfData(@PathVariable String fund, ModelMap model) {
 		
 		
-		// String risk1 = "1";
-        // String risk2 = "4";
-    	// String str="";
-    	 
-    	 ApplicationContext context = 
-         		new ClassPathXmlApplicationContext("Spring-Module.xml");
-    	 
-    	 
-    	// FundsDAO customerDAO = (FundsDAO) context.getBean("FundsDAO");
-        // str =  customerDAO.buildStrPeformanceData(risk1, risk2);
-		
-		
+	/*	
 		JSONObject jsonObj = new JSONObject(name);
         String risk1 = jsonObj.getString("risk1");
         String risk2 = jsonObj.getString("risk2");
         selectFundsByRisk fundsByRisk = new selectFundsByRisk(risk1,risk2);
         
         String strRisk = fundsByRisk.getjsonStr();
-        
-        
-		      
-         
-	//	Shop shop = new Shop();
-	//	shop.setName(strRisk);
-		
-		//jRisk jrisk = new jRisk();
-		//jrisk.setRisk(strRisk);
-		
-		//shop.setStaffName(new String[] { "mkyong1", "mkyong2" });
+    */
 		
 		
 		
-		model.addAttribute("perfJSON",strRisk);
+		    //String fundtmp = "{'Fund': 'PGMIX'}";
+	        JSONObject jsonObj = new JSONObject(fund);
+	        String sfund = jsonObj.getString("Fund");
+	        selectFundsByFund thefund = new selectFundsByFund(sfund);
+	        
+	        String strRisk = thefund.getjsonStr();
+            model.addAttribute("perfJSON",strRisk);
 	
-
-		
-		
-		
-
 		return "Fund";
 
 	}

@@ -24,17 +24,7 @@ public class App
     {
         System.out.println( "Hello World!" );
         
-        
-        ApplicationContext context = 
-        		new ClassPathXmlApplicationContext("Spring-Module.xml");
-        
-        	 //String risk1 = "1";
-        	 //String risk2 = "4";
-        	 //String str="";
-        	 
-        	 //FundsDAO customerDAO = (FundsDAO) context.getBean("FundsDAO");
-             //str =  customerDAO.buildStrPeformanceData(risk1, risk2);
-        
+   
    /*
         String name = "{'Risk1': '1', 'Risk2': '4'}";
         
