@@ -64,7 +64,8 @@ for (i in str) {
 
 
 document.getElementById("json").innerHTML = x;
-document.getElementById("demo").innerHTML = obj3;
+document.getElementById("demo").innerHTML = obj3.Performance[0].fees
+
 
 
 
