@@ -25,7 +25,6 @@
 	
 	
 	
-	
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>

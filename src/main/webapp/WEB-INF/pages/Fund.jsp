@@ -6,6 +6,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Mutual Funds</title>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<h1>Spring MVC Mutual Funds</h1>
+
+	<h2>${msg}</h2>
+	
+	
+	<p id="demo"></p>
+	<p id="json"></p>
+	<p> test </p>
+
+
 <script>
 
 
@@ -46,22 +73,6 @@ document.getElementById("json").innerHTML = x;
 
 
 
-
-
-
-
-
-
-</head>
-<body>
-<h1>Spring MVC Mutual Funds</h1>
-
-	<h2>${msg}</h2>
-	
-	
-	<p id="demo"></p>
-	<p id="json"></p>
-	<p> test </p>p>
 
 <div>
 
