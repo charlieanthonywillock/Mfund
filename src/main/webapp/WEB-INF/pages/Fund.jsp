@@ -77,6 +77,10 @@ document.getElementById("json").innerHTML = x;
 
 <div>
 
+<p>${perfJSON} </p>    
+
+
+
 
 <div id="Snapshot">
     <div>
