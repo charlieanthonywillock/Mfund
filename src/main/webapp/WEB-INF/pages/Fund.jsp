@@ -13,8 +13,6 @@ var myObj =  '{"risk":[' +
    '{"Return":[{"firstName":"John","lastName":"Black" },{"firstName":"Charlie","lastName":"One"}]},{"Holdings":[{"Chart":"Brown"}]}      ]}'
 
 
-<!--var ctrjson = ${perfJSON};  -->
-<!-- obj = JSON.parse(text2); -->
 obj2 = JSON.parse(myObj);
 
 
