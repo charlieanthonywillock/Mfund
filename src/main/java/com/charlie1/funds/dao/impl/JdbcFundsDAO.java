@@ -577,14 +577,351 @@ public	  String buildStrIDX() {
 			
 		}
 	  
+	/*******************************************************************************/  
+
+
+ 	public String buildStrPeformanceDataByFund(String fund){
+ 		
+ 		
+ 		
+ 		 String jsonstr = "";
+ 		
+ 		 String performancestr = "select P.SymID,P.InceptionDate_,P.MER_,P.Assets_,P.Rank_,P.MstarRating_,P.StdDev_,P.VolatileRank_," +
+ 	               "P.MstarRisk_,P.Alpha_,P.Beta_,P.Rsquared_,P.RRSPEligibility_,P.Load_,P.MaxFrontEnd_,P.MaxBackEnd_,P.SaleOpen_,P.NavPS_," +
+ 	               "P.NetAsset_,P.Yield_,P.Dividend_,P.Managers_,P.Fees_,P.FundName_" +
+ 	               " from PerformanceData P where  P.SymID = '" + fund + "'";
+
+ 		 jPerformanceData jperform = new jPerformanceData();
+ 	
+ 		 
+ 		 
+ 		 
+  List<String> data = getJdbcTemplate().query(performancestr, new RowMapper<String>(){
+ 			 
+ 			 String jsonstr = "";
+              public String mapRow(ResultSet rs, int rowNum) 
+                                           throws SQLException {
+             	 
+             	   
+             	              
+                      
+                     jperform.setInceptionDate(rs.getDate("InceptionDate_"));
+                     jperform.setAlpha(rs.getDouble("Alpha_"));
+          			jperform.setAssets(rs.getDouble("Assets_"));
+          			jperform.setBeta(rs.getDouble("Beta_"));
+          			jperform.setDividend(rs.getDouble("Dividend_"));
+          			jperform.setFees(rs.getDouble("Fees_"));
+          			jperform.setFundName(rs.getString("FundName_"));
+          			jperform.setLoad(rs.getString("Load_"));
+          			jperform.setManagers(rs.getString("Managers_"));
+          			jperform.setMaxBackEnd(rs.getDouble("MaxBackEnd_"));
+          			jperform.setMER(rs.getDouble("MER_"));
+          			jperform.setMstarRating(rs.getDouble("MstarRating_"));
+          			jperform.setMstarRisk(rs.getDouble("MstarRisk_"));
+          			jperform.setNavPS(rs.getDouble("NavPS_"));
+          			jperform.setRank(rs.getDouble("Rank_"));
+          			jperform.setRRSPEligibility(rs.getString("RRSPEligibility_"));
+          			jperform.setRsquared(rs.getDouble("Rsquared_"));
+          			jperform.setSaleOpen(rs.getString("SaleOpen_"));
+          			jperform.setStdDev(rs.getDouble("StdDev_"));
+          			jperform.setSymID(rs.getString("SymID"));
+          			jperform.setVolatileRank(rs.getDouble("VolatileRank_"));
+          			jperform.setYield(rs.getDouble("Yield_"));
+                      
+                  
+                      
+                      jsonstr += jperform.toString();
+                      jsonstr += ",";
+                      
+                      
+                      return jsonstr;
+                      
+                      
+                      
+              }
+              
+         });
+ 			
+ 			
+ 		Iterator itemIterator = data.iterator();
+ 				
+ 		while(itemIterator.hasNext()){
+ 			
+ 			jsonstr+= (String)itemIterator.next();
+ 			
+ 		}
+ 		 
+ 		 
+ 		return jsonstr;
+ 		
+ 		
+ 	}  
 	  
-	  
-	  
-	  
-	  
-	 
-	 
+ 	public String buildStrHoldingsDataByFund(String fund) {
+		
+		
+		
+		 String jsonstr = "";
+		
+		 String holdingstr = "select h.FundSymID,h.symid,h.name,aa.asset,sa.sector,ga.geograph,h.percentage from holdings H left join AssetAllocation AA on H.assetid = AA.assetid left join SectorAllocation SA on H.sectorid = SA.sectorid left join GeographAllocation GA on H.geographid = GA.geographid left join PerformanceData P on H.FundSymID = P.SymID where h.FundSymID = '" + fund + "'";
 	
+	
+		 List <Map <String,Object>> rows = getJdbcTemplate().queryForList(holdingstr);
+		for (Map<String,Object> row : rows) {
+			jHoldings holdings = new jHoldings();
+			
+			holdings.setFundSymID((String)row.get("FundSymID"));
+			holdings.setSymID((String)row.get("symid"));
+			holdings.setName((String)row.get("name"));
+			holdings.setAsset((String)row.get("asset"));
+			holdings.setSector((String)row.get("sector"));
+			holdings.setGeograph((String)row.get("geograph"));
+			holdings.setPercentage((Double)row.get("percentage"));
+		
+					
+			
+			
+			
+			jsonstr += holdings.toString();
+           jsonstr += ",";
+
+			
+			
+		}
+		
+		return jsonstr;
+		
+		
+	}
+	  
+ 	public String buildStrReturnsDataByFund(String fund) {
+		
+		
+		
+		 String jsonstr = "";
+		
+		 String returnstr = "select PDR.return_,PDR.OneMonth,PDR.ThreeMonth,PDR.SixMonth,PDR.YTD,PDR.OneYear,PDR.ThreeYear,PDR.FiveYear,PDR.TenYear from PerformanceDataReturn PDR left join PerformanceData P on PDR.return_ = P.SymID where PDR.return_ = '"+ fund +"'";
+
+
+	
+		 List <Map <String,Object>> rows = getJdbcTemplate().queryForList(returnstr);
+		for (Map<String,Object> row : rows) {
+			jPerformanceReturns returns = new jPerformanceReturns();
+			
+			returns.setReturn((String)row.get("Return_"));
+			returns.setOneMonth((Double)row.get("OneMonth"));
+			returns.setThreeMonth((Double)row.get("ThreeMonth"));
+			returns.setSixMonth((Double)row.get("SixMonth"));
+			returns.setYTD((Double)row.get("YTD"));
+			returns.setOneYear((Double)row.get("OneYear"));
+			returns.setThreeYear((Double)row.get("ThreeYear"));
+			returns.setFiveYear((Double)row.get("FiveYear"));
+			returns.setTenYear((Double)row.get("TenYear"));
+		
+					
+			
+			
+			
+			jsonstr += returns.toString();
+          jsonstr += ",";
+
+			
+			
+		}
+		
+		return jsonstr;
+		
+		
+	} 
+	 
+ 	public String buildStrHistoricalDataByFund(String fund){
+		
+		 
+		 
+		
+		 
+		 jHDstats stats = new jHDstats();
+		 
+		 String jsonstr = "";
+			
+		 String symbolstr = "select S.symbol_,S.Epoch_,S.Open_,S.High_,S.Low_ ,S.Close_,S.Close_Adj,S.Volume_  from PerformanceData P " +
+		            "left join Symbols S on substring(s.symbol_, 1, LEN(S.symbol_) - 2) = P.SymID where S.symbol_ >= '" + fund + "'";
+
+		 List<String> data = getJdbcTemplate().query(symbolstr, new RowMapper<String>(){
+			 
+			 String jsonstr = "";
+            public String mapRow(ResultSet rs, int rowNum) 
+                                         throws SQLException {
+           	 
+           	   
+           	     stats.setSymbol(rs.getString("symbol_"));
+           	    
+                    stats.setEpoch(rs.getDate("epoch_"));
+                    stats.setOpen(rs.getDouble("open_"));
+                    stats.setHigh(rs.getDouble("high_"));
+                    stats.setLow(rs.getDouble("low_"));
+                    stats.setClose(rs.getDouble("close_"));
+                    stats.setClose_adj(rs.getDouble("close_adj"));
+                    stats.setVolume(rs.getDouble("volume_"));
+                    
+                    
+                    
+                    
+                    jsonstr += stats.toString();
+                    jsonstr += ",";
+                    
+                    
+                    return jsonstr;
+                    
+                    
+                    
+            }
+            
+       });
+			
+			
+		Iterator itemIterator = data.iterator();
+				
+		while(itemIterator.hasNext()){
+			
+			jsonstr+= (String)itemIterator.next();
+			
+		}
+		
+		
+			
+		return jsonstr;
+		
+		
+	}
+ 	
+ 	
+ 	
+ 	public  String buildStrPerformanceCalanderByFund(String fund) {		
+		
+		
+		 String jsonstr = "";
+
+		
+		 String query = "select c.Year_,c.Symbol_,c.NavPS_ from PerformanceCalander c left join performancedata d on c.symbol_ = d.symid where c.Symbol_ ='" + fund +"'";
+		 jPerfCalender cal = new jPerfCalender();
+
+
+		 
+		 
+		 
+		 
+			
+		 List<String> data = getJdbcTemplate().query(query, new RowMapper<String>(){
+			 
+			 String jsonstr = "";
+            public String mapRow(ResultSet rs, int rowNum) 
+                                         throws SQLException {
+           	 
+           	   
+           	     cal.setDate(rs.getDate("Year_"));
+           	     cal.setSymbol(rs.getString("Symbol_"));
+                    cal.setNavPS(rs.getDouble("NavPS_"));
+                
+                    
+                    
+                    
+                    
+                    jsonstr += cal.toString();
+                    jsonstr += ",";
+                    
+                    
+                    return jsonstr;
+                    
+                    
+                    
+            }
+            
+       });
+			
+			
+		Iterator itemIterator = data.iterator();
+				
+		while(itemIterator.hasNext()){
+			
+			jsonstr+= (String)itemIterator.next();
+			
+		}
+		
+		 
+		return jsonstr;
+		
+		
+	}
+ 	
+ 	
+ 	
+ 	public Iterator getFundsbyFund(String fund)
+    {
+	
+
+		ArrayList<String> jlist = new ArrayList<String>();
+	
+		
+		
+		 String jsonstr = "";
+		 String buildstr = "";
+		
+		 String performancestr = "select P.SymID,P.InceptionDate_,P.MER_,P.Assets_,P.Rank_,P.MstarRating_,P.StdDev_,P.VolatileRank_," +
+	               "P.MstarRisk_,P.Alpha_,P.Beta_,P.Rsquared_,P.RRSPEligibility_,P.Load_,P.MaxFrontEnd_,P.MaxBackEnd_,P.SaleOpen_,P.NavPS_," +
+	               "P.NetAsset_,P.Yield_,P.Dividend_,P.Managers_,P.Fees_,P.FundName_" +
+	               " from PerformanceData P where  P.SymID = '" + fund + "'";
+
+
+
+
+
+	
+		 List <Map <String,Object>> rows = getJdbcTemplate().queryForList(performancestr);
+		for (Map<String,Object> row : rows) {
+			jPerformanceData data = new jPerformanceData();
+			
+			
+		
+			data.setSymID((String)row.get("SymID"));
+			
+			   buildstr+= data + " ";
+			   jlist.add(buildstr);
+
+               
+
+			
+			
+			
+		
+        
+			
+			
+		}
+		
+		
+		//jPerformDataEnum jdata = new jPerformDataEnum(buildstr, new Char[] {' ',','}); 
+		
+		Iterator<String> forList =  jlist.iterator();
+		
+		
+		
+		
+		
+		return forList;
+		
+		
+	}	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
 	
 	
 }

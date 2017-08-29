@@ -22,6 +22,12 @@ public interface FundsDAO
 	public String buildStrIDX(); 
 	public String buildStrIDXSpinner();
 	public Iterator<String> getFundsbyRisk(String risk1, String risk2);
+	public String buildStrPeformanceDataByFund(String fund);
+	public String buildStrHoldingsDataByFund(String fund);
+	public String buildStrReturnsDataByFund(String fund);
+	public String buildStrHistoricalDataByFund(String fund);
+	public  String buildStrPerformanceCalanderByFund(String fund);
+	public Iterator getFundsbyFund(String fund);
 		    
 			
 		

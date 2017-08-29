@@ -6,15 +6,43 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Mutual Funds</title>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<h1>Spring MVC Mutual Funds</h1>
+
+	<h2>${msg}</h2>
+	
+	
+	<p id="demo"></p>
+	<p id="json"></p>
+
+
+
 <script>
 
 
 var myObj =  '{"risk":[' +
    '{"Return":[{"firstName":"John","lastName":"Black" },{"firstName":"Charlie","lastName":"One"}]},{"Holdings":[{"Chart":"Brown"}]}      ]}'
 
-
+var myObj3 = ${perfJSON}
+   
 obj2 = JSON.parse(myObj);
-
+obj3 = JSON.parse(myObj3);
 
 
 
@@ -32,7 +60,7 @@ for (i in str) {
 
 
 document.getElementById("json").innerHTML = x;
-
+document.getElementById("demo").innerHTML = obj3;
 
 
 
@@ -46,22 +74,6 @@ document.getElementById("json").innerHTML = x;
 
 
 
-
-
-
-
-
-
-</head>
-<body>
-<h1>Spring MVC Mutual Funds</h1>
-
-	<h2>${msg}</h2>
-	
-	
-	<p id="demo"></p>
-	<p id="json"></p>
-	<p> test </p>p>
 
 <div>
 
