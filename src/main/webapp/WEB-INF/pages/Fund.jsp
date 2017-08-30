@@ -7,32 +7,6 @@
 <title>Mutual Funds</title>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-</head>
-<body>
-
-
-<h1>Spring MVC Mutual Funds</h1>
-
-	<h2>${msg}</h2>
-	
-	
-	<p id="demo"></p>
-	<p id="json"></p>
-
-
-
 <script>
 
 
@@ -74,6 +48,32 @@ document.getElementById("demo").innerHTML = obj3.Performance[0].fees
 
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<h1>Spring MVC Mutual Funds</h1>
+
+	<h2>${msg}</h2>
+	
+	
+	<p id="demo"></p>
+	<p id="json"></p>
+
+
+
 
 
 
