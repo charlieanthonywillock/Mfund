@@ -82,7 +82,7 @@ document.getElementById("demo").innerHTML = obj3.Performance[0].fees
 
 <div>
 
-<p>json </p>    
+<p>${perfJSON} </p>    
 
 
 
@@ -189,7 +189,7 @@ document.getElementById("demo").innerHTML = obj3.Performance[0].fees
 <td>
 
 <div class="temp2">
-             Growth of $10,000
+             Growth of $10,000 <p id="demo"></p>
                    <span style="font-size: 9px; font-weight: normal;">
                     <span id="Stemp2">(As of&nbsp;July 31, 2017)</span></span></div>
                             
