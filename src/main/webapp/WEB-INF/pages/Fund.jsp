@@ -148,7 +148,7 @@
 <td>
 
 <div class="temp2">
-             Growth of $10,000 <p id="demo"></p>
+             Growth of $10,000 <span id="demo"></span>
                    <span style="font-size: 9px; font-weight: normal;">
                     <span id="Stemp2">(As of&nbsp;July 31, 2017)</span></span></div>
                             
