@@ -8,40 +8,16 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 </head>
 <body>
 
 
 <h1>Spring MVC Mutual Funds</h1>
 
-	<h2>${msg}</h2>
 	
-	
-	<p id="demo"></p>
-	<p id="json"></p>
-
-
-
-
-
-
-
-
-
 <div>
 
-<p>${perfJSON} </p>    
+  
 
 
 
@@ -73,13 +49,6 @@
 </div>
 
 
-
-
-
-
-
-
-
 <table style="width: 100%;" cellpadding="0" border="0" cellspacing="0">
 
 <tr>
@@ -92,7 +61,7 @@
 <td style="height:30px; vertical-align:top;"> Inception Return<br /> </td>
 
 <td style="height: 30px; vertical-align: top; white-space: nowrap;">
-<span id="1"> 9.7 </span>
+<p>  ${inceptdate} </p>
 
  </td>
  </tr>
@@ -120,7 +89,7 @@
 <td style="height:30px; vertical-align:top;"> Nav Ps<br /> </td>
 
 <td style="height: 30px; vertical-align: top; white-space: nowrap;">
-<span id="1"> 9.7 </span>
+<span > ${navps} </span>
 
  </td>
 </tr>
@@ -132,7 +101,7 @@
 <td style="height:30px; vertical-align:middle;"> Change </td>
 
 <td style="height: 30px; vertical-align: moddle; white-space: nowrap;"> 
-<span id="2"> 2.52  </span></td>
+<span id="2"> 0.0  </span></td>
 
 </tr>
 
@@ -168,39 +137,39 @@
                                         MER
                                     </td>
                                     <td class="Fund">
-                                        <span id="txtMER">1.70 %</span>
+                                        <span id="txtMER">${mer}</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="Fund">
                                         Assets ($mil)
                                     </td>
-                                    <td class="Fund">
-                                        <span id="txtAssets">$0.17</span>
+                                    <td >
+                                        <span id="1">${assets}</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="Fund">
+                                    <td >
                                         Rank (1Yr)
                                     </td>
-                                    <td class="Fund">
-                                        <span id="txtRank">-</span>
+                                    <td >
+                                        <span>${rank}</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="Fund">
+                                    <td>
                                         Std Dev (3Yr)
                                     </td>
                                     <td class="Fund">
-                                        <span id="txtStdDev">21.06 %</span>
+                                        <span>${stddev} %</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="Fund">
+                                    <td>
                                         Volatility Ranking (3Yr)
                                     </td>
-                                    <td class="Fund">
-                                        <span id="ctl00_MainContent_txtVolatilityRank">10/10</span>
+                                    <td>
+                                        <span>10/10</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -208,7 +177,7 @@
                                         RRSP Eligibility
                                     </td>
                                     <td class="Fund">
-                                        <span id="txtRRSP">Yes</span>
+                                        <span> ${rrspel}</span>
                                     </td>
                                 </tr>
                                 <tr>
