@@ -7,47 +7,6 @@
 <title>Mutual Funds</title>
 
 
-<script>
-
-
-var myObj =  '{"risk":[' +
-   '{"Return":[{"firstName":"John","lastName":"Black" },{"firstName":"Charlie","lastName":"One"}]},{"Holdings":[{"Chart":"Brown"}]}      ]}'
-
-
-   
-var test = '${perfJSON}';
-
-   
-   
-obj2 = JSON.parse(myObj);
-obj3 = JSON.parse(test);
-
-
-
-<!--document.getElementById("demo").innerHTML =  ctrjson; -->
-
-
-var x="";
-var str = JSON.stringify(obj2.risk[1].Holdings[0].Chart);
-
-for (i in str) {
-    x += str[i] ;
-}
-
-
-
-
-document.getElementById("json").innerHTML = x;
-document.getElementById("demo").innerHTML = obj3.Performance[0].fees
-
-
-
-
-
-
-
-
-</script>
 
 
 
@@ -686,6 +645,54 @@ document.getElementById("demo").innerHTML = obj3.Performance[0].fees
     
     
 </div>
+
+<script>
+
+
+var myObj =  '{"risk":[' +
+   '{"Return":[{"firstName":"John","lastName":"Black" },{"firstName":"Charlie","lastName":"One"}]},{"Holdings":[{"Chart":"Brown"}]}      ]}'
+
+
+   
+var test = '${perfJSON}';
+
+   
+   
+obj2 = JSON.parse(myObj);
+obj3 = JSON.parse(test);
+
+
+
+<!--document.getElementById("demo").innerHTML =  ctrjson; -->
+
+
+var x="";
+var str = JSON.stringify(obj2.risk[1].Holdings[0].Chart);
+
+for (i in str) {
+    x += str[i] ;
+}
+
+
+
+
+document.getElementById("json").innerHTML = x;
+document.getElementById("demo").innerHTML = obj3.Performance[0].fees
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
 
 </body>
 </html>
