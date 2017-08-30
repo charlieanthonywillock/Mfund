@@ -8,79 +8,16 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 </head>
 <body>
 
 
 <h1>Spring MVC Mutual Funds</h1>
 
-	<h2>${msg}</h2>
 	
-	
-	<p id="demo"></p>
-	<p id="json"></p>
-
-
-
-<script>
-
-
-var myObj =  '{"risk":[' +
-   '{"Return":[{"firstName":"John","lastName":"Black" },{"firstName":"Charlie","lastName":"One"}]},{"Holdings":[{"Chart":"Brown"}]}      ]}'
-
-
-   
-var test = {Performance: [{"symID":"PGMIX","fees":0.3,"fundName":"JPMorgan Market Expansion Enh Idx I","inceptionDate":"1998-01-01","mer":1.36,"assets":250.0,"rank":8.0,"mstarRating":5.0,"stdDev":16.0,"volatileRank":8.0,"mstarRisk":3.0,"alpha":0.0,"beta":0.0,"rsquared":0.0,"rrspeligibility":"yes","load":"no load","maxBackEnd":0.0,"maxFrontEnd":0.0,"saleOpen":"open","navPS":15.0,"netAsset":0.0,"yield":4.2,"dividend":2.0,"managers":"Dennis S. Ruhl"}]};   
-   
-   
-obj2 = JSON.parse(myObj);
-obj3 = JSON.parse(perfJSON);
-
-
-
-<!--document.getElementById("demo").innerHTML =  ctrjson; -->
-
-
-var x="";
-var str = JSON.stringify(obj2.risk[1].Holdings[0].Chart);
-
-for (i in str) {
-    x += str[i] ;
-}
-
-
-
-
-document.getElementById("json").innerHTML = x;
-document.getElementById("demo").innerHTML = obj3;
-
-
-
-
-
-
-
-</script>
-
-
-
-
-
-
 <div>
 
-<p>${perfJSON} </p>    
+  
 
 
 
@@ -112,13 +49,6 @@ document.getElementById("demo").innerHTML = obj3;
 </div>
 
 
-
-
-
-
-
-
-
 <table style="width: 100%;" cellpadding="0" border="0" cellspacing="0">
 
 <tr>
@@ -131,7 +61,7 @@ document.getElementById("demo").innerHTML = obj3;
 <td style="height:30px; vertical-align:top;"> Inception Return<br /> </td>
 
 <td style="height: 30px; vertical-align: top; white-space: nowrap;">
-<span id="1"> 9.7 </span>
+<p>  ${inceptdate} </p>
 
  </td>
  </tr>
@@ -159,7 +89,7 @@ document.getElementById("demo").innerHTML = obj3;
 <td style="height:30px; vertical-align:top;"> Nav Ps<br /> </td>
 
 <td style="height: 30px; vertical-align: top; white-space: nowrap;">
-<span id="1"> 9.7 </span>
+<span > ${navps} </span>
 
  </td>
 </tr>
@@ -171,7 +101,7 @@ document.getElementById("demo").innerHTML = obj3;
 <td style="height:30px; vertical-align:middle;"> Change </td>
 
 <td style="height: 30px; vertical-align: moddle; white-space: nowrap;"> 
-<span id="2"> 2.52  </span></td>
+<span id="2"> 0.0  </span></td>
 
 </tr>
 
@@ -187,7 +117,7 @@ document.getElementById("demo").innerHTML = obj3;
 <td>
 
 <div class="temp2">
-             Growth of $10,000
+             Growth of $10,000 <span id="demo"></span>
                    <span style="font-size: 9px; font-weight: normal;">
                     <span id="Stemp2">(As of&nbsp;July 31, 2017)</span></span></div>
                             
@@ -207,39 +137,39 @@ document.getElementById("demo").innerHTML = obj3;
                                         MER
                                     </td>
                                     <td class="Fund">
-                                        <span id="txtMER">1.70 %</span>
+                                        <span id="txtMER">${mer}</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="Fund">
                                         Assets ($mil)
                                     </td>
-                                    <td class="Fund">
-                                        <span id="txtAssets">$0.17</span>
+                                    <td >
+                                        <span id="1">${assets}</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="Fund">
+                                    <td >
                                         Rank (1Yr)
                                     </td>
-                                    <td class="Fund">
-                                        <span id="txtRank">-</span>
+                                    <td >
+                                        <span>${rank}</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="Fund">
+                                    <td>
                                         Std Dev (3Yr)
                                     </td>
                                     <td class="Fund">
-                                        <span id="txtStdDev">21.06 %</span>
+                                        <span>${stddev} %</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="Fund">
+                                    <td>
                                         Volatility Ranking (3Yr)
                                     </td>
-                                    <td class="Fund">
-                                        <span id="ctl00_MainContent_txtVolatilityRank">10/10</span>
+                                    <td>
+                                        <span>10/10</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -247,7 +177,7 @@ document.getElementById("demo").innerHTML = obj3;
                                         RRSP Eligibility
                                     </td>
                                     <td class="Fund">
-                                        <span id="txtRRSP">Yes</span>
+                                        <span> ${rrspel}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -684,6 +614,54 @@ document.getElementById("demo").innerHTML = obj3;
     
     
 </div>
+
+<script>
+
+
+var myObj =  '{"risk":[' +
+   '{"Return":[{"firstName":"John","lastName":"Black" },{"firstName":"Charlie","lastName":"One"}]},{"Holdings":[{"Chart":"Brown"}]}      ]}'
+
+
+   
+var test = '${perfJSON}';
+
+   
+   
+obj2 = JSON.parse(myObj);
+obj3 = JSON.parse(test);
+
+
+
+<!--document.getElementById("demo").innerHTML =  ctrjson; -->
+
+
+var x="";
+var str = JSON.stringify(obj2.risk[1].Holdings[0].Chart);
+
+for (i in str) {
+    x += str[i] ;
+}
+
+
+
+
+document.getElementById("json").innerHTML = x;
+document.getElementById("demo").innerHTML = obj3.Performance[0].fees
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
 
 </body>
 </html>
