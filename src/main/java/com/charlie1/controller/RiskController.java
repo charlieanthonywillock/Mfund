@@ -20,6 +20,7 @@ package com.charlie1.controller;
 	
 	@Controller
 	@RequestMapping("/rest/apiSelectRisk")
+	
 public class RiskController {
 	
 	

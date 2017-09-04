@@ -7,10 +7,21 @@ public class jRisk {
 	
 	
 	String risk1;
+	String risk2;
 	
 	
 	
 	public jRisk() {}
+	
+	public jRisk(String risk1, String risk2) {
+		
+		this.risk1 = risk1;
+		this.risk2 = risk2;
+		
+	}
+	
+	
+	
 
 	public String getRisk() {
 		return risk1;
