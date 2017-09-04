@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 	
 	import com.charlie1.funds.model.jRisk;
 import com.charlie1.funds.model.selectFundsByFund;
+import com.charlie1.funds.model.selectFundsByRisk;
 
 @RequestMapping("/rest/apiCharlie1")
 @RestController
@@ -31,12 +32,18 @@ public class RiskControllerJson {
 			
 	    
 			
-			
 			 JSONObject jsonObj = new JSONObject(fund);
-		        String sfund = jsonObj.getString("Fund");
-		        selectFundsByFund thefund = new selectFundsByFund(sfund);
+					
+			 String risk1 = jsonObj.getString("risk1");
+		     String risk2 = jsonObj.getString("risk2");
+		     selectFundsByRisk fundsByRisk = new selectFundsByRisk(risk1,risk2);
 		        
-		        String strRisk = thefund.getjsonStr();
+		     String strRisk = fundsByRisk.getjsonStr();
+		        
+			
+					
+		        
+		    
 		        jsonpre = "{'symid':'";
 		        jsonpost = "'},";
 		        
