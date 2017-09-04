@@ -38,7 +38,7 @@ public class RiskControllerJson {
 		        
 		        String strRisk = thefund.getjsonStr();
 		        jsonpre = "{'symid':'";
-		        jsonpost = "'}";
+		        jsonpost = "'},";
 		        
 		        try {
 		        
@@ -74,9 +74,11 @@ public class RiskControllerJson {
 			
 			
 			
+		        StringBuilder sb = new StringBuilder(jsonstr);
+            	sb.deleteCharAt(jsonstr.length()-1);
+            	jsonstr = sb.toString();
 			
-			
-			
+			    
 			
 			
 			
