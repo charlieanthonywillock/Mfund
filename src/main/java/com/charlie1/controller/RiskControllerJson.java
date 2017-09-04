@@ -32,10 +32,16 @@ public class RiskControllerJson {
 	    //public jRisk getRisk(@RequestParam(value="{name}", defaultValue="World") String name) {
 	        
 	    	
+	    	jRisk jrisk = new jRisk();
+	    	
+	    	jrisk.setRisk1("charlie1");
+	    	jrisk.setRisk2("charlie2");
 	    	
 	    	
+	    //	return new jRisk("Charlie1",String.format(template, name));
 	    	
-	    	return new jRisk("Charlie1",String.format(template, name));
+	    	return jrisk;
+	    	
 	    }
 	}
 	
