@@ -14,7 +14,7 @@ public class selectRisk {
 	
 	
 	
-	private String jsonstr;
+	private String jsonstr="";
 	private String risk1;
 	private String risk2;
 	
