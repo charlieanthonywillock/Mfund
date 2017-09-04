@@ -49,7 +49,8 @@ public class RiskController {
 	        String strRisk = selectrisk.getjsonStr();
 	        			
 			jRisk jrisk = new jRisk();
-			jrisk.setRisk(strRisk);
+			jrisk.setRisk1(strRisk);
+			jrisk.setRisk2(strRisk);
 			
 		
 			 return jrisk;

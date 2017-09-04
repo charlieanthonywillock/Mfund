@@ -53,7 +53,7 @@ public class JSONController {
 	//	shop.setName(strRisk);
 		
 		jRisk jrisk = new jRisk();
-		jrisk.setRisk(strRisk);
+		jrisk.setRisk1(strRisk);
 		
 		//shop.setStaffName(new String[] { "mkyong1", "mkyong2" });
 
