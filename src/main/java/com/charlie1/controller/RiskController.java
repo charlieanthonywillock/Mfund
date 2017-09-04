@@ -25,7 +25,7 @@ public class RiskController {
 	
 	
 		@RequestMapping(value = "{name}", method = RequestMethod.GET)
-		public @ResponseBody
+		//public @ResponseBody
 		jRisk getTestJSON(@PathVariable String name) {
 			
 			
