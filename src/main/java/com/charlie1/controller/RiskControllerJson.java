@@ -50,9 +50,9 @@ public class RiskControllerJson {
 
 
 
-		        for (int i = 0; i < ja_dataPerformance.length(); i++) {
+		      //  for (int i = 0; i < ja_dataPerformance.length(); i++) {
 
-		            JSONObject rootObj = ja_dataPerformance.getJSONObject(i);
+		            JSONObject rootObj = ja_dataPerformance.getJSONObject(0);
 
 		            sym = rootObj.getString("symID");
 		            
@@ -61,7 +61,7 @@ public class RiskControllerJson {
 		            jsonstr += jsonpost; 
 		            
 		            
-		        }  
+		     //   }  
 		             
 		             
 		        } catch(Exception ex) {
