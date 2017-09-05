@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 	
 	import com.charlie1.funds.model.jRisk;
-import com.charlie1.funds.model.selectFundsByFund;
+//import com.charlie1.funds.model.selectFundsByFund;
 import com.charlie1.funds.model.selectFundsByRisk;
 
 @RequestMapping("/rest/apiCharlie1")
@@ -81,9 +81,9 @@ public class RiskControllerJson {
 			
 			
 			
-		        StringBuilder sb = new StringBuilder(jsonstr);
-            	sb.deleteCharAt(jsonstr.length()-1);
-            	jsonstr = sb.toString();
+		     //   StringBuilder sb = new StringBuilder(jsonstr);
+           // 	sb.deleteCharAt(jsonstr.length()-1);
+           // 	jsonstr = sb.toString();
 			
 			    
 			
@@ -99,7 +99,7 @@ public class RiskControllerJson {
 	    	jRisk jrisk = new jRisk();
 	    	
 	    	jrisk.setRisk1(jsonstr);
-	    	//jrisk.setRisk2("charlie2");
+	    	jrisk.setRisk2(strRisk);
 	    	
 	    	
 	    //	return new jRisk("Charlie1",String.format(template, name));
