@@ -13,6 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.charlie1.funds.dao.FundsDAO;
 import com.charlie1.funds.model.jPerformanceData;
 import com.charlie1.funds.model.selectFundsByRisk;
+import com.charlie1.funds.model.selectRisk;
 import com.charlie1.funds.model.selectFundsByFund;
 
 
@@ -27,7 +28,7 @@ public class App
     {
         System.out.println( "Hello World!" );
         
-   
+        String name = "{'risk1': '1', 'risk2': '4'}";
    /*
         String name = "{'Risk1': '1', 'Risk2': '4'}";
         
@@ -41,14 +42,14 @@ public class App
         String strRisk = risk.getjsonStr();
      */
         
-      
+    /*  
         String fundtmp = "{'Fund': 'PGMIX'}";
         JSONObject jsonObj = new JSONObject(fundtmp);
         String fund = jsonObj.getString("Fund");
         selectFundsByFund thefund = new selectFundsByFund(fund);
         
         String strRisk = thefund.getjsonStr();
-        
+     */   
     /*    
         
         JSONObject jsonObject = new JSONObject(strRisk);
@@ -93,6 +94,110 @@ public class App
         
         
        */
+        
+        
+ //   String test = "{ Performance : {SymID :BTTRX, InceptionDate : 1998-02-15, MER=1.6, Assets=247.0, Rank=1.0, MstarRating=5.0, StdDev=16.0, VolatileRank=2.0, MstarRisk=3.0, Alpha=0.0, Beta=0.0, Rsquared=0.0, RRSPEligibility=yes, Load=no load, MaxBackEnd=0.0, MaxFrontEnd=0.0, SaleOpen=open, NavPS=99.0, NetAsset=0.0, Yield=4.2, Dividend=2.0, Managers=Robert Gahagan, Fees=0.7, FundName=American Century Zero Coupon 2025 Inv]}";
+
+    
+   		  		
+    		//,[SymID=BTTRX, InceptionDate=1998-02-15, MER=1.6, Assets=247.0, Rank=1.0, MstarRating=5.0, StdDev=16.0, VolatileRank=2.0, MstarRisk=3.0, Alpha=0.0, Beta=0.0, Rsquared=0.0, RRSPEligibility=yes, Load=no load, MaxBackEnd=0.0, MaxFrontEnd=0.0, SaleOpen=open, NavPS=99.0, NetAsset=0.0, Yield=4.2, Dividend=2.0, Managers=Robert Gahagan, Fees=0.7, FundName=American Century Zero Coupon 2025 Inv]"
+    		//,[SymID=PLGBX, InceptionDate=1978-07-15, MER=1.2, Assets=247.0, Rank=5.0, MstarRating=2.0, StdDev=16.0, VolatileRank=2.0, MstarRisk=3.0, Alpha=0.0, Beta=0.0, Rsquared=0.0, RRSPEligibility=yes, Load=no load, MaxBackEnd=0.0, MaxFrontEnd=0.0, SaleOpen=open, NavPS=29.0, NetAsset=0.0, Yield=1.0, Dividend=2.0, Managers=William A. Coleman, Fees=0.45, FundName=Vanguard Balanced Index Inv]]}";
+        
+//    String foo = "{foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7}";
+   // JSONObject jsonObjs = new JSONObject(foo);  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        JSONObject jsonObj = new JSONObject(name);
+        String risk1 = jsonObj.getString("risk1");
+        String risk2 = jsonObj.getString("risk2");
+        
+        selectRisk selectrisk = new selectRisk(risk1,risk2);
+        
+	     String strRisk = selectrisk.getjsonStr();
+	        
+		
+	        String sym ="";
+		    String jsonstr="";
+		    String jsonpre="";
+		    String jsonpost="";
+	        
+	    
+	        jsonpre = "{'symid':'";
+	        jsonpost = "'},";
+	        
+	        try {
+	        
+	        JSONObject jsonObject = new JSONObject(strRisk);
+	        
+	        
+	        JSONArray ja_dataPerformance = jsonObject.getJSONArray("Performance");
+
+
+
+
+	      //  for (int i = 0; i < ja_dataPerformance.length(); i++) {
+
+	            JSONObject rootObj = ja_dataPerformance.getJSONObject(0);
+
+	            sym = rootObj.getString("SymID");
+	            
+	            jsonstr += jsonpre;
+	            jsonstr += sym;
+	            jsonstr += jsonpost; 
+	            
+	            
+	     //   }  
+	            
+	            
+	            if(!jsonstr.equals("")) {
+	            	
+
+	   		        StringBuilder sb = new StringBuilder(jsonstr);
+	              	sb.deleteCharAt(jsonstr.length()-1);
+	               	jsonstr = sb.toString();
+	   			
+	   			    
+	            	
+	            	
+	            	
+	            }
+	            
+	             
+	             
+	        } catch(Exception ex) {
+	        	
+	        	ex.printStackTrace();
+	        	
+	        }
+		
+		
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
           
     
     }

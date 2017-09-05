@@ -8,6 +8,7 @@ public class jRisk {
 	
 	String risk1;
 	String risk2;
+	String symid;
 	
 	
 	
@@ -22,6 +23,15 @@ public class jRisk {
 	
 	
 	
+	public String getSymid() {
+		return symid;
+	}
+	
+	public void setSymid(String symid) {
+		this.symid = symid;
+	}
+	
+		
 
 	public String getRisk1() {
 		return risk1;
@@ -38,6 +48,9 @@ public class jRisk {
 	public void setRisk2(String risk2) {
 		this.risk2 = risk2;
 	}
+	
+	
+	
 	
 	
 	

@@ -79,10 +79,14 @@ public class selectRisk {
 
 
   
-	        jsonstr += "{Performance: [";
+	      //  jsonstr += "{Performance: [{";
+	      //  jsonstr += PerformanceData + "}]}";
+	        
+	        jsonstr += "{\"Performance\": [";
 	        jsonstr += PerformanceData + "]}";
 	       
 
+	        
 
 
 
