@@ -32,17 +32,16 @@ public class RiskControllerJson {
 			
 	    
 			
-			 JSONObject jsonObj = new JSONObject(fund);
-					
-			 String risk1 = jsonObj.getString("risk1");
-		     String risk2 = jsonObj.getString("risk2");
-		     selectRisk selectrisk = new selectRisk(risk1,risk2);
-		        
+			JSONObject jsonObj = new JSONObject(fund);
+	        String risk1 = jsonObj.getString("risk1");
+	        String risk2 = jsonObj.getString("risk2");
+	        
+	        selectRisk selectrisk = new selectRisk(risk1,risk2);
+	        
 		     String strRisk = selectrisk.getjsonStr();
 		        
 			
-					
-		        
+		        	        
 		    
 		        jsonpre = "{'symid':'";
 		        jsonpost = "'},";
@@ -61,7 +60,7 @@ public class RiskControllerJson {
 
 		            JSONObject rootObj = ja_dataPerformance.getJSONObject(0);
 
-		            sym = rootObj.getString("symID");
+		            sym = rootObj.getString("SymID");
 		            
 		            jsonstr += jsonpre;
 		            jsonstr += sym;
@@ -69,6 +68,18 @@ public class RiskControllerJson {
 		            
 		            
 		     //   }  
+		            
+		            
+		            if(!jsonstr.equals("")) {
+		            	
+
+		   		        StringBuilder sb = new StringBuilder(jsonstr);
+		              	sb.deleteCharAt(jsonstr.length()-1);
+		               	jsonstr = sb.toString();
+		   		        	
+		            	
+		            }
+		            
 		             
 		             
 		        } catch(Exception ex) {
@@ -78,16 +89,7 @@ public class RiskControllerJson {
 		        }
 			
 			
-			
-			
-			
-		     //   StringBuilder sb = new StringBuilder(jsonstr);
-           // 	sb.deleteCharAt(jsonstr.length()-1);
-           // 	jsonstr = sb.toString();
-			
-			    
-			
-			
+	        
 			
 			
 			
@@ -100,6 +102,7 @@ public class RiskControllerJson {
 	    	
 	    	jrisk.setRisk1(jsonstr);
 	    	jrisk.setRisk2(strRisk);
+	    	jrisk.setSymid(strRisk);
 	    	
 	    	
 	    //	return new jRisk("Charlie1",String.format(template, name));
