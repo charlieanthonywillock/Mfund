@@ -936,6 +936,125 @@ public	  String buildStrIDX() {
 	}	
  	
  	
+ 
+
+ 		public String buildStrPeformanceDataAll(){
+ 	 		
+ 	 		
+ 	 		
+ 	 		 String jsonstr = "";
+ 	 		
+ 	 		 String performancestr = "select P.SymID,P.InceptionDate_,P.MER_,P.Assets_,P.Rank_,P.MstarRating_,P.StdDev_,P.VolatileRank_," +
+ 	 	               "P.MstarRisk_,P.Alpha_,P.Beta_,P.Rsquared_,P.RRSPEligibility_,P.Load_,P.MaxFrontEnd_,P.MaxBackEnd_,P.SaleOpen_,P.NavPS_," +
+ 	 	               "P.NetAsset_,P.Yield_,P.Dividend_,P.Managers_,P.Fees_,P.FundName_" +
+ 	 	               " from PerformanceData P ";
+
+ 	 		 jPerformanceData jperform = new jPerformanceData();
+ 	 	
+ 	 		 
+ 	 		 
+ 	 		 
+ 	  List<String> data = getJdbcTemplate().query(performancestr, new RowMapper<String>(){
+ 	 			 
+ 	 			 String jsonstr = "";
+ 	              public String mapRow(ResultSet rs, int rowNum) 
+ 	                                           throws SQLException {
+ 	             	 
+ 	             	   
+ 	             	              
+ 	                      
+ 	                     jperform.setInceptionDate(rs.getDate("InceptionDate_"));
+ 	                     jperform.setAlpha(rs.getDouble("Alpha_"));
+ 	          			jperform.setAssets(rs.getDouble("Assets_"));
+ 	          			jperform.setBeta(rs.getDouble("Beta_"));
+ 	          			jperform.setDividend(rs.getDouble("Dividend_"));
+ 	          			jperform.setFees(rs.getDouble("Fees_"));
+ 	          			jperform.setFundName(rs.getString("FundName_"));
+ 	          			jperform.setLoad(rs.getString("Load_"));
+ 	          			jperform.setManagers(rs.getString("Managers_"));
+ 	          			jperform.setMaxBackEnd(rs.getDouble("MaxBackEnd_"));
+ 	          			jperform.setMER(rs.getDouble("MER_"));
+ 	          			jperform.setMstarRating(rs.getDouble("MstarRating_"));
+ 	          			jperform.setMstarRisk(rs.getDouble("MstarRisk_"));
+ 	          			jperform.setNavPS(rs.getDouble("NavPS_"));
+ 	          			jperform.setRank(rs.getDouble("Rank_"));
+ 	          			jperform.setRRSPEligibility(rs.getString("RRSPEligibility_"));
+ 	          			jperform.setRsquared(rs.getDouble("Rsquared_"));
+ 	          			jperform.setSaleOpen(rs.getString("SaleOpen_"));
+ 	          			jperform.setStdDev(rs.getDouble("StdDev_"));
+ 	          			jperform.setSymID(rs.getString("SymID"));
+ 	          			jperform.setVolatileRank(rs.getDouble("VolatileRank_"));
+ 	          			jperform.setYield(rs.getDouble("Yield_"));
+ 	                      
+ 	                  
+ 	                      
+ 	          			ObjectMapper ob = new ObjectMapper();
+ 	          			String jkson="";
+ 	          			
+ 	          			try {
+ 	          				
+ 	          				jkson = ob.writeValueAsString(jperform);
+ 	          				
+ 	          				
+ 	          				
+ 	          			}catch(JsonProcessingException ex) {
+ 	          				
+ 	          				ex.printStackTrace();
+ 	          				
+ 	          				
+ 	          			}
+ 	          			
+ 	          			
+ 	          			  jsonstr += jkson;
+ 	          			
+ 	                   
+ 	                      jsonstr += ",";
+ 	                      
+ 	                      
+ 	                      return jsonstr;
+ 	                      
+ 	                      
+ 	                      
+ 	              }
+ 	              
+ 	         });
+ 	 			
+ 	 			
+ 	 		Iterator itemIterator = data.iterator();
+ 	 				
+ 	 		while(itemIterator.hasNext()){
+ 	 			
+ 	 			jsonstr+= (String)itemIterator.next();
+ 	 			
+ 	 		}
+ 	 		 
+ 	 		 
+ 	 		return jsonstr;
+ 	 		
+ 	 		
+ 	 	}  
+		
+		
+		
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
  	
  	
  	

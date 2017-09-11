@@ -28,6 +28,7 @@ public interface FundsDAO
 	public String buildStrHistoricalDataByFund(String fund);
 	public  String buildStrPerformanceCalanderByFund(String fund);
 	public Iterator getFundsbyFund(String fund);
+	public String buildStrPeformanceDataAll();
 		    
 			
 		

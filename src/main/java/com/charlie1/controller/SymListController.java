@@ -1,5 +1,8 @@
 package com.charlie1.controller;
 
+
+
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -17,21 +20,25 @@ import org.springframework.web.servlet.mvc.AbstractController;
 import org.springframework.ui.ModelMap;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.charlie1.funds.model.jRisk;
+//import com.charlie1.funds.model.jRisk;
+//import com.charlie1.funds.model.selectFundsByFund;
+import com.charlie1.funds.model.selectFundsAll;
 import com.charlie1.funds.model.selectFundsByFund;
-import com.charlie1.funds.model.selectFundsByRisk;
+
+
+
 
 
 
 
 
 @Controller
-@RequestMapping("/rest/SelectFundsByFund")
-public class PerfListController  {
+@RequestMapping("/rest/SelectFundsAll")
+public class SymListController {
 	
 	
-	@RequestMapping(value = "{fund}", method = RequestMethod.GET)
-	String getPerfData(@PathVariable String fund, ModelMap model) {
+	//@RequestMapping(value = "{fund}", method = RequestMethod.GET)
+	String getPerfData(ModelMap model) {
 		
 		
 	
@@ -66,9 +73,9 @@ public class PerfListController  {
 		
 		
 		    //String fundtmp = "{'Fund': 'PGMIX'}";
-	        JSONObject jsonObj = new JSONObject(fund);
-	        String sfund = jsonObj.getString("Fund");
-	        selectFundsByFund thefund = new selectFundsByFund(sfund);
+	     //   JSONObject jsonObj = new JSONObject(fund);
+	     //   String sfund = jsonObj.getString("Fund");
+	        selectFundsAll thefund = new selectFundsAll();
 	        
 	        String strRisk = thefund.getjsonStr();
 	        
@@ -151,19 +158,47 @@ public class PerfListController  {
 	        
             model.addAttribute("perfJSON",strRisk);
 	
-		return "Fund";
+		return "FundSearch";
 
 	}
 	
-	
-	
-	
-	
-	
-	
 }
+
+
 	
 	
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
