@@ -199,8 +199,10 @@
 								var ahref = document.createElement('a');
 								if(colcnt == 1){
 								
-								ahref.href = "https://nfunds.herokuapp.com/spring/rest/findbyfunds.aspx?symid="+colval;
-												
+							//	ahref.href = "https://nfunds.herokuapp.com/spring/rest/findbyfunds.aspx?symid="+colval;
+									
+								ahref.href = "https://nfunds.herokuapp.com/spring/rest/SelectFundsByFund/{'Fund':'"+colval+"'}";
+								
 								txtref = document.createTextNode(colval);
 								ahref.appendChild(txtref);
 								ahref.title = "URL";
