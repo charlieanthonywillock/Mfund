@@ -603,8 +603,10 @@
     
     
     
-    <p id="json"></p>
-    <p id="demo"></p>
+    <p>${perfJSON}</p>
+    
+    <p>${myObj}</p>
+    
     
     
     
