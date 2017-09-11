@@ -24,7 +24,7 @@
 
 
 
-<p> ${symbolList} </p>
+
 
 
 
@@ -83,11 +83,37 @@
 }
       
    </script>
+   
+   
+   <script>
+   
+   
+   //data1  ={"Performance": [{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'BTTRX'},{'Fundname':'American Century Zero Coupon 2025 Inv'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'BTTRX'},{'Fundname':'American Century Zero Coupon 2025 Inv'},{'Symid':'VBINX'},{'Fundname':'PIMCO Long-Term US Government Admin'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'BTTRX'},{'Fundname':'American Century Zero Coupon 2025 Inv'},{'Symid':'VBINX'},{'Fundname':'PIMCO Long-Term US Government Admin'},{'Symid':'VGSTX'},{'Fundname':'Vanguard Balanced Index Inv'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'BTTRX'},{'Fundname':'American Century Zero Coupon 2025 Inv'},{'Symid':'VBINX'},{'Fundname':'PIMCO Long-Term US Government Admin'},{'Symid':'VGSTX'},{'Fundname':'Vanguard Balanced Index Inv'},{'Symid':'PLGBX'},{'Fundname':'Vanguard Balanced Index Inv'}]} 
+   
+   
+   </script>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 
    
    
    
-   <script>
+    <script>
    
    alert("Section");
    
@@ -107,20 +133,20 @@
    
    function factoryTable(jsonarray,skey) { 
    
-  
+ 
 		for(var key in jsonarray) {
 		
 		
 			if(key == skey ){
    
   
-				for(var i=0; i < data[key].length;i++ ){
+				for(var i=0; i < jsonarray[key].length;i++ ){
 				
-				
+				alert("inside datakey");
 				
 					
 					var cntjson=0;
-					var rows = data[key].length;
+					var rows = jsonarray[key].length;
 					var cntcols=0;
 					var bool = true;
 					
@@ -129,10 +155,11 @@
 						for(var i=0; i < rows; i++){
      
 	 
-	                     	var col = data[key][i];
+	                     	var col = jsonarray[key][i];
 								
 								
 							if(bool){
+								 
 								for(var calc in col){
 								
 								cntcols++
@@ -143,8 +170,10 @@
 							r = document.createElement('tr');	
 						
 						for(var j in col){
+							
+							
 								colcnt++;
-							    var colval = data[key][i][j];
+							    var colval = jsonarray[key][i][j];
 								var hdr = j;
 								
 								alert(hdr+" : " +colval);
@@ -157,7 +186,7 @@
 								header.setAttribute("class","center");
 								header.setAttribute("scope","col");
 								header.setAttribute("colspan","8");
-								header.width = "450px";
+							//	header.width = "450px";
 								
 								var colname = "";
 															
@@ -223,6 +252,8 @@
     
    
    </script>
+   
+   
    
    
    

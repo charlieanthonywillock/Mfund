@@ -186,6 +186,7 @@ public class App
 	    String jsonsim="";
 	    String jsonname="";
 	    String jsonpost="";
+	    String jsoncomma="";
         
         
         selectFundsAll thefund = new selectFundsAll();
@@ -197,9 +198,10 @@ public class App
         String header = "{\"Performance\": [";
         
         jsonsim = "{'Symid':'";
-        jsonname = "{'Fundname':'";
+        jsonname = ",'Fundname':'";
         jsonpost = "'},";
         String footer = "]}";
+        jsoncomma ="'";
         
         try {
         
@@ -222,7 +224,7 @@ public class App
             
             jsonstr += jsonsim;
             jsonstr += sym;
-            jsonstr += jsonpost;
+            jsonstr += jsoncomma;
             jsonstr += jsonname;
             jsonstr += fundname;
             jsonstr += jsonpost;
