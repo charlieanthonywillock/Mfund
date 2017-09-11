@@ -109,7 +109,7 @@ public class App
         
         
         
-        
+        /*
         
         
         
@@ -162,10 +162,7 @@ public class App
 	   		        StringBuilder sb = new StringBuilder(jsonstr);
 	              	sb.deleteCharAt(jsonstr.length()-1);
 	               	jsonstr = sb.toString();
-	   			
-	   			    
-	            	
-	            	
+	   		        	
 	            	
 	            }
 	            
@@ -178,7 +175,7 @@ public class App
 	        }
 		
 		
-        
+        */
         
         
         

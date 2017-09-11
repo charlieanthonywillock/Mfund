@@ -603,7 +603,8 @@
     
     
     
-    
+    <p id="json"></p>
+    <p id="demo"></p>
     
     
     
@@ -646,8 +647,8 @@ for (i in str) {
 
 
 document.getElementById("json").innerHTML = x;
-document.getElementById("demo").innerHTML = obj3.Performance[0].fees
-
+document.getElementById("demo").innerHTML = obj3;
+//document.getElementById("demo").innerHTML = obj3.Performance[0].fees
 
 
 
