@@ -105,7 +105,7 @@
    var cnt=0;
 
    
-   function factoryTable(jsonarray,skey,shref) { 
+   function factoryTable(jsonarray,skey) { 
    
   
 		for(var key in jsonarray) {
@@ -217,7 +217,9 @@
    
    }
    
-   factoryTable(data,"basketball","ProductName");
+   
+   var sym  = ${symbolList};
+   factoryTable(sym,"Performance");
     
    
    </script>

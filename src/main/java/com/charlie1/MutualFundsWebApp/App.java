@@ -12,6 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 //import com.charlie1.controller.JSONArray;
 import com.charlie1.funds.dao.FundsDAO;
 import com.charlie1.funds.model.jPerformanceData;
+import com.charlie1.funds.model.selectFundsAll;
 import com.charlie1.funds.model.selectFundsByRisk;
 import com.charlie1.funds.model.selectRisk;
 import com.charlie1.funds.model.selectFundsByFund;
@@ -178,15 +179,85 @@ public class App
         */
         
         
+
+	    String sym ="";
+	    String fundname ="";
+	    String jsonstr="";
+	    String jsonsim="";
+	    String jsonname="";
+	    String jsonpost="";
+        
+        
+        selectFundsAll thefund = new selectFundsAll();
+        
+        String strRisk = thefund.getjsonStr();
+        
+		
+        
+        String header = "{\"Performance\": [";
+        
+        jsonsim = "{'Symid':'";
+        jsonname = "{'Fundname':'";
+        jsonpost = "'},";
+        String footer = "]}";
+        
+        try {
+        
+        JSONObject jsonObject = new JSONObject(strRisk);
+        
+        
+        JSONArray ja_dataPerformance = jsonObject.getJSONArray("Performance");
+
+        int sz = ja_dataPerformance.length();
+        
+        jsonstr += header;
+
+
+        for (int i = 0; i < ja_dataPerformance.length(); i++) {
+
+            JSONObject rootObj = ja_dataPerformance.getJSONObject(i);
+
+            sym = rootObj.getString("symID");
+            fundname = rootObj.getString("fundName");
+            
+            jsonstr += jsonsim;
+            jsonstr += sym;
+            jsonstr += jsonpost;
+            jsonstr += jsonname;
+            jsonstr += fundname;
+            jsonstr += jsonpost;
+            
+            
+          
+            
+            
+           
+        }  
+             
+             
+        } catch(Exception ex) {
+        	
+        	ex.printStackTrace();
+        	
+        }
+	
+	
+        if(!jsonstr.equals("")) {
+        	
+
+		        StringBuilder sb = new StringBuilder(jsonstr);
+          	sb.deleteCharAt(jsonstr.length()-1);
+           	jsonstr = sb.toString();
+		        	
+        	
+        }
         
         
         
+        jsonstr += footer;
         
         
-        
-        
-        
-        
+       
         
         
         

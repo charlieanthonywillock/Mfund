@@ -52,7 +52,7 @@ public class selectFundsAll {
     	 
     	 FundsDAO customerDAO = (FundsDAO) context.getBean("FundsDAO");
  	      
-    	 String PerformanceData = customerDAO.buildStrPeformanceDataByFund(fund);
+    	 String PerformanceData = customerDAO.buildStrPeformanceDataAll();
 	        if (PerformanceData.equals(""))
 	        {
 
