@@ -37,7 +37,7 @@ import com.charlie1.funds.model.selectFundsByFund;
 public class SymListController {
 	
 	
-	//@RequestMapping(value = "{fund}", method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	String getPerfData(ModelMap model) {
 		
 		
@@ -156,9 +156,9 @@ public class SymListController {
 	        
 	        
 	        
-            model.addAttribute("perfJSON",strRisk);
+            model.addAttribute("symbolList",strRisk);
 	
-		return "FundSearch";
+		return "searchpage";
 
 	}
 	
