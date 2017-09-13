@@ -9,7 +9,10 @@
 
 
 <form name="aspnetForm" method="get" action="https://nfunds.herokuapp.com/spring/rest/SelectCatFunds" id="aspnetForm">
-
+<!--
+<input type="hidden" name="a" value="1" /> 
+<input type="hidden" name="b" value="2" /> 
+-->
 <script type="text/javascript">
 
 var theForm = document.forms['aspnetForm'];
@@ -41,11 +44,11 @@ function getJson(){
                  <div class="FilterCat">
                     
                         Filter by Category:
-                    <select name="SelectRisk" onchange="getJson()" id="RiskFundType" class="WidgetDropDown" style="width:250px;">
+                    <select name="risk" onchange="getJson()" id="RiskFundType" class="WidgetDropDown" style="width:250px;">
 	<option selected="selected" value="0">All Categories</option>
-	<option value="{'risk1':'1','risk2':'4'}">High</option>
-	<option value="{'risk1':'5','risk2':'7'}">Medium</option>
-	<option value="{'risk1':'8','risk2':'10'}">Low</option>
+	<option value="3">High</option>
+	<option value="2">Medium</option>
+	<option value="1">Low</option>
 	
 
 </select>
@@ -57,7 +60,7 @@ function getJson(){
 
 <div id="getTable" class="BorderCurve"></div>
 
-<div> ${symbolList} </div>
+
 
 <script>
 
