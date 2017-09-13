@@ -15,6 +15,11 @@
 	
 	<bean name="/MutualFunds.htm"
 		class="com.charlie1.controller.FundController" />
+		
+		<bean name="/searchpage.htm"
+		class="com.charlie1.controller.SymListCatController" />
+		
+		
 
     <bean id="viewResolver"
     	class="org.springframework.web.servlet.view.InternalResourceViewResolver" >

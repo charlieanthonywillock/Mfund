@@ -1,71 +1,93 @@
 <html>
-
 <head>
-
-<link href="css/stylesheetperf.css" rel="stylesheet" /> 
-
-
-<style>
-
-
-
-
-</style>
-
-
-
+<meta charset="UTF-8" /><link href="css/Widgets.css" rel="stylesheet" />
+<title></title>
 </head>
+
 
 <body>
 
-<div id="getTable">
 
+<form name="aspnetForm" method="get" action="https://nfunds.herokuapp.com/spring/rest/SelectCatFunds" id="aspnetForm">
 
+<script type="text/javascript">
 
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function getJson(){
+   
+    
+   theForm.submit();
+   
+}
+</script>
+<table style="width:100%; border-collapse:collapse; border-spacing:0;" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <div class="WidgetNavTab">
+                    <ul>
+                        <li id="liTop" class="selected">
+                            <a id="lnkBtnTop" href="javascript:__doPostBack()">Top</a>
+                        </li>
+                        <li id="liBottom">
+                            <a id="lnkBtnBottom" href="javascript:__doPostBack()">Bottom</a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                 <div class="FilterCat">
+                    
+                        Filter by Category:
+                    <select name="SelectRisk" onchange="getJson()" id="RiskFundType" class="WidgetDropDown" style="width:250px;">
+	<option selected="selected" value="0">All Categories</option>
+	<option value="{'risk1':'1','risk2':'4'}">High</option>
+	<option value="{'risk1':'5','risk2':'7'}">Medium</option>
+	<option value="{'risk1':'8','risk2':'10'}">Low</option>
+	
 
+</select>
+                </div>
+            </td>
+        </tr>
+    </table>
+</form>
 
+<div id="getTable" class="BorderCurve"></div>
 
-
-
-
-</div>
-
-<h2>Create Table from JSON String</h2>
-<p id="json"></p>
-
-<div id="getTable" class="tester"></div>
-
-
-
-
+<div> ${symbolList} </div>
 
 <script>
 
-
-
-
    data = {
   "tennis": [{
-    "Price": 379.99,
-    "Description": "Insert description here.",
     "ProductName": "Babolat Play Pure Drive",
+    "Description": "Insert description here.",
+	"Price": 379.99,
+   
   }, {
+    "ProductName": "Yonex AI 98 Tennis Racquet",
     "Description": "Insert description here.",
     "Price": 199.99,
-    "ProductName": "Yonex AI 98 Tennis Racquet",
+   
   }],
   "basketball": [{
+    "ProductName": "Wilson NCAA Solution Official Game Basketball",
     "Description": "Insert description here.",
     "Price": 64.99,
-    "ProductName": "Wilson NCAA Solution Official Game Basketball",
+   
   }, {
+	"ProductName": "Spalding NBA NeverFlat Size 7 Composite Leather Basketball",
     "Description": "Insert description here.",
     "Price": 59.99,
-    "ProductName": "Spalding NBA NeverFlat Size 7 Composite Leather Basketball",
+ 
   },{
+    "ProductName": "Charlie1",
     "Description": "Insert description here.",
     "Price": 59.99,
-    "ProductName": "Charlie1",
+   
   },{
     "Description": "Insert description here.",
     "Price": 59.99,
@@ -84,11 +106,13 @@
       
    </script>
    
-   
    <script>
    
+   function oddOrEven(x) {
+	return ( x & 1 ) ? "odd" : "even";
+	}
    
-   //data1  ={"Performance": [{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'BTTRX'},{'Fundname':'American Century Zero Coupon 2025 Inv'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'BTTRX'},{'Fundname':'American Century Zero Coupon 2025 Inv'},{'Symid':'VBINX'},{'Fundname':'PIMCO Long-Term US Government Admin'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'BTTRX'},{'Fundname':'American Century Zero Coupon 2025 Inv'},{'Symid':'VBINX'},{'Fundname':'PIMCO Long-Term US Government Admin'},{'Symid':'VGSTX'},{'Fundname':'Vanguard Balanced Index Inv'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'BTTRX'},{'Fundname':'American Century Zero Coupon 2025 Inv'},{'Symid':'VBINX'},{'Fundname':'PIMCO Long-Term US Government Admin'},{'Symid':'VGSTX'},{'Fundname':'Vanguard Balanced Index Inv'},{'Symid':'PLGBX'},{'Fundname':'Vanguard Balanced Index Inv'}]} 
+   
    
    
    </script>
@@ -97,28 +121,26 @@
    
    
    
+   <script>
+   
+   
+ //  data1  ={"Performance": [{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'BTTRX'},{'Fundname':'American Century Zero Coupon 2025 Inv'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'BTTRX'},{'Fundname':'American Century Zero Coupon 2025 Inv'},{'Symid':'VBINX'},{'Fundname':'PIMCO Long-Term US Government Admin'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'BTTRX'},{'Fundname':'American Century Zero Coupon 2025 Inv'},{'Symid':'VBINX'},{'Fundname':'PIMCO Long-Term US Government Admin'},{'Symid':'VGSTX'},{'Fundname':'Vanguard Balanced Index Inv'},{'Symid':'PGMIX'},{'Fundname':'JPMorgan Market Expansion Enh Idx I'},{'Symid':'ARGFX'},{'Fundname':'Ariel Fund Investor'},{'Symid':'BTTRX'},{'Fundname':'American Century Zero Coupon 2025 Inv'},{'Symid':'VBINX'},{'Fundname':'PIMCO Long-Term US Government Admin'},{'Symid':'VGSTX'},{'Fundname':'Vanguard Balanced Index Inv'},{'Symid':'PLGBX'},{'Fundname':'Vanguard Balanced Index Inv'}]} 
+ //var data1 = {"Performance": [{"symID":"VBINX","assets":247.0,"rank":5.0,"mstarRating":2.0,"netAsset":0.0,"yield":6.0,"dividend":2.0,"mstarRisk":2.0,"alpha":0.0,"beta":0.0,"rsquared":0.0,"rrspeligibility":"yes","stdDev":16.0,"volatileRank":7.0,"mer":1.5,"managers":"Christopher E. Wrazen","fees":0.35,"fundName":"PIMCO Long-Term US Government Admin","inceptionDate":"1998-07-15","load":"no load","maxBackEnd":0.0,"maxFrontEnd":0.0,"saleOpen":"open","navPS":30.0}]}
+   
+   </script>
    
    
    
    
    
    
-   
-   
-   
-   
-   
-   
-
-   
-   
-   
-    <script>
+<script>
    
    alert("Section");
    
    var table = document.createElement('table');
-   table.setAttribute('class','StdDataGrid');
+  // table.setAttribute('class','StdDataGrid'); 
+   table.setAttribute('class','FundataWidget');
    table.setAttribute('id','tablejson');
    table.setAttribute('style','border-collapse:collapse');
    table.setAttribute('border','1');
@@ -167,7 +189,19 @@
 								bool = false;
 								}
 														
-							r = document.createElement('tr');	
+							r = document.createElement('tr');
+							var res = oddOrEven(rowcnt);
+							if(res == "even"){
+							
+									r.setAttribute('class','even');
+									alert("even");
+							}else{
+							
+							r.setAttribute('class','odd');
+									alert("odd");
+							
+							}
+							
 						
 						for(var j in col){
 							
@@ -179,13 +213,14 @@
 								alert(hdr+" : " +colval);
 														
 								c = document.createElement('td');
-								c.setAttribute("colspan","20");
+								c.setAttribute('class','Name');
+								//c.setAttribute("colspan","20");
 								
 															
 							    var header = document.createElement('th');
-								header.setAttribute("class","center");
+								header.setAttribute("class","left");
 								header.setAttribute("scope","col");
-								header.setAttribute("colspan","8");
+								//header.setAttribute("colspan","8");
 							//	header.width = "450px";
 								
 								var colname = "";
@@ -251,6 +286,7 @@
    
    var sym  = ${symbolList};
    factoryTable(sym,"Performance");
+  // factoryTable(data,"tennis");
     
    
    </script>
@@ -263,14 +299,5 @@
    
    
    
-   
-   
-   
-   
-   
-   
-
-
-
-</body>
+  </body>
 </html>
