@@ -131,7 +131,7 @@ public class SymListCatController {
 		    
 		    model.addAttribute("symbolList",strRisk);
 		
-			return "Searchpage";
+			return "SearchCatpage";
 
 		}
 		
