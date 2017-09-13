@@ -30,6 +30,8 @@ public class SymListCatController {
 		{
 	    	String cat="";
 	    	
+	    	cat = "{'risk1':'1','risk2':'4'}";
+	    	
 	    	if(risk == "1") {
 	    		
 	    		cat = "{'risk1':'1','risk2':'4'}";

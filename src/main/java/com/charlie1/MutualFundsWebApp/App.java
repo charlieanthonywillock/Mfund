@@ -30,6 +30,33 @@ public class App
         System.out.println( "Hello World!" );
         
         String name = "{'risk1': '1', 'risk2': '4'}";
+        
+        
+        String risk = "1";
+        
+        String cat="";
+    	
+    	if(risk == "1") {
+    		
+    		cat = "{'risk1':'1','risk2':'4'}";
+    		
+    	}else if(risk == "2"){
+    		
+    		cat = "{'risk1':'4','risk2':'8'}";
+    		
+    	}else if(risk == "3") {
+    		
+    		cat = "{'risk1':'8','risk2':'10'}";
+    		
+    		
+    	}
+        
+    	
+    	JSONObject jsonObj = new JSONObject(name);
+        String risk1 = jsonObj.getString("risk1");
+        String risk2 = jsonObj.getString("risk2");
+        
+        
    /*
         String name = "{'Risk1': '1', 'Risk2': '4'}";
         
