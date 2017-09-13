@@ -50,7 +50,7 @@ public class SymListController {
 	    String jsonpost="";
 	    String jsoncomma="";
         
-        
+        /*
         selectFundsAll thefund = new selectFundsAll();
         
         String strRisk = thefund.getjsonStr();
@@ -128,7 +128,7 @@ public class SymListController {
         
         strRisk = jsonstr; 
 	    model.addAttribute("symbolList",strRisk);
-	
+	*/
 		return "Searchpage";
 
 	}
