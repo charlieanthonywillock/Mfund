@@ -26,21 +26,21 @@ public class SymListCatController {
 		
 	//	@RequestMapping("/rest/SelectCatFunds",params = {"risk1", "risk2"})
 	    @RequestMapping("/rest/SelectCatFunds")
-		String getCatFundsData(ModelMap model,@RequestParam("risk") String risk) 
+		String getCatFundsData(ModelMap model,@RequestParam("risk") int risk) 
 		{
 	    	String cat="";
 	    	
-	    	cat = "{'risk1':'1','risk2':'4'}";
+	    	//cat = "{'risk1':'1','risk2':'4'}";
 	    	
-	    	if(risk == "1") {
+	    	if(risk == 1) {
 	    		
 	    		cat = "{'risk1':'1','risk2':'4'}";
 	    		
-	    	}else if(risk == "2"){
+	    	}else if(risk == 2){
 	    		
 	    		cat = "{'risk1':'4','risk2':'8'}";
 	    		
-	    	}else if(risk == "3") {
+	    	}else if(risk == 3) {
 	    		
 	    		cat = "{'risk1':'8','risk2':'10'}";
 	    		
