@@ -38,7 +38,7 @@ public class SymListController {
 	
 	
 	@RequestMapping(method = RequestMethod.GET)
-	String getPerfData(ModelMap model) {
+	String getAllSymData(ModelMap model) {
 		
 		
 
