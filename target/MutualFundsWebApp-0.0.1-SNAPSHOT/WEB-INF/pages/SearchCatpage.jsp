@@ -41,12 +41,11 @@ function getJson(){
                  <div class="FilterCat">
                     
                         Filter by Category:
-                    <select name="SelectRisk" onchange="getJson()" id="RiskFundType" class="WidgetDropDown" style="width:250px;">
+                    <select name="risk" onchange="getJson()" id="RiskFundType" class="WidgetDropDown" style="width:250px;">
 	<option selected="selected" value="0">All Categories</option>
-	<option value="{'risk1':'1','risk2':'4'}">High</option>
-	<option value="{'risk1':'5','risk2':'7'}">Medium</option>
-	<option value="{'risk1':'8','risk2':'10'}">Low</option>
-	
+	<option value="3">High</option>
+	<option value="2">Medium</option>
+	<option value="1">Low</option>
 
 </select>
                 </div>
