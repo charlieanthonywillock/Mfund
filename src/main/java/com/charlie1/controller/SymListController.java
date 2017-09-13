@@ -129,7 +129,7 @@ public class SymListController {
         strRisk = jsonstr; 
 	    model.addAttribute("symbolList",strRisk);
 	*/
-		return "Searchpage";
+		return "test";
 
 	}
 	
