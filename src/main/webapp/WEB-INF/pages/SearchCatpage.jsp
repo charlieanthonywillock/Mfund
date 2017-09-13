@@ -284,8 +284,8 @@ function getJson(){
    }
    
    
-   var sym  = ${symbolList};
-   factoryTable(sym,"Performance");
+   var symcat  = ${symbolCatList};
+   factoryTable(symcat,"Performance");
   // factoryTable(data,"tennis");
     
    

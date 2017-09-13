@@ -20,11 +20,7 @@ import com.charlie1.funds.model.selectRisk;
 public class SymListCatController {
 	
 	
-	//@RequestMapping(value = "{category}", method = RequestMethod.GET)
-	//String getCatFundsData(@PathVariable String category , ModelMap model,@RequestParam(value="cat") String cat) {
-		
-		
-	//	@RequestMapping("/rest/SelectCatFunds",params = {"risk1", "risk2"})
+
 	    @RequestMapping("/rest/SelectCatFunds")
 		String getCatFundsData(ModelMap model,@RequestParam("risk") int risk) 
 		{
@@ -38,7 +34,7 @@ public class SymListCatController {
 	    		
 	    	}else if(risk == 2){
 	    		
-	    		cat = "{'risk1':'4','risk2':'8'}";
+	    		cat = "{'risk1':'4','risk2':'7'}";
 	    		
 	    	}else if(risk == 3) {
 	    		
@@ -152,7 +148,7 @@ public class SymListCatController {
 	        
 		   
 		    
-		    model.addAttribute("symbolList",strRisk);
+		    model.addAttribute("symbolCatList",strRisk);
 		
 			return "SearchCatpage";
 

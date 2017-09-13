@@ -52,9 +52,9 @@ public class App
     	}
         
     	
-    	JSONObject jsonObj = new JSONObject(name);
-        String risk1 = jsonObj.getString("risk1");
-        String risk2 = jsonObj.getString("risk2");
+  //  	JSONObject jsonObj = new JSONObject(name);
+  //      String risk1 = jsonObj.getString("risk1");
+  //      String risk2 = jsonObj.getString("risk2");
         
         
    /*
@@ -137,12 +137,12 @@ public class App
         
         
         
+        
+        
+        
         /*
         
-        
-        
-        
-        JSONObject jsonObj = new JSONObject(name);
+        JSONObject jsonObj = new JSONObject(cat);
         String risk1 = jsonObj.getString("risk1");
         String risk2 = jsonObj.getString("risk2");
         
@@ -206,7 +206,7 @@ public class App
         */
         
         
-
+/*
 	    String sym ="";
 	    String fundname ="";
 	    String jsonstr="";
@@ -288,7 +288,7 @@ public class App
         
        
         
-        
+        */
         
         
         
