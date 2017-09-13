@@ -7,7 +7,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.charlie1.funds.model.Greeting;
 import com.charlie1.funds.model.selectFundsAll;
 import com.charlie1.funds.model.selectFundsByFund;
 import com.charlie1.funds.model.selectFundsByRisk;
@@ -20,7 +22,10 @@ public class SymListCatController {
 	
 	
 	@RequestMapping(value = "{category}", method = RequestMethod.GET)
-	String getCatFundsData(@PathVariable String category , ModelMap model) {
+	String getCatFundsData(@PathVariable String category , ModelMap model,@RequestParam(value="cat") String cat) {
+		
+		
+		
 	
 	
 	
@@ -127,7 +132,7 @@ public class SymListCatController {
 	        
 	        
 	        */
-		    String strRisk = category;
+		    String strRisk = cat;
 		    
 		    model.addAttribute("symbolList",strRisk);
 		
