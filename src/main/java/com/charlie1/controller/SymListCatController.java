@@ -17,17 +17,17 @@ import com.charlie1.funds.model.selectRisk;
 
 
 @Controller
-@RequestMapping("/rest/SelectCatFunds")
 public class SymListCatController {
 	
 	
-	@RequestMapping(value = "{category}", method = RequestMethod.GET)
-	String getCatFundsData(@PathVariable String category , ModelMap model,@RequestParam(value="cat") String cat) {
+	//@RequestMapping(value = "{category}", method = RequestMethod.GET)
+	//String getCatFundsData(@PathVariable String category , ModelMap model,@RequestParam(value="cat") String cat) {
 		
 		
-		
-	
-	
+	//	@RequestMapping("/rest/SelectCatFunds",params = {"risk1", "risk2"})
+	    @RequestMapping("/rest/SelectCatFunds")
+		String getCatFundsData(ModelMap model,@RequestParam("risk1") String risk1, 
+		@RequestParam("risk2") String risk2) {
 	
 		
 		
@@ -132,7 +132,7 @@ public class SymListCatController {
 	        
 	        
 	        */
-		    String strRisk = cat;
+		    String strRisk = risk1;
 		    
 		    model.addAttribute("symbolList",strRisk);
 		
