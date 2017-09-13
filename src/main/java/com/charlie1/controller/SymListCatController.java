@@ -26,8 +26,24 @@ public class SymListCatController {
 		
 	//	@RequestMapping("/rest/SelectCatFunds",params = {"risk1", "risk2"})
 	    @RequestMapping("/rest/SelectCatFunds")
-		String getCatFundsData(ModelMap model,@RequestParam("risk1") String risk1, 
-		@RequestParam("risk2") String risk2) {
+		String getCatFundsData(ModelMap model,@RequestParam("risk") String risk) 
+		{
+	    	String cat="";
+	    	
+	    	if(risk == "1") {
+	    		
+	    		cat = "{'risk1':'1','risk2':'4'}";
+	    		
+	    	}else if(risk == "2"){
+	    		
+	    		cat = "{'risk1':'4','risk2':'8'}";
+	    		
+	    	}else if(risk == "3") {
+	    		
+	    		cat = "{'risk1':'8','risk2':'10'}";
+	    		
+	    		
+	    	}
 	
 		
 		
@@ -43,9 +59,9 @@ public class SymListCatController {
 		    
 		    
 		  
-	/*	    
+		    
 
-			JSONObject jsonObj = new JSONObject(category);
+			JSONObject jsonObj = new JSONObject(cat);
 	        String risk1 = jsonObj.getString("risk1");
 	        String risk2 = jsonObj.getString("risk2");
 	        selectRisk thefunds = new selectRisk(risk1,risk2);
@@ -131,8 +147,8 @@ public class SymListCatController {
 	        strRisk = jsonstr; 
 	        
 	        
-	        */
-		    String strRisk = risk1;
+	        
+		   
 		    
 		    model.addAttribute("symbolList",strRisk);
 		
