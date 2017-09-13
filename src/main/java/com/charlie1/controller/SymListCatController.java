@@ -97,8 +97,10 @@ public class SymListCatController {
 
 	            JSONObject rootObj = ja_dataPerformance.getJSONObject(i);
 
-	            sym = rootObj.getString("symID");
-	            fundname = rootObj.getString("fundName");
+
+	            sym = rootObj.getString("SymID");
+	            
+	            fundname = rootObj.getString("FundName");
 	            
 	            jsonstr += jsonsim;
 	            jsonstr += sym;

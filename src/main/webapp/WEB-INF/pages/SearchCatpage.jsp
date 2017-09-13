@@ -56,9 +56,7 @@ function getJson(){
 
 <div id="getTable" class="BorderCurve"></div>
 
-<div>${symbolCatList} </div>
 
-<div>${symbolCatListTest} </div>
 
 
 <script>
