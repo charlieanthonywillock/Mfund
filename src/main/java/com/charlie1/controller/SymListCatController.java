@@ -67,7 +67,7 @@ public class SymListCatController {
 	        String strRisk = thefunds.getjsonStr();
 		    
 		   	        
-	       
+	        String testrisk = thefunds.getjsonStr();
 	        
 	       
 	        
@@ -149,6 +149,8 @@ public class SymListCatController {
 		   
 		    
 		    model.addAttribute("symbolCatList",strRisk);
+		    model.addAttribute("symbolCatListTest", testrisk);
+		    
 		
 			return "SearchCatpage";
 

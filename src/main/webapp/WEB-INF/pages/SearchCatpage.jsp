@@ -58,6 +58,8 @@ function getJson(){
 
 <div>${symbolCatList} </div>
 
+<div>${symbolCatListTest} </div>
+
 
 <script>
 
