@@ -1,13 +1,17 @@
-
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head><title>
 	Mutual Fund Search – Mutual Funds 
-</title><meta charset="UTF-8" /><link href="css/stylesheetsearch.css" rel="stylesheet" /><link href="../css/Nav.css" rel="stylesheet" />
-  
-     
+</title>
+
+    
+    <spring:url value="/resources/css/stylesheetsearch.css" var="searchCss" />
+    <link href="${searchCss}" rel="stylesheet" />
+    <spring:url value="/resources/css/Nav.css" var="navCss" />
+    <link href="${navCss}" rel="stylesheet" />
     
 </head>
 <body>
