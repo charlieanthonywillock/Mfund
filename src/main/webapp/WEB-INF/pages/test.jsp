@@ -1,9 +1,14 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <html>
 <head>
-<!--  <meta charset="UTF-8" /><link href="css/Widgets.css" rel="stylesheet" /> -->
+
 <title></title>
 
-<link href="<c:url value="/resources/css/Widgets.css" />" rel="stylesheet">
+
+<spring:url value="/resources/css/Widgets.css" var="widgeCss" />
+<link href="${widgeCss}" rel="stylesheet" />
+
+
 
 </head>
 
