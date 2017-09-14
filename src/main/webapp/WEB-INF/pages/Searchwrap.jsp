@@ -5,9 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head><title>
 	Mutual Fund Search – Mutual Funds 
-</title><meta charset="UTF-8" /><link href="css/stylesheetsearch.css" rel="stylesheet" /><link href="../css/Nav.css" rel="stylesheet" />
+</title>
+
+<!-- <meta charset="UTF-8" /><link href="css/stylesheetsearch.css" rel="stylesheet" /><link href="../css/Nav.css" rel="stylesheet" />  -->
   
-     
+     <link href="<c:url value="/resources/css/stylesheetsearch.css" />" rel="stylesheet">
+     <link href="<c:url value="/resources/css/Nav.css" />" rel="stylesheet">
     
 </head>
 <body>

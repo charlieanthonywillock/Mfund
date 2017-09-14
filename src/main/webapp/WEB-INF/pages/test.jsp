@@ -1,7 +1,10 @@
 <html>
 <head>
-<meta charset="UTF-8" /><link href="css/Widgets.css" rel="stylesheet" />
+<!--  <meta charset="UTF-8" /><link href="css/Widgets.css" rel="stylesheet" /> -->
 <title></title>
+
+<link href="<c:url value="/resources/css/Widgets.css" />" rel="stylesheet">
+
 </head>
 
 
