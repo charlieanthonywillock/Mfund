@@ -151,7 +151,8 @@ public class PerfListController  {
 	        
             model.addAttribute("perfJSON",strRisk);
 	
-		return "Fund";
+            
+		return "Fundstats";
 
 	}
 	
