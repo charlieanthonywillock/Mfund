@@ -155,12 +155,12 @@
         <table>
             <tr>
                 <td style="padding-right: 20px;">
-                    <img src="images/worldsearch.png" id="SearchImg" /></td>
+                    <img src="resources/images/worldsearch.png" id="SearchImg" /></td>
                 <td>
                     <div style="font-size: 19px; padding-bottom: 6px;">Search Mutual Funds</div>
                     <input class="SearchTxtBox" type="text" id="TxtSearchTerm" /></td>
                 <td style="padding-top: 29px;"><a id="btnSearch" href="#">
-                    <img src="images/btnGo.png" id="Button_Img" /></a></td>
+                    <img src="resources/images/btnGo.png" id="Button_Img" /></a></td>
             </tr>
         </table>
     
