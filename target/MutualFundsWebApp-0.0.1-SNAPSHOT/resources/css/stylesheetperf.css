@@ -7,7 +7,7 @@ html, body, table, td, th, h1, h2, h3, h4, h5, h6, p, a, span, div
 
 body
 {
-    background:url("resources/images/BGGradient.jpg") repeat-x top left;
+    background:url("/resources/images/BGGradient.jpg") repeat-x top left;
 }
 
 img
@@ -106,7 +106,7 @@ table.StdDataGrid th, table.StandardDataGrid th a
 table.StdDataGrid th, table.StandardDataGrid td.Header
 {
     font-weight:bold;
-    background:url("resources/images/FundSearchBGHr1.jpg") repeat right top;
+    background:url("/resources/images/FundSearchBGHr1.jpg") repeat right top;
     border:1px solid #cacce7; 
     border-collapse:collapse;
     height:25px;
