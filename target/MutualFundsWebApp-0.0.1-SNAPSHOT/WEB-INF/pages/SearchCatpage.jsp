@@ -3,9 +3,9 @@
 <head>
 
 
+<link rel="stylesheet" href="<c:url value="/resources/css/Widgets.css" />">
 
 
- <link href="<c:url value="/resources/css/Widgets.css" />" rel="stylesheet">
  
  
 
