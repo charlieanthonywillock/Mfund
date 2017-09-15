@@ -1,13 +1,11 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 
 <title></title>
 
 
-<spring:url value="/resources/css/Widgets.css" var="widgeCss" />
-<link href="${widgeCss}" rel="stylesheet" />
-
+<link rel="stylesheet" href="<c:url value="/resources/css/Widgets.css" />">
 
 
 </head>
