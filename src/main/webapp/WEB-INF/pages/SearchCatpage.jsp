@@ -16,6 +16,27 @@
 <body>
 
 
+<script type="text/javascript" src='resources/js/jquery-1.7.2.min.js'></script>
+  <script type="text/javascript" src='resources/js/jquery.popupWindow.js'></script>
+ <script type="text/javascript">
+     $(function () {
+         $('.RiskPopup').popupWindow({
+             width: 860,
+             height: 800,
+             centerScreen: 1,
+             scrollbars: 1,
+             resizable: 1
+         });
+     });
+            </script>
+
+
+
+
+
+
+
+
 <form name="aspnetForm" method="get" action="https://nfunds.herokuapp.com/spring/rest/SelectCatFunds" id="aspnetForm">
 
 <script type="text/javascript">
@@ -153,6 +174,8 @@ function getJson(){
    table.setAttribute('style','border-collapse:collapse');
    table.setAttribute('border','1');
    var a = document.createElement('a');
+   a.setAttribute("class"," RiskPopup");
+  
  //  var ahref = document.createElement('a');
    var r;
    var c;
