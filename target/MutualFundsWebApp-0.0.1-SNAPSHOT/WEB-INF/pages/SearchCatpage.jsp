@@ -16,8 +16,9 @@
 <body>
 
 
-<script type="text/javascript" src='resources/js/jquery-1.7.2.min.js'></script>
-  <script type="text/javascript" src='resources/js/jquery.popupWindow.js'></script>
+<script type="text/javascript" src="<c:url value="resources/js/jquery-1.7.2.min.js" />"> </script>
+<script type="text/javascript" src="<c:url value="resources/js/jquery.popupWindow.js" />"> </script>
+
  <script type="text/javascript">
      $(function () {
          $('.RiskPopup').popupWindow({
@@ -174,7 +175,7 @@ function getJson(){
    table.setAttribute('style','border-collapse:collapse');
    table.setAttribute('border','1');
    var a = document.createElement('a');
-   a.setAttribute("class"," RiskPopup");
+   a.setAttribute("class","RiskPopup");
   
  //  var ahref = document.createElement('a');
    var r;
