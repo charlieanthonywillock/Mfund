@@ -17,6 +17,8 @@
 
 <img src="https://nfunds.herokuapp.com/chart_cagr">
 
+<img src="https://nfunds.herokuapp.com/chartAssetAlloc">
+
 
 
 <script type="text/javascript" src="<c:url value="resources/js/jquery-1.7.2.min.js" />"> </script>
