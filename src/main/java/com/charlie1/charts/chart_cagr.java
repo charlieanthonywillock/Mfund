@@ -74,7 +74,7 @@ public class chart_cagr extends HttpServlet {
 	    chart.setBackgroundPaint(Color.white);
 	    XYPlot plot = chart.getXYPlot();
 	    plot.setRenderer(new XYDifferenceRenderer(Color.green, Color.red, false));
-	    plot.setBackgroundPaint(Color.lightGray);
+	    plot.setBackgroundPaint(Color.WHITE);
 	    plot.setDomainGridlinePaint(Color.white);
 	    plot.setRangeGridlinePaint(Color.white);
 	  //  plot.setAxisOffset(new Spacer(Spacer.ABSOLUTE, 5.0, 5.0, 5.0, 5.0));
