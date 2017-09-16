@@ -15,6 +15,10 @@
 
 <img src="https://nfunds.herokuapp.com/cagr">
 
+<img src="https://nfunds.herokuapp.com/chart_cagr">
+
+
+
 <script type="text/javascript" src="<c:url value="resources/js/jquery-1.7.2.min.js" />"> </script>
 <script type="text/javascript" src="<c:url value="resources/js/jquery.popupWindow.js" />"> </script>
 

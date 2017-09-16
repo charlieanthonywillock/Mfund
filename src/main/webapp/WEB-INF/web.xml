@@ -31,4 +31,14 @@
     <servlet-name>cagr</servlet-name>
     <url-pattern>/cagr</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>chart_cagr</display-name>
+    <servlet-name>chart_cagr</servlet-name>
+    <servlet-class>com.charlie1.charts.chart_cagr</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>chart_cagr</servlet-name>
+    <url-pattern>/chart_cagr</url-pattern>
+  </servlet-mapping>
 </web-app>
