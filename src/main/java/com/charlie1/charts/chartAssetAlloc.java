@@ -1,5 +1,6 @@
 package com.charlie1.charts;
 
+import java.awt.Color;
 import java.io.IOException;
 import java.io.OutputStream;
 
@@ -45,7 +46,7 @@ public class chartAssetAlloc extends HttpServlet {
 	      dataset.setValue( "Nokia Lumia" , new Double( 10 ) ); 
 
 	      JFreeChart chart = ChartFactory.createPieChart3D( 
-	         "Mobile Sales" ,  // chart title                   
+	         "" ,  // chart title                   
 	         dataset ,         // data 
 	         true ,            // include legend                   
 	         true, 
@@ -53,7 +54,9 @@ public class chartAssetAlloc extends HttpServlet {
 
 	      final PiePlot3D plot = ( PiePlot3D ) chart.getPlot( );             
 	      plot.setStartAngle( 270 );             
-	      plot.setForegroundAlpha( 0.60f );             
+	      plot.setForegroundAlpha( 0.60f ); 
+	      plot.setBackgroundPaint(Color.WHITE);
+	      plot.setLabelBackgroundPaint(Color.WHITE);
 	      plot.setInteriorGap( 0.02 );             
 	      int width = 250;   /* Width of the image */             
 	      int height = 250;  /* Height of the image */                             
