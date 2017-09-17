@@ -55,8 +55,8 @@ public class chartAssetAlloc extends HttpServlet {
 	      plot.setStartAngle( 270 );             
 	      plot.setForegroundAlpha( 0.60f );             
 	      plot.setInteriorGap( 0.02 );             
-	      int width = 640;   /* Width of the image */             
-	      int height = 480;  /* Height of the image */                             
+	      int width = 250;   /* Width of the image */             
+	      int height = 250;  /* Height of the image */                             
 	      //File pieChart3D = new File( "pie_Chart3D.jpeg" );                           
 	      ChartUtilities.writeChartAsPNG( out , chart , width , height );   
 		

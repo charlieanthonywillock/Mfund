@@ -246,6 +246,75 @@
 
             <!--Allocations start--->
             
+            <table>
+            
+            <tr>
+            
+           <td style="width: 270px; text-align: center;">
+           
+            <div class="FundStatsCat">  Asset </div>
+            
+            <div style="border-right: 1px solid #cacce7;"> <img src="https://nfunds.herokuapp.com/chartAssetAlloc"> </div>
+           
+           
+           
+                   
+            </td>
+            
+            
+            
+            
+            
+            <td style="width: 265px; text-align: center;">
+            
+             <div class="FundStatsCat"> Sector </div>
+             
+              <div style="border-right: 1px solid #cacce7;"> <img src="https://nfunds.herokuapp.com/chartAssetAlloc"> </div>
+            
+            
+            
+            
+            </td>
+            
+            
+            
+            
+            <td style="text-align: center;">
+            
+             <div class="FundStatsCat"> Geographic    </div>
+            
+            <div>
+            
+            
+            </div> <img src="https://nfunds.herokuapp.com/chartAssetAlloc">      <div>
+            
+            
+            
+            
+            
+            
+            </td>
+           </tr>
+            
+            
+            
+            </table>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
            
 	
