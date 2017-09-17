@@ -64,7 +64,7 @@ public class chart_cagr extends HttpServlet {
 	    dataset.addSeries(series2);
 
 	    JFreeChart chart = ChartFactory.createTimeSeriesChart(
-	        "Synthese",
+	        "",
 	        "Time", "Value",
 	        dataset,
 	        false,  // legend
