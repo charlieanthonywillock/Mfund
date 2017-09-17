@@ -125,7 +125,7 @@
                                 <span style="font-size: 9px; font-weight: normal;">
                                     <span id="lblPerformanceDate1">(As of&nbsp;July 31, 2017)</span></span></div>
                             <div>
-                                <img id="chrtGrowth" src="/MutualFunds/Chart" alt="" style="border-width:0px;" />
+                                <img src="https://nfunds.herokuapp.com/chart_cagr">
                                 
                             </div>
                         </td>
