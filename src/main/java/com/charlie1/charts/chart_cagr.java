@@ -85,7 +85,7 @@ public class chart_cagr extends HttpServlet {
 	    plot.setDomainAxis(domainAxis);
 	    plot.setForegroundAlpha(0.5f);
 	    response.setContentType("image/png");
-	    ChartUtilities.writeChartAsPNG(out,chart,400,300); 
+	    ChartUtilities.writeChartAsPNG(out,chart,450,300); 
 		
 		
 		

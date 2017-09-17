@@ -58,7 +58,7 @@ public class chartAssetAlloc extends HttpServlet {
 	      plot.setBackgroundPaint(Color.WHITE);
 	      plot.setLabelBackgroundPaint(Color.WHITE);
 	      plot.setInteriorGap( 0.02 );             
-	      int width = 300;   /* Width of the image */             
+	      int width = 350;   /* Width of the image */             
 	      int height = 250;  /* Height of the image */                             
 	      //File pieChart3D = new File( "pie_Chart3D.jpeg" );                           
 	      ChartUtilities.writeChartAsPNG( out , chart , width , height );   
