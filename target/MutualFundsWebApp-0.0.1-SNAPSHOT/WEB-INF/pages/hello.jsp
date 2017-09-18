@@ -267,7 +267,7 @@
  _div.appendChild(table);
    
    
-   
+   }
    
    
   // var symcat  = ${perfJSON};
