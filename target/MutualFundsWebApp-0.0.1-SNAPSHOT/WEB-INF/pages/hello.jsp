@@ -26,7 +26,7 @@
 
 
 
-<script type="text/javascript" src="<c:url value="resources/js/jquery-1.7.2.min.js" />"> </script>
+<script type="text/javascript" src="<c:url value="resources/js/jquery.1.10.2.min.js" />"> </script>
 <script type="text/javascript" src="<c:url value="resources/js/jquery.popupWindow.js" />"> </script>
 <script type="text/javascript" src="<c:url value="resources/js/main.js" />"> </script>
 
