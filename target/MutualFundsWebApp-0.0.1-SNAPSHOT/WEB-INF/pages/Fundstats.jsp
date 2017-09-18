@@ -77,10 +77,10 @@
                                 <tr>
                                     <td class="StatsPerfHorizLbl1" style="height: 30px; vertical-align: top;">
                                         Inception Return<br />
-                                        <span id="PerformanceStartDate" class="InceptionDate">(12/13/2013)</span>
+                                        <span id="PerformanceStartDate" class="InceptionDate">( ${p_inceptdate}</span>
                                     </td>
                                     <td class="StatsPerfHorizRES1" style="height: 30px; vertical-align: top; white-space: nowrap;">
-                                        <span id="InceptionReturn">0.00 %</span>
+                                        <span id="InceptionReturn"> %</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -88,7 +88,7 @@
                                         YTD Return
                                     </td>
                                     <td class="StatsPerfHorizRES1" style="height: 30px; vertical-align: middle; white-space: nowrap;">
-                                        <span id="YTDReturn">0.00 %</span>
+                                        <span id="YTDReturn">${p_yield} %</span>
                                     </td>
                                 </tr>
                             </table>
@@ -98,7 +98,7 @@
                                 <tr>
                                     <td class="StatsPerfHorizLbl1" style="height: 30px; vertical-align: top;">
                                         NAVPS<br />
-                                        <span id="NavpsDate" class="InceptionDate">${inception}</span>
+                                        <span id="NavpsDate" class="InceptionDate">${p_navps}</span>
                                     </td>
                                     <td class="StatsPerfHorizRES1" style="height: 30px; vertical-align: top;">
                                         <span id="ctl00_MainContent_txtNavps">$0.00</span>
@@ -136,7 +136,7 @@
                                         MER
                                     </td>
                                     <td class="StatsPerfHorizRES2">
-                                        <span id="txtMER">0.00 %</span>
+                                        <span id="txtMER">${p_mer} %</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -144,7 +144,7 @@
                                         Assets ($mil)
                                     </td>
                                     <td class="StatsPerfHorizRES2">
-                                        <span id="txtAssets">$0.00</span>
+                                        <span id="txtAssets">$ ${p_assets}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -152,7 +152,7 @@
                                         Rank (1Yr)
                                     </td>
                                     <td class="StatsPerfHorizRES2">
-                                        <span id="txtRank">-</span>
+                                        <span id="txtRank">${p_rank}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -160,7 +160,7 @@
                                         Std Dev (3Yr)
                                     </td>
                                     <td class="StatsPerfHorizRES2">
-                                        <span id="txtStdDev">00.00 %</span>
+                                        <span id="txtStdDev">${p_stddev} %</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -176,7 +176,7 @@
                                         RRSP Eligibility
                                     </td>
                                     <td class="StatsPerfHorizRES2">
-                                        <span id="txtRRSP">Yes</span>
+                                        <span id="txtRRSP">${p_rrspel}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -184,7 +184,7 @@
                                         Load
                                     </td>
                                     <td class="StatsPerfHorizRES2">
-                                        <span id="txtLoad">No Load</span>
+                                        <span id="txtLoad">${p_load}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -192,7 +192,7 @@
                                         Max Front End
                                     </td>
                                     <td class="StatsPerfHorizRES2">
-                                        <span id="txtFeesFront">-</span>
+                                        <span id="txtFeesFront">${p_maxfrontend}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -200,7 +200,7 @@
                                         Max Back End
                                     </td>
                                     <td class="StatsPerfHorizRES2">
-                                        <span id="txtFeesBack">-</span>
+                                        <span id="txtFeesBack">${p_maxbackend}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -208,7 +208,7 @@
                                         Sales Status
                                     </td>
                                     <td class="StatsPerfHorizRES2">
-                                        <span id="txtSalesStatus">Open</span>
+                                        <span id="txtSalesStatus">${p_salesopen}</span>
                                     </td>
                                 </tr>
                             </table>
