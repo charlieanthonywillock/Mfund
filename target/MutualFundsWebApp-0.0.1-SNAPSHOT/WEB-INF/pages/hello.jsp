@@ -6,7 +6,7 @@
 
 
 <link rel="stylesheet" href="<c:url value="/resources/css/main.css" />">
-
+<link rel="stylesheet" href="<c:url value="/resources/css/stylesheetperf.css" />">
 
 
 
@@ -123,38 +123,37 @@
    alert("Section");
    
    var table = document.createElement('table');
-  // table.setAttribute('class','StdDataGrid'); 
-   table.setAttribute('class','FundataWidget');
+   table.setAttribute('class','StdDataGrid');
    table.setAttribute('id','tablejson');
    table.setAttribute('style','border-collapse:collapse');
    table.setAttribute('border','1');
    var a = document.createElement('a');
-   a.setAttribute("class","RiskPopup");
-  
  //  var ahref = document.createElement('a');
    var r;
    var c;
    var rowcnt=0;
    var colcnt=0;
    var cnt=0;
+   var h;
+   var hc;
 
    
-   function factoryTable(jsonarray,skey) { 
+   function factoryTable(jsonarray,skey,shref) { 
    
- 
+  
 		for(var key in jsonarray) {
 		
 		
 			if(key == skey ){
    
   
-				for(var i=0; i < jsonarray[key].length;i++ ){
+				for(var i=0; i < data[key].length;i++ ){
 				
-				alert("inside datakey");
+				
 				
 					
 					var cntjson=0;
-					var rows = jsonarray[key].length;
+					var rows = data[key].length;
 					var cntcols=0;
 					var bool = true;
 					
@@ -163,11 +162,10 @@
 						for(var i=0; i < rows; i++){
      
 	 
-	                     	var col = jsonarray[key][i];
+	                     	var col = data[key][i];
 								
 								
 							if(bool){
-								 
 								for(var calc in col){
 								
 								cntcols++
@@ -176,38 +174,26 @@
 								}
 														
 							r = document.createElement('tr');
-							var res = oddOrEven(rowcnt);
-							if(res == "even"){
-							
-									r.setAttribute('class','even');
-									alert("even");
-							}else{
-							
-							r.setAttribute('class','odd');
-									alert("odd");
-							
-							}
-							
+                            h =	document.createElement('tr');						
 						
 						for(var j in col){
-							
-							
 								colcnt++;
-							    var colval = jsonarray[key][i][j];
+							    var colval = data[key][i][j];
 								var hdr = j;
 								
 								alert(hdr+" : " +colval);
 														
 								c = document.createElement('td');
-								c.setAttribute('class','Name');
-								//c.setAttribute("colspan","20");
-								
+								hc = document.createElement('td');
+								c.setAttribute("colspan","20");
+								hc.setAttribute("colspan","20");
 															
 							    var header = document.createElement('th');
-								header.setAttribute("class","left");
+								header.setAttribute("class","center");
 								header.setAttribute("scope","col");
-								//header.setAttribute("colspan","8");
-							//	header.width = "450px";
+								header.setAttribute("colspan","8");
+								
+								header.width = "800px";
 								
 								var colname = "";
 															
@@ -220,10 +206,8 @@
 								var ahref = document.createElement('a');
 								if(colcnt == 1){
 								
-							//	ahref.href = "https://nfunds.herokuapp.com/spring/rest/findbyfunds.aspx?symid="+colval;
-									
-								ahref.href = "https://nfunds.herokuapp.com/spring/rest/SelectFundsByFund/{'Fund':'"+colval+"'}";
-								
+								ahref.href = "https://nfunds.herokuapp.com/spring/rest/findbyfunds.aspx?symid="+colval;
+												
 								txtref = document.createTextNode(colval);
 								ahref.appendChild(txtref);
 								ahref.title = "URL";
@@ -235,13 +219,29 @@
 								
 							  	}
 		    
-								if( cnt < cntcols){ c.appendChild(header); alert("header " + hdr); }
+								if( cnt < cntcols){ hc.appendChild(header); h.appendChild(hc); alert("header " + hdr);  }
 									
 									if (colcnt == 1){c.appendChild(ahref);}else{ c.appendChild(coltext);   }
 									
 								
 									r.appendChild(c);
+									
 										cnt++;
+										
+										if(cnt == (cntcols)){
+										
+										alert("create Row");
+										
+										
+										table.appendChild(h);
+												
+												
+										
+										
+										}
+										
+										
+										
 									
 						}
 					
@@ -269,14 +269,10 @@
    
    }
    
-   
-  // var symcat  = ${perfJSON};
-   factoryTable(data,"tennis");
-  // factoryTable(data,"tennis");
+   factoryTable(data,"basketball","ProductName");
     
    
    </script>
-
 
 
 
