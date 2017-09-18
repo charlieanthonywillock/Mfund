@@ -77,7 +77,7 @@
                                 <tr>
                                     <td class="StatsPerfHorizLbl1" style="height: 30px; vertical-align: top;">
                                         Inception Return<br />
-                                        <span id="PerformanceStartDate" class="InceptionDate">( ${p_inceptdate}</span>
+                                        <span id="PerformanceStartDate" class="InceptionDate">( ${p_inceptdate})</span>
                                     </td>
                                     <td class="StatsPerfHorizRES1" style="height: 30px; vertical-align: top; white-space: nowrap;">
                                         <span id="InceptionReturn"> %</span>
@@ -98,10 +98,10 @@
                                 <tr>
                                     <td class="StatsPerfHorizLbl1" style="height: 30px; vertical-align: top;">
                                         NAVPS<br />
-                                        <span id="NavpsDate" class="InceptionDate">${p_navps}</span>
+                                        <span id="NavpsDate" class="InceptionDate"></span>
                                     </td>
                                     <td class="StatsPerfHorizRES1" style="height: 30px; vertical-align: top;">
-                                        <span id="ctl00_MainContent_txtNavps">$0.00</span>
+                                        <span id="ctl00_MainContent_txtNavps">${p_navps}</span>
                                     </td>
                                 </tr>
                                 <tr>

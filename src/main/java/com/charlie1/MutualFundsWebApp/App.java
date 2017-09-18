@@ -71,25 +71,30 @@ public class App
      */
         
       
-  //      String fundtmp = "{'Fund': 'PGMIX'}";
-  //      JSONObject jsonObj = new JSONObject(fundtmp);
-  //      String fund = jsonObj.getString("Fund");
-  //      selectFundsByFund thefund = new selectFundsByFund(fund);
+        String fundtmp = "{'Fund': 'PGMIX'}";
+        JSONObject jsonObj = new JSONObject(fundtmp);
+        String fund = jsonObj.getString("Fund");
+        selectFundsByFund thefund = new selectFundsByFund(fund);
         
-  //      String strRisk = thefund.getjsonStr();
+        String strRisk = thefund.getjsonStr();
+        
+        String dummy ="";
+        
        
-      
-  /*      try {
+      /*
+     //   try {
         	
         	
         	
         
         
         
-   //     JSONObject jsonObject = new JSONObject(strRisk);
+    //    JSONObject jsonObject = new JSONObject(strRisk);
         
         
-    //    JSONArray ja_dataPerformance = jsonObject.getJSONArray("PerformanceCalander");
+     //   JSONArray ja_dataPerformance = jsonObject.getJSONArray("PerformanceCalander");
+        
+     //   JSONArray ja_dataHoldings = jsonObject.getJSONArray("Holdings");
         
    
         
