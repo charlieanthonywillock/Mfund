@@ -16,7 +16,7 @@ import com.charlie1.funds.model.selectFundsAll;
 import com.charlie1.funds.model.selectFundsByRisk;
 import com.charlie1.funds.model.selectRisk;
 import com.charlie1.funds.model.selectFundsByFund;
-
+import java.util.Date;
 
 
 /**
@@ -28,7 +28,7 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-        
+       /* 
         String name = "{'risk1': '1', 'risk2': '4'}";
         
         
@@ -51,7 +51,7 @@ public class App
     		
     	}
         
-    	
+    	*/
   //  	JSONObject jsonObj = new JSONObject(name);
   //      String risk1 = jsonObj.getString("risk1");
   //      String risk2 = jsonObj.getString("risk2");
@@ -70,28 +70,125 @@ public class App
         String strRisk = risk.getjsonStr();
      */
         
-    /*  
-        String fundtmp = "{'Fund': 'PGMIX'}";
-        JSONObject jsonObj = new JSONObject(fundtmp);
-        String fund = jsonObj.getString("Fund");
-        selectFundsByFund thefund = new selectFundsByFund(fund);
+      
+  //      String fundtmp = "{'Fund': 'PGMIX'}";
+  //      JSONObject jsonObj = new JSONObject(fundtmp);
+  //      String fund = jsonObj.getString("Fund");
+  //      selectFundsByFund thefund = new selectFundsByFund(fund);
         
-        String strRisk = thefund.getjsonStr();
-     */   
-    /*    
+  //      String strRisk = thefund.getjsonStr();
+       
+      
+  /*      try {
+        	
+        	
+        	
         
-        JSONObject jsonObject = new JSONObject(strRisk);
         
         
-        JSONArray ja_dataPerformance = jsonObject.getJSONArray("Performance");
-
-
+   //     JSONObject jsonObject = new JSONObject(strRisk);
+        
+        
+    //    JSONArray ja_dataPerformance = jsonObject.getJSONArray("PerformanceCalander");
+        
+   
+        
+       // return "{Fund:" + Fund + ", Asset:" + Asset + ", Count:" + Count + ", Percent:" + Percent + "}";
 
 
      //   for (int i = 0; i < ja_dataPerformance.length(); i++) {
+          
+          
+    //	return "{Symbol:" + Symbol + ", Date:" + Date + ", NavPS:" + NavPS + "}";
+        
+        
+    
+        
+          JSONObject rootObj = ja_dataPerformance.getJSONObject(0);
+         
+          String PCDate = rootObj.getString("Date");
+          String PCSymbol = rootObj.getString("Symbol");
+          Double PCNavPS = rootObj.getDouble("NavPS");
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
 
-            JSONObject rootObj = ja_dataPerformance.getJSONObject(0);
-
+          String GFund = rootObj.getString("Fund");
+          String GGeograph = rootObj.getString("Geograph");
+          int GCount = rootObj.getInt("Count");
+          int GPercent = rootObj.getInt("Percent");
+          
+          
+          
+          
+ 
+          
+          
+          String SFund = rootObj.getString("Fund");
+          String SSector = rootObj.getString("Sector");
+          int SCount = rootObj.getInt("Count");
+          int SPercent = rootObj.getInt("Percent");
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          String AFund = rootObj.getString("Fund");
+          String AAsset = rootObj.getString("Asset");
+          int ACount = rootObj.getInt("Count");
+          int APercent = rootObj.getInt("Percent");
+          
+          
+          
+           
+       
+          String RReturns = rootObj.getString("Return");
+          Double ROneMonth = rootObj.getDouble("OneMonth");
+          Double RThreeMonth = rootObj.getDouble("ThreeMonth");
+          Double RSixMonth = rootObj.getDouble("SixMonth");
+          Double RYTD = rootObj.getDouble("YTD");
+          Double ROneYear = rootObj.getDouble("OneYear");
+          Double RThreeYear = rootObj.getDouble("ThreeYear");
+          Double RFiveYear = rootObj.getDouble("FiveYear");
+          Double RTenYear = rootObj.getDouble("TenYear");
+          
+          
+          
+                
+          String HFundSymID = rootObj.getString("FundSymID");
+          String HSymID = rootObj.getString("SymID");
+          String HName = rootObj.getString("Name");
+          String HAsset = rootObj.getString("Asset");
+          String HSector = rootObj.getString("Sector");
+          String HGeograph = rootObj.getString("Geograph");
+          Double HPercent = rootObj.getDouble("Percentage");
+          
+          
+          
+            /**********************************************************/
+/*
             String sym = rootObj.getString("symID");
             String inceptdate = rootObj.getString("inceptionDate");
             double mer = rootObj.getDouble("mer");
@@ -119,9 +216,16 @@ public class App
 
         
     
+        } catch(Exception ex) {
+        	
+        	
+        	
+        	ex.printStackTrace();
+        	
+        	
+        }
         
-        
-       */
+       
         
         
  //   String test = "{ Performance : {SymID :BTTRX, InceptionDate : 1998-02-15, MER=1.6, Assets=247.0, Rank=1.0, MstarRating=5.0, StdDev=16.0, VolatileRank=2.0, MstarRisk=3.0, Alpha=0.0, Beta=0.0, Rsquared=0.0, RRSPEligibility=yes, Load=no load, MaxBackEnd=0.0, MaxFrontEnd=0.0, SaleOpen=open, NavPS=99.0, NetAsset=0.0, Yield=4.2, Dividend=2.0, Managers=Robert Gahagan, Fees=0.7, FundName=American Century Zero Coupon 2025 Inv]}";
@@ -136,12 +240,7 @@ public class App
         
         
         
-        
-        
-        
-        
-        /*
-        
+            
         JSONObject jsonObj = new JSONObject(cat);
         String risk1 = jsonObj.getString("risk1");
         String risk2 = jsonObj.getString("risk2");
@@ -285,10 +384,10 @@ public class App
         
         jsonstr += footer;
         
-        
+      */  
        
         
-        */
+        
         
         /*
     	String sym ="";
@@ -391,35 +490,35 @@ public class App
         strRisk = jsonstr; 
         
         
-        */
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
         
+    	
+    	*/
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+           
         
           
     

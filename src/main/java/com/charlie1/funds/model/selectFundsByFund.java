@@ -68,7 +68,7 @@ public class selectFundsByFund {
 	        if (ReturnsData.equals(""))
 	        {
 
-	            ReturnsData = "{'Return': '-','OneMonth' : '0','ThreeMonth': '0', 'SixMonth': '0','ThreeMonth': '0' ,'SixMonth': '0','YTD': '0','OneYear': '0','ThreeYear' : '0','FiveYear' : '0','TenYear' : '0'}";
+	            ReturnsData = "{'Return': '-','OneMonth' : '0','ThreeMonth': '0', 'SixMonth': '0','YTD': '0','OneYear': '0','ThreeYear' : '0','FiveYear' : '0','TenYear' : '0'}";
 
 	        }
 	        else
@@ -314,7 +314,7 @@ public class selectFundsByFund {
 
 
 
-
+/*
 
 
 	//        jsonstr = "{Returns : [";
@@ -340,8 +340,74 @@ public class selectFundsByFund {
 	//        jsonstr += "SpinnerIDX: [";
 	//        jsonstr += SpinnerIdx + "]}";
 
-	
+*/	
 		
+	        
+	        
+ 	        jsonstr += "{\"Returns\": [";
+	        jsonstr += ReturnsData + "],";
+	        jsonstr += "\"Holdings\": [";	
+	        jsonstr += HoldingsData + "],";
+	        jsonstr += "\"Performance\": [";
+	        jsonstr += PerformanceData + "],";
+	        
+	        
+	        
+	//        jsonstr += "{\"Symbols\": [";
+	//        jsonstr += SymbolsData + "]}";
+	        
+	        jsonstr += "\"AssetChart\": [";
+	        jsonstr += AssetData + "],";		
+	        jsonstr += "\"SectorChart\": [";
+	        jsonstr += SectorData + "],";
+	        jsonstr += "\"GeographChart\": [";
+	        jsonstr += GeographData + "],";
+	        jsonstr += "\"PerformanceCalander\": [";
+	        jsonstr += PerformanceDataCalander + "],";
+	        jsonstr += "\"PerformanceCalanderIDX\": [";
+	        jsonstr += PerformanceIDXCalander + "]}";
+	        
+	        /************************************************************/
+	        
+//	        jsonstr = "{Returns : [";
+	    	//        jsonstr += ReturnsData;
+	    	//        jsonstr += "],";
+	    	//        jsonstr += "Holdings: [";
+	    	//        jsonstr += HoldingsData + "],";
+	 //   	        jsonstr += "{\"Performance\": [";
+	 //   	        jsonstr += PerformanceData + "]}";
+	    	//        jsonstr += PerformanceData + "],";
+	    	//        jsonstr += "Symbols: [";
+	    	//        jsonstr += SymbolsData + "],";
+	    	//        jsonstr += "AssetChart: [";
+	    	//        jsonstr += AssetData + "],";
+	    	//        jsonstr += "SectorChart: [";
+	    	//        jsonstr += SectorData + "],";
+	    	//        jsonstr += "GeographChart: [";
+	    	//        jsonstr += GeographData + "],";                                
+	    	//        jsonstr += "PerformanceCalander: [";
+	    	//        jsonstr += PerformanceDataCalander +"],";
+	    	//        jsonstr += "PerformanceCalanderIDX: [";
+	    	//        jsonstr += PerformanceIDXCalander + "],";
+	    	//        jsonstr += "SpinnerIDX: [";
+	    	//        jsonstr += SpinnerIdx + "]}";
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
 		
 	}
 	

@@ -48,11 +48,11 @@
     </div>
 
     <div style="clear:both;">
-        <h1 class="StatsHeader" style="float:left;">${FundID}</h1>
+        <h1 class="StatsHeader" style="float:left;">${p_symid}</h1>
         <div style="float:right;padding-top:5px;">
             
         </div>
-        <div style="clear:both;padding-bottom:5px;">${Description}</div>
+        <div style="clear:both;padding-bottom:5px;">${p_fullName}</div>
     </div>
 
     <div id="MutualfundHeader" style="float:left;">

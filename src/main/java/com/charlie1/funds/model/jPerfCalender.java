@@ -41,7 +41,7 @@ public class jPerfCalender {
 
 	@Override
 	public String toString() {
-		return "[Symbol=" + Symbol + ", Date=" + Date + ", NavPS=" + NavPS + "]";
+		return "{Symbol:" + Symbol + ", Date:" + Date + ", NavPS:" + NavPS + "}";
 	}
      
      
