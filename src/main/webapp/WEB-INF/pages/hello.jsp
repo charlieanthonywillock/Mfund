@@ -267,11 +267,11 @@
  _div.appendChild(table);
    
    
-   }
    
    
-   var symcat  = ${perfJSON};
-   factoryTable(symcat,"Performance");
+   
+  // var symcat  = ${perfJSON};
+   factoryTable(data,"tennis");
   // factoryTable(data,"tennis");
     
    
