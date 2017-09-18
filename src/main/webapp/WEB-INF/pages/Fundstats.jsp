@@ -57,7 +57,7 @@
 
     <div id="MutualfundHeader" style="float:left;">
 		
-        <img id="MutualfundImg" src="images/gif.gif" align="bottom" style="border-width:0px;" />
+        <img id="MutualfundImg" src="/resources/images/charlieone.png" align="bottom" style="border-width:0px;" />
     
 	</div>
 
