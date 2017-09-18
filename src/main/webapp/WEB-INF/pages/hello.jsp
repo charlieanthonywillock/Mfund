@@ -22,7 +22,7 @@
 
 <div id="getTable" class="BorderCurve"></div>
 
-
+<div>${perfJSON} </div>
 
 
 
