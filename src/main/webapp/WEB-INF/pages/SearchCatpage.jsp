@@ -297,7 +297,7 @@ function getJson(){
 										if(cnt == (cntcols)){
 											
 											table.appendChild(h);
-									
+										}
 						}
 					
 						colcnt=0;
