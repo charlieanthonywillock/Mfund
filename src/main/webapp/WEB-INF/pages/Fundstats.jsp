@@ -325,31 +325,7 @@
                     <span id="lblTopTenHolding"></span></span></div>
             <div class="FundTopTen">
                 <div>
-		<table class="StdDataGrid" cellspacing="0" rules="all" border="1" id="TopTenHoldings" style="border-collapse:collapse;">
-			<tr>
-				<th scope="col">Name</th><th class="center" scope="col">Asset</th><th class="center" scope="col">Sector</th><th class="center" scope="col">Geographic</th><th class="center" scope="col">Percent</th>
-			</tr><tr>
-				<td>JP Poorman &amp; Co</td><td>US Equity</td><td>Financial Services</td><td>United States</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Citigang Inc</td><td>US Equity</td><td>Financial Services</td><td>United States</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Bank of Ireland Corp</td><td>US Equity</td><td>Financial Services</td><td>United States</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Goldman Suchs Group Inc</td><td>US Equity</td><td>Financial Services</td><td>United States</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Barclays PLC - ADR</td><td>International Equity</td><td>Financial Services</td><td>European Union</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Standard Chartered PLC</td><td>International Equity</td><td>Financial Services</td><td>European Union</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Royal Bank of Scotland Group PLC - ADR</td><td>International Equity</td><td>Financial Services</td><td>European Union</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>ING Groep NV - ADR</td><td>International Equity</td><td>Financial Services</td><td>European Union</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>State Street Corp</td><td>US Equity</td><td>Financial Services</td><td>United States</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Canadian Dollar</td><td>Cash and Equivalents</td><td>Cash and Cash Equivalent</td><td>Canada</td><td align="right">0.00%</td>
-			</tr>
-		</table>
+		<div id="getTableHoldings" class="tester"></div>
 	</div>
                 
                 <input type="hidden" name="FundID" id="FundID" value="" />
@@ -702,6 +678,182 @@
         </table>
     </div>
 </form>
+
+
+
+   <script>
+   
+   alert("Section");
+   
+   var table = document.createElement('table');
+   table.setAttribute('class','StdDataGrid');
+   table.setAttribute('id','tablejson');
+   table.setAttribute('style','border-collapse:collapse');
+   table.setAttribute('border','1');
+   var a = document.createElement('a');
+ //  var ahref = document.createElement('a');
+   var r;
+   var c;
+   var rowcnt=0;
+   var colcnt=0;
+   var cnt=0;
+   var h;
+   var hc;
+
+   
+   function factoryTable(jsonarray,skey) { 
+   
+  
+		for(var key in jsonarray) {
+		
+		
+			if(key == skey ){
+   
+  
+				for(var i=0; i < data[key].length;i++ ){
+				
+				
+				
+					
+					var cntjson=0;
+					var rows = data[key].length;
+					var cntcols=0;
+					var bool = true;
+					
+					alert("Total Records "+rows);
+					
+						for(var i=0; i < rows; i++){
+     
+	 
+	                     	var col = data[key][i];
+								
+								
+							if(bool){
+								for(var calc in col){
+								
+								cntcols++
+								}
+								bool = false;
+								}
+														
+							r = document.createElement('tr');
+                            h =	document.createElement('tr');						
+						
+						for(var j in col){
+								colcnt++;
+							    var colval = data[key][i][j];
+								var hdr = j;
+								
+								alert(hdr+" : " +colval);
+														
+								c = document.createElement('td');
+								hc = document.createElement('td');
+								c.setAttribute("colspan","20");
+								hc.setAttribute("colspan","20");
+															
+							    var header = document.createElement('th');
+								header.setAttribute("class","center");
+								header.setAttribute("scope","col");
+								header.setAttribute("colspan","8");
+								
+								header.width = "800px";
+								
+								var colname = "";
+															
+								var txthdr = document.createTextNode(hdr);
+								header.appendChild(txthdr);
+								
+						
+								var coltext;
+								var txtref;
+								var ahref = document.createElement('a');
+								if(colcnt == 1){
+								
+								ahref.href = "https://nfunds.herokuapp.com/spring/rest/findbyfunds.aspx?symid="+colval;
+												
+								txtref = document.createTextNode(colval);
+								ahref.appendChild(txtref);
+								ahref.title = "URL";
+						
+								 
+								}else{
+								
+								coltext = document.createTextNode(colval);
+								
+							  	}
+		    
+								if( cnt < cntcols){ hc.appendChild(header); h.appendChild(hc); alert("header " + hdr);  }
+									
+									if (colcnt == 1){c.appendChild(ahref);}else{ c.appendChild(coltext);   }
+									
+								
+									r.appendChild(c);
+									
+										cnt++;
+										
+										if(cnt == (cntcols)){
+										
+										alert("create Row");
+										
+										
+										table.appendChild(h);
+												
+												
+										
+										
+										}
+										
+										
+										
+									
+						}
+					
+						colcnt=0;
+						rowcnt++;									
+						alert("next record");
+						table.appendChild(r);
+			
+				}
+   
+			}
+		
+		
+		 }
+   
+   }
+   
+      
+ //  document.body.appendChild(table);
+ //  document.body.append(a);
+ 
+ var holdingsdata = ${perfJSON}
+ var _div = document.getElementById("getTableHoldings");
+ _div.appendChild(table);
+   
+   
+   }
+   
+   factoryTable(holdingsdata,"Holdings");
+    
+   
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
 
