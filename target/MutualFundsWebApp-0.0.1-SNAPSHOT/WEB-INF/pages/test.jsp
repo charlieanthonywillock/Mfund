@@ -292,7 +292,7 @@ function getJson(){
 											
 										}											}
 									
-						}
+						
 					
 						colcnt=0;
 						rowcnt++;									
