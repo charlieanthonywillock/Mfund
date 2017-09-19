@@ -270,7 +270,8 @@
    
    }
    
-   factoryTable(data,"basketball","ProductName");
+   var hdata = ${strJson}
+   factoryTable(hdata,"Holdings","ProductName");
     
    
    </script>
