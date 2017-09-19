@@ -177,6 +177,8 @@ function getJson(){
    var rowcnt=0;
    var colcnt=0;
    var cnt=0;
+   var h;
+   var hc;
 
    
    function factoryTable(jsonarray,skey) { 
@@ -216,6 +218,7 @@ function getJson(){
 								}
 														
 							r = document.createElement('tr');
+							h =	document.createElement('tr');
 							var res = oddOrEven(rowcnt);
 							if(res == "even"){
 							
@@ -239,6 +242,7 @@ function getJson(){
 								alert(hdr+" : " +colval);
 														
 								c = document.createElement('td');
+								hc = document.createElement('td');
 								c.setAttribute('class','Name');
 								//c.setAttribute("colspan","20");
 								
@@ -275,13 +279,18 @@ function getJson(){
 								
 							  	}
 		    
-								if( cnt < cntcols){ c.appendChild(header); alert("header " + hdr); }
+								if( cnt < cntcols){ hc.appendChild(header); h.appendChild(hc); alert("header " + hdr); }
 									
 									if (colcnt == 1){c.appendChild(ahref);}else{ c.appendChild(coltext);   }
 									
 								
 									r.appendChild(c);
 										cnt++;
+										if(cnt == (cntcols)){
+											
+											table.appendChild(h);
+											
+										}											}
 									
 						}
 					
