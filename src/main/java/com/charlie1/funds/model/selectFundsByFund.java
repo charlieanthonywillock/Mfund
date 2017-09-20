@@ -68,7 +68,7 @@ public class selectFundsByFund {
 	        if (ReturnsData.equals(""))
 	        {
 
-	            ReturnsData = "{'Return': '-','OneMonth' : '0','ThreeMonth': '0', 'SixMonth': '0','YTD': '0','OneYear': '0','ThreeYear' : '0','FiveYear' : '0','TenYear' : '0'}";
+	            ReturnsData = "{\"Return\": \"-\",\"OneMonth\" : \"0\",\"ThreeMonth\": \"0\", \"SixMonth\": \"0\",\"YTD\": \"0\",\"OneYear\": \"0\",\"ThreeYear\" : \"0\",\"FiveYear\" : \"0\",\"TenYear\" : \"0\"}";
 
 	        }
 	        else
@@ -85,7 +85,7 @@ public class selectFundsByFund {
 
 	           
 
-	            HoldingsData = "{'FundSymID': '-','SymID' : '-','Name': '-', 'Asset': '-','Sector': '-' ,'Geograph': '-','Percentage': '0'}";
+	            HoldingsData = "{\"FundSymID\": \"-\",\"SymID\" : \"-\",\"Name\": \"-\", \"Asset\": \"-\",\"Sector\": \"-\" ,\"Geograph\": \"-\",\"Percentage\": \"0\"}";
 
 	        }
 	        else
@@ -106,7 +106,7 @@ public class selectFundsByFund {
 
 	            
 
-	            PerformanceData = "{'symbol': '-','InceptionDate' : '2001-01-01','Mer': '0', 'Asset': '0','Rank': '0' ,'MstarRating': '0','StdDev': '0','VolatileRank': '0','Alpha': '0','Beta': '0','Rsquare': '0','RRSPEligibility': '-','Load': '-','MaxFrontEnd': '0','MaxBackEnd': '0','SalesOpen': '-','NavPs': '0','NetAsset': '0','Yield': '0','Dividend': '0','Managers': '0','Fees': '0','FundName': '0'}";
+	            PerformanceData = "{\"symbol\": \"-\",\"InceptionDate\" : \"2001-01-01\",\"Mer\": \"0\", \"Asset\": \"0\",\"Rank\": \"0\" ,\"MstarRating\": \"0\",\"StdDev\": \"0\",\"VolatileRank\": \"0\",\"Alpha\": \"0\",\"Beta\": \"0\",\"Rsquare\": \"0\",\"RRSPEligibility\": \"-\",\"Load\": \"-\",\"MaxFrontEnd\": \"0\",\"MaxBackEnd\": \"0\",\"SalesOpen\": \"-\",\"NavPs\": \"0\",\"NetAsset\": \"0\",\"Yield\": \"0\",D\"ividend\": \"0\",\"Managers\": \"0\",\"Fees\": \"0\",\"FundName\": \"0\"}";
 
 	        }
 	        else
@@ -127,7 +127,7 @@ public class selectFundsByFund {
 
 
 	           
-	            SymbolsData = "{'symbol': '-','epoch' : '-','open': '-', 'high': '-','low': '-' ,'close': '-','close_adj': '0','volume': '0'}";
+	            SymbolsData = "{\"symbol\": \"-\",\"epoch\" : \"-\",\"open\": \"-\", \"high\": \"-\",\"low\": \"-\" ,\"close\": \"-\",\"close_adj\": \"0\",\"volume\": \"0\"}";
 
 	        
 
@@ -148,7 +148,7 @@ public class selectFundsByFund {
 
 
 
-	            PerformanceDataCalander = "{'Date': '-','Symbol' : '-','NavPS': '-'}";
+	            PerformanceDataCalander = "{\"Date\": \"-\",\"Symbol\" : \"-\",\"NavPS\": \"-\"}";
 
 
 
@@ -168,7 +168,7 @@ public class selectFundsByFund {
 
 
 
-	            PerformanceIDXCalander = "{'Date': '-','Symbol' : '-','NavPS': '-'}";
+	            PerformanceIDXCalander = "{\"Date\": \"-\",\"Symbol\" : \"-\",\"NavPS\": \"-\"}";
 
 
 
@@ -189,7 +189,7 @@ public class selectFundsByFund {
 
 
 
-	            SpinnerIdx = "{'Symbol': '-','FullName' : '-'}";
+	            SpinnerIdx = "{\"Symbol\": \"-\",\"FullName\" : \"-\"}";
 
 
 
@@ -221,7 +221,7 @@ public class selectFundsByFund {
 	            if (Sector.equals(""))
 	            {
 
-	                Sector = "{'Fund': '-','Sector' : '-','Count': '0', 'Percent': '0'}";
+	                Sector = "{\"Fund\": \"-\",\"Sector\" : \"-\",\"Count\": \"0\", \"Percent\": \"0\"}";
 
 	            }
 	            else
@@ -240,7 +240,7 @@ public class selectFundsByFund {
 	            if (Asset.equals(""))
 	            {
 
-	                Asset = "{'Fund': '-','Asset' : '-','Count': '0', 'Percent': '0'}";
+	                Asset = "{\"Fund\": \"-\",\"Asset\" : \"-\",\"Count\": \"0\", \"Percent\": \"0\"}";
 
 	            }
 	            else
@@ -255,7 +255,7 @@ public class selectFundsByFund {
 	            if (Geograph.equals(""))
 	            {
 
-	                Geograph = "{'Fund': '-','Geograph' : '-','Count': '0', 'Percent': '0'}";
+	                Geograph = "{\"Fund\": \"-\",\"Geograph\" : \"-\",\"Count\": \"0\", \"Percent\": \"0\"}";
 
 	            }
 	            else

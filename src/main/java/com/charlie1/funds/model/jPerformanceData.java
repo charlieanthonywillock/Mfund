@@ -348,13 +348,13 @@ return "[SymID=" + SymID + ", InceptionDate=" + InceptionDate + ", MER=" + MER +
 	
 	  @Override
 	  public String toString() {
-	  return "{SymID:" + SymID + ", InceptionDate:" + InceptionDate + ", MER:" + MER + ", Assets:"
-	  	+ Assets + ", Rank:" + Rank + ", MstarRating:" + MstarRating + ", StdDev:" + StdDev + ", VolatileRank:"
-	  	+ VolatileRank + ", MstarRisk:" + MstarRisk + ", Alpha:" + Alpha + ", Beta:" + Beta + ", Rsquared:"
-	  	+ Rsquared + ", RRSPEligibility:" + RRSPEligibility + ", Load:" + Load + ", MaxBackEnd:" + MaxBackEnd
-	  	+ ", MaxFrontEnd:" + MaxFrontEnd + ", SaleOpen:" + SaleOpen + ", NavPS:" + NavPS + ", NetAsset:"
-	  	+ NetAsset + ", Yield:" + Yield + ", Dividend:" + Dividend + ", Managers:" + Managers + ", Fees:" + Fees
-	  	+ ", FundName:" + FundName + "}";
+	  return "{\"SymID\":\"" + SymID + "\", \"InceptionDate\":\"" + InceptionDate + "\", \"MER\":\"" + MER + "\", \"Assets\":\""
+	  	+ Assets + "\", \"Rank\":\"" + Rank + ",\" MstarRating\":\"" + MstarRating + "\", \"StdDev\"" + StdDev + "\", \"VolatileRank\":\""
+	  	+ VolatileRank + "\", \"MstarRisk\":\"" + MstarRisk + ", \"Alpha\":\"" + Alpha + "\", \"Beta:" + Beta + "\", \"Rsquared\":\""
+	  	+ Rsquared + "\", \"RRSPEligibility\":\"" + RRSPEligibility + "\", \"Load\":\"" + Load + ", \"MaxBackEnd\":\"" + MaxBackEnd
+	  	+ "\", \"MaxFrontEnd\":" + MaxFrontEnd + "\", \"SaleOpen\":\"" + SaleOpen + ", \"NavPS\":\"" + NavPS + "\", \"NetAsset\":\""
+	  	+ NetAsset + "\", \"Yield\":\"" + Yield + "\", \"Dividend\":\"" + Dividend + "\", \"Managers\":\"" + Managers + "\", \"Fees\":\"" + Fees
+	  	+ "\", \"FundName\":\"" + FundName + "\"}";
 	  }
 	
 	

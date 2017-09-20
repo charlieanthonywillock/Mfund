@@ -70,7 +70,7 @@ public class App
         String strRisk = risk.getjsonStr();
      */
         
-      
+  /*    
         String fundtmp = "{'Fund': 'PGMIX'}";
         JSONObject jsonObj = new JSONObject(fundtmp);
         String fund = jsonObj.getString("Fund");
@@ -81,20 +81,20 @@ public class App
         String dummy ="";
         
        
-      /*
-     //   try {
+     
+        try {
         	
         	
         	
         
         
         
-    //    JSONObject jsonObject = new JSONObject(strRisk);
+        JSONObject jsonObject = new JSONObject(strRisk);
         
         
-     //   JSONArray ja_dataPerformance = jsonObject.getJSONArray("PerformanceCalander");
+        JSONArray ja_dataPerformance = jsonObject.getJSONArray("PerformanceCalander");
         
-     //   JSONArray ja_dataHoldings = jsonObject.getJSONArray("Holdings");
+        JSONArray ja_dataHoldings = jsonObject.getJSONArray("Holdings");
         
    
         
@@ -105,6 +105,96 @@ public class App
           
           
     //	return "{Symbol:" + Symbol + ", Date:" + Date + ", NavPS:" + NavPS + "}";
+        
+        
+        
+        JSONObject rootObjholding = ja_dataHoldings.getJSONObject(0);
+        
+        
+        
+        String h_FundSymID="";
+        String h_SymID = "";
+        String h_Name = "";
+        String h_Asset = "";
+        String h_Sector = "";
+        String h_Geograph = "";
+        double h_Percent = 0;
+        
+        
+        
+        h_FundSymID = rootObjholding.getString("FundSymID");
+        h_SymID = rootObjholding.getString("SymID");
+        h_Name = rootObjholding.getString("Name");
+        h_Asset = rootObjholding.getString("Asset");
+        h_Sector = rootObjholding.getString("Sector");
+        h_Geograph = rootObjholding.getString("Geograph");
+        h_Percent = rootObjholding.getDouble("Percentage");
+        
+        
+        
+        
+        String p_sym ="";
+        String p_inceptdate ="";
+        double p_mer =0;
+        double p_assets=0;
+        double p_rank =0;
+        double p_mstarrating=0;
+        double p_stddev =0;
+        double p_volatilerank =0;
+        double p_mstarrisk =0;
+        double p_alpha =0;
+        double p_beta =0;
+        double p_rsquare =0;
+        String p_rrspel ="";
+        String p_load ="";
+        double p_maxfrontend =0;
+        double p_maxbackend =0;
+        String p_salesopen ="";
+        double p_navps =0;
+        double p_netasset =0;
+        double p_yield =0;
+        double p_dividend =0;
+        String p_manager ="";
+        double p_Fees =0;
+        String p_FullName ="";
+        
+        
+        JSONArray ja_dataPerformance_ = jsonObject.getJSONArray("Performance");
+        
+        JSONObject rootObjProfile = ja_dataPerformance_.getJSONObject(0);
+
+        p_sym = rootObjProfile.getString("symID");
+        p_inceptdate = rootObjProfile.getString("inceptionDate");
+        p_mer = rootObjProfile.getDouble("mer");
+        p_assets = rootObjProfile.getDouble("assets");
+        p_rank = rootObjProfile.getDouble("rank");
+        p_mstarrating= rootObjProfile.getDouble("mstarRating");
+        p_stddev = rootObjProfile.getDouble("stdDev");
+        p_volatilerank = rootObjProfile.getDouble("volatileRank");
+        p_mstarrisk = rootObjProfile.getDouble("mstarRisk");
+        p_alpha = rootObjProfile.getDouble("alpha");
+        p_beta = rootObjProfile.getDouble("beta");
+        p_rsquare = rootObjProfile.getDouble("rsquared");
+        p_rrspel = rootObjProfile.getString("rrspeligibility");
+        p_load = rootObjProfile.getString("load");
+        p_maxfrontend = rootObjProfile.getDouble("maxFrontEnd");
+        p_maxbackend = rootObjProfile.getDouble("maxBackEnd");
+        p_salesopen = rootObjProfile.getString("saleOpen");
+        p_navps = rootObjProfile.getDouble("navPS");
+        p_netasset = rootObjProfile.getDouble("netAsset");
+        p_yield = rootObjProfile.getDouble("yield");
+        p_dividend = rootObjProfile.getDouble("dividend");
+        p_manager = rootObjProfile.getString("managers");
+        p_Fees = rootObjProfile.getDouble("fees");
+        p_FullName = rootObjProfile.getString("fundName");
+        
+        
+        
+        
+        
+        
+        
+        
         
         
     
@@ -230,8 +320,8 @@ public class App
         	
         }
         
-       
-        
+     */  
+     /*   
         
  //   String test = "{ Performance : {SymID :BTTRX, InceptionDate : 1998-02-15, MER=1.6, Assets=247.0, Rank=1.0, MstarRating=5.0, StdDev=16.0, VolatileRank=2.0, MstarRisk=3.0, Alpha=0.0, Beta=0.0, Rsquared=0.0, RRSPEligibility=yes, Load=no load, MaxBackEnd=0.0, MaxFrontEnd=0.0, SaleOpen=open, NavPS=99.0, NetAsset=0.0, Yield=4.2, Dividend=2.0, Managers=Robert Gahagan, Fees=0.7, FundName=American Century Zero Coupon 2025 Inv]}";
 

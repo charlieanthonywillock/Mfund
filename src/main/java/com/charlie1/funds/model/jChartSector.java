@@ -50,7 +50,7 @@ public class jChartSector {
 
 	@Override
 	public String toString() {
-		return "{Fund:" + Fund + ", Sector:" + Sector + ", Count:" + Count + ", Percent:" + Percent + "}";
+		return "{\"Fund\":\"" + Fund + "\", \"Sector\":\"" + Sector + "\", \"Count\":\"" + Count + "\", \"Percent\":\"" + Percent + "\"}";
 	} 
 
     

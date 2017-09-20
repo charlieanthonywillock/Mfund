@@ -98,8 +98,8 @@ public class jHoldings {
 
 	@Override
 	public String toString() {
-		return "{FundSymID:" + FundSymID + ", SymID:" + SymID + ", Name:" + Name + ", Asset:" + Asset
-				+ ", Sector:" + Sector + ", Geograph:" + Geograph + ", Percentage:" + Percentage + "}";
+		return "{\"FundSymID\":\"" + FundSymID + "\", \"SymID\":\"" + SymID + "\", \"Name\":\"" + Name + "\", \"Asset\":\"" + Asset
+				+ "\", \"Sector\":\"" + Sector + "\", \"Geograph\":\"" + Geograph + "\", \"Percentage\":\"" + Percentage + "\"}";
 	}
 	
 	

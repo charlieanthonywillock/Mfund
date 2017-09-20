@@ -728,7 +728,7 @@
    var hc;
 
    
-   function factoryTable(jsonarray,skey) { 
+   function factoryTable(jsonarray,skey,shref) { 
    
   
 		for(var key in jsonarray) {
@@ -736,14 +736,15 @@
 		
 			if(key == skey ){
    
+ 
   
-				for(var i=0; i < data[key].length;i++ ){
+				for(var i=0; i < jsonarray[key].length;i++ ){
 				
 				
 				
 					
 					var cntjson=0;
-					var rows = data[key].length;
+					var rows = jsonarray[key].length;
 					var cntcols=0;
 					var bool = true;
 					
@@ -752,7 +753,7 @@
 						for(var i=0; i < rows; i++){
      
 	 
-	                     	var col = data[key][i];
+	                     	var col = jsonarray[key][i];
 								
 								
 							if(bool){
@@ -768,7 +769,7 @@
 						
 						for(var j in col){
 								colcnt++;
-							    var colval = data[key][i][j];
+							    var colval = jsonarray[key][i][j];
 								var hdr = j;
 								
 								alert(hdr+" : " +colval);
@@ -853,14 +854,14 @@
  //  document.body.appendChild(table);
  //  document.body.append(a);
  
- var holdingsdata = ${perfJSON}
- var _div = document.getElementById("getTableHoldings");
+ var _div = document.getElementById("getTable");
  _div.appendChild(table);
    
    
    }
    
-   factoryTable(holdingsdata,"Holdings");
+   factoryTable(hdata,"Holdings","ProductName");
+ //  factoryTable(data,"basketball","ProductName");
     
    
    </script>
