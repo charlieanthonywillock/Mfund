@@ -24,7 +24,15 @@ public class HelloController {
         selectFundsByFund thefund = new selectFundsByFund(sfund);
         
         String strRisk = thefund.getjsonStr();
-		
+        String strHolding = thefund.getholdingsStr();
+        String strCalPerf = thefund.getperfCalander();
+        String strReturn =  thefund.getreturnsdataStr();
+        
+        
+        
+        mode.addAttribute("jsonHoldings",strHolding);
+        mode.addAttribute("jsonCalPerf",strCalPerf);
+        mode.addAttribute("jsonAnnualReturns",strReturn);
 		mode.addAttribute("strJson", strRisk);
 		
 		

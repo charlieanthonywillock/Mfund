@@ -271,7 +271,8 @@
    
    }
    
-   factoryTable(hdata,"Holdings","ProductName");
+   var = hdatas = ${jsonHoldings};
+   factoryTable(hdatas,"Holdings","ProductName");
  //  factoryTable(data,"basketball","ProductName");
     
    

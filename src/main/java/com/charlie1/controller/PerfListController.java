@@ -115,6 +115,9 @@ public class PerfListController  {
 	        selectFundsByFund thefund = new selectFundsByFund(sfund);
 	        
 	        String strRisk = thefund.getjsonStr();
+	        String strHolding = thefund.getholdingsStr();
+	        String strCalPerf = thefund.getperfCalander();
+	        String strReturn =  thefund.getreturnsdataStr();
 	        
 	        try {
 	        
@@ -311,9 +314,12 @@ public class PerfListController  {
 	        
 	        
 	        
+	      
 	        
             model.addAttribute("perfJSON",strRisk);
-	
+            model.addAttribute("jsonHoldings",strHolding);
+            model.addAttribute("jsonCalPerf",strCalPerf);
+            model.addAttribute("jsonAnnualReturns",strReturn);
             
 		return "Fundstats";
 

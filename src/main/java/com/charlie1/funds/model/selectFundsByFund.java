@@ -16,6 +16,10 @@ public class selectFundsByFund {
 
 	private String jsonstr="";
 	private String fund;
+	private String HoldingsData="";
+	private String PerformanceDataCalander="";
+	private String ReturnsData="";
+	
 
 	
 	
@@ -36,6 +40,24 @@ public class selectFundsByFund {
 	}
 
 
+	
+	public String getholdingsStr() {
+		
+		return HoldingsData;
+	}
+	
+	public String getperfCalander() {
+		
+		
+		return PerformanceDataCalander;
+	}
+	
+	public String getreturnsdataStr() {
+		
+		
+		return ReturnsData;
+	}
+	
 
 
 	private void getFunds() {
@@ -61,7 +83,7 @@ public class selectFundsByFund {
 		
 		
 		
-		 String ReturnsData = customerDAO.buildStrReturnsDataByFund(fund);
+		 ReturnsData = customerDAO.buildStrReturnsDataByFund(fund);
 
 
 	       
@@ -79,7 +101,7 @@ public class selectFundsByFund {
 	            ReturnsData = sb.toString();
 	        }
 
-	        String HoldingsData = customerDAO.buildStrHoldingsDataByFund(fund);
+	        HoldingsData = customerDAO.buildStrHoldingsDataByFund(fund);
 	        if (HoldingsData.equals(""))
 	        {
 
@@ -141,7 +163,7 @@ public class selectFundsByFund {
 	        }
 
 
-	        String PerformanceDataCalander =  customerDAO.buildStrPerformanceCalanderByFund(fund);
+	        PerformanceDataCalander =  customerDAO.buildStrPerformanceCalanderByFund(fund);
 
 	        if (PerformanceDataCalander.equals(""))
 	        {
