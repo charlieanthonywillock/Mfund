@@ -22,7 +22,7 @@
 
 <div id="getTable" class="BorderCurve"></div>
 
-<div>${strJson} </div>
+<div>${jsonHoldings} </div>
 
 
 
