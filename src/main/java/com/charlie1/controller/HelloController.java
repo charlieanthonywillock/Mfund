@@ -32,7 +32,26 @@ public class HelloController {
         jsonHolding += strHolding + "]}";
         
         
+        String jsonCalPerf = "{\"PerformanceCalander\": [";
+        jsonCalPerf += strCalPerf + "]}";
+        
+        String jsonReturn = "{\"Returns\": [";
+        jsonReturn += strReturn + "]}";
+        
+        
+      
+        
+        
+        
+        
+        
         mode.addAttribute("jsonHoldings",jsonHolding);
+        mode.addAttribute("jsonCalPerf",jsonCalPerf);
+        mode.addAttribute("jsonAnnualReturns",jsonReturn);
+        
+        
+       
+        
         
         
         

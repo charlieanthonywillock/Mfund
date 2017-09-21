@@ -239,6 +239,13 @@ public class PerfListController  {
 	             
 	             
 	             
+	            
+	             
+	             
+	             
+	             
+	             
+	             
 	        
 	        
 	        } catch(Exception ex) {
@@ -320,6 +327,47 @@ public class PerfListController  {
             model.addAttribute("jsonHoldings",strHolding);
             model.addAttribute("jsonCalPerf",strCalPerf);
             model.addAttribute("jsonAnnualReturns",strReturn);
+            
+            
+            
+            
+            
+            
+            
+            String strChartHolding = thefund.getholdingsStr();
+            String strChartCalPerf = thefund.getperfCalander();
+            String strChartReturn =  thefund.getreturnsdataStr();
+            
+            String jsonHolding = "{\"Holdings\": [";	
+            jsonHolding += strChartHolding + "]}";
+            
+            
+            String jsonCalPerf = "{\"PerformanceCalander\": [";
+            jsonCalPerf += strChartCalPerf + "]}";
+            
+            String jsonReturn = "{\"Returns\": [";
+            jsonReturn += strChartReturn + "]}";
+            
+            
+            model.addAttribute("jsonHoldings",jsonHolding);
+            model.addAttribute("jsonCalPerf",jsonCalPerf);
+            model.addAttribute("jsonAnnualReturns",jsonReturn);
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
 		return "Fundstats";
 

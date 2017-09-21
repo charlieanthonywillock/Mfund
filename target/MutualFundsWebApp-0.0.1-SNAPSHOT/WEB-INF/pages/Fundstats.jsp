@@ -326,31 +326,7 @@
             <div class="FundTopTen">
                 <div>
 		<div id="getTableHoldings" class="tester"></div>
-		<table class="StdDataGrid" cellspacing="0" rules="all" border="1" id="TopTenHoldings" style="border-collapse:collapse;">
-			<tr>
-				<th scope="col">Name</th><th class="center" scope="col">Asset</th><th class="center" scope="col">Sector</th><th class="center" scope="col">Geographic</th><th class="center" scope="col">Percent</th>
-			</tr><tr>
-				<td>JP Poorman &amp; Co</td><td>US Equity</td><td>Financial Services</td><td>United States</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Citigang Inc</td><td>US Equity</td><td>Financial Services</td><td>United States</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Bank of Ireland Corp</td><td>US Equity</td><td>Financial Services</td><td>United States</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Goldman Suchs Group Inc</td><td>US Equity</td><td>Financial Services</td><td>United States</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Barclays PLC - ADR</td><td>International Equity</td><td>Financial Services</td><td>European Union</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Standard Chartered PLC</td><td>International Equity</td><td>Financial Services</td><td>European Union</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Royal Bank of Scotland Group PLC - ADR</td><td>International Equity</td><td>Financial Services</td><td>European Union</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>ING Groep NV - ADR</td><td>International Equity</td><td>Financial Services</td><td>European Union</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>State Street Corp</td><td>US Equity</td><td>Financial Services</td><td>United States</td><td align="right">0.00%</td>
-			</tr><tr>
-				<td>Canadian Dollar</td><td>Cash and Equivalents</td><td>Cash and Cash Equivalent</td><td>Canada</td><td align="right">0.00%</td>
-			</tr>
-		</table>
+		
 		
 		
 	</div>
@@ -854,13 +830,16 @@
  //  document.body.appendChild(table);
  //  document.body.append(a);
  
- var _div = document.getElementById("getTable");
+ var _div = document.getElementById("getTableHoldings");
  _div.appendChild(table);
    
    
    }
    
-   factoryTable(hdata,"Holdings","ProductName");
+   
+   var choldings = ${jsonHoldings}
+   
+   factoryTable(choldings,"Holdings","ProductName");
  //  factoryTable(data,"basketball","ProductName");
     
    
