@@ -341,11 +341,287 @@
                 <span id="lblPerformanceDate2" class="InceptionDate">(As of&nbsp;July 31, 2017)</span></div>
             <div>
                 <div>
-                   	<div id="getTableAnnualRet" class="tester"></div>
+                    <table class="StdDataGrid" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <th>
+                                &nbsp;
+                            </th>
+                            <th colspan="4" class="center">
+                                Return (%)
+                            </th>
+                            <th colspan="4" class="center">
+                                Annualized Return (%)
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style>
+                                Return
+                            </th>
+                            <th class="center">
+                                1
+                                Mth
+                            </th>
+                            <th class="center">
+                                3
+                                Mth
+                            </th>
+                            <th class="center">
+                                6
+                                Mth
+                            </th>
+                            <th class="center">
+                                YTD
+                            </th>
+                            <th class="center">
+                                1
+                                Yr
+                            </th>
+                            <th class="center">
+                                3
+                                Yr
+                            </th>
+                            <th class="center">
+                                5
+                                Yr
+                            </th>
+                            <th class="center">
+                                10
+                                Yr
+                            </th>
+                        </tr>
+                        <tr>
+                            <td style="width: 18%;text-align: left;">  
+                                Fund
+                            </td>
+                            <td style="width: 10.25%; text-align: right; padding:2px 25px 2px 2px;" nowrap> 
+                                <span id="F1mthRtn">-0.00</span>
+                            </td>
+                            <td style="width: 10.25%; text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="F3mthRtn">-0.00</span>
+                            </td>
+                            <td style="width: 10.25%; text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="F6mthRtn">0.00</span>
+                            </td>
+                            <td style="width: 10.25%; text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="FytdRtn">0.00</span>
+                            </td>
+                            <td style="width: 10.25%; text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="F1yrRtn">0.00</span>
+                            </td>
+                            <td style="width: 10.25%; text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="F3yrRtn">0.00</span>
+                            </td>
+                            <td style="width: 10.25%; text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="F5yrRtn">-&nbsp;&nbsp;&nbsp;</span>
+                            </td>
+                            <td style="width: 10.25%; text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="F10yrRtn">-&nbsp;&nbsp;&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td nowrap>
+                                Benchmark
+                            </td>
+                            <td style="text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="B1mthRtn">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="B3mthRtn">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="B6mthRtn">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="BytdRtn">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="B1yrRtn">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="B3yrRtn">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="B5yrRtn">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 25px 2px 2px;" nowrap>
+                                <span id="B10yrRtn">0.00</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td nowrap>
+                                Quartile Ranking
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="Q1mthqrank">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="Q3mthqrank">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="Q6mthqrank">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="Qytdrank">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="Q1yrqrank">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="Q3yrqrank">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="Q5yrqrank">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="Q10yrqrank">-</span>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 <br />
                 <div>
-                    	<div id="getTableCalPerf" class="tester"></div>
+                    	<table class="StdDataGrid" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <th>
+                                Calendar Return (%)
+                            </th>
+                            <th class="center">
+                                <span id="txtCalyr1">2016</span>
+                            </th>
+                            <th class="center">
+                                <span id="txtCalyr2">2015</span>
+                            </th>
+                            <th class="center">
+                                <span id="txtCalyr3">2014</span>
+                            </th>
+                            <th class="center">
+                                <span id="txtCalyr4">2013</span>
+                            </th>
+                            <th class="center">
+                                <span id="txtCalyr5">2012</span>
+                            </th>
+                            <th class="center">
+                                <span id="txtCalyr6">2011</span>
+                            </th>
+                            <th class="center">
+                                <span id="txtCalyr7">2010</span>
+                            </th>
+                            <th class="center">
+                                <span id="txtCalyr8">2009</span>
+                            </th>
+                            <th class="center">
+                                <span id="txtCalyr9">2008</span>
+                            </th>
+                            <th class="center">
+                                <span id="txtCalyr10">2007</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td style="width: 18%;">
+                                Fund
+                            </td>
+                            <td style="width: 8.2%; text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="FCalRtnyr1">0.00</span>
+                            </td>
+                            <td style="width: 8.2%; text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="FCalRtnyr2">0.00</span>
+                            </td>
+                            <td style="width: 8.2%; text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="FCalRtnyr3">0.00</span>
+                            </td>
+                            <td style="width: 8.2%; text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="FCalRtnyr4">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            </td>
+                            <td style="width: 8.2%; text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="FCalRtnyr5">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            </td>
+                            <td style="width: 8.2%; text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="FCalRtnyr6">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            </td>
+                            <td style="width: 8.2%; text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="FCalRtnyr7">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            </td>
+                            <td style="width: 8.2%; text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="FCalRtnyr8">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            </td>
+                            <td style="width: 8.2%; text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="FCalRtnyr9">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            </td>
+                            <td style="width: 8.2%; text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="FCalRtnyr10">-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td nowrap>
+                                Benchmark
+                            </td>
+                            <td style="text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="BCalRtnyr1">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="BCalRtnyr2">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="BCalRtnyr3">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="BCalRtnyr4">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="BCalRtnyr5">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="BCalRtnyr6">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="BCalRtnyr7">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="BCalRtnyr8">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="BCalRtnyr9">0.00</span>
+                            </td>
+                            <td style="text-align: right; padding:2px 12px 2px 2px;">
+                                <span id="BCalRtnyr10">0.00</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Quartile Ranking
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="QCalrtnyr1">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="QCalrtnyr2">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="QCalrtnyr3">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="QCalrtnyr4">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="QCalrtnyr5">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="QCalrtnyr6">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="QCalrtnyr7">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="QCalrtnyr8">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="QCalrtnyr9">-</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <span id="QCalrtnyr10">-</span>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -569,12 +845,12 @@
    
    
    var choldings = ${jsonHoldings}
-   var ccalper = ${jsonCalPerf}
-   var cannualreturns = ${jsonAnnualReturns}
+ //  var ccalper = ${jsonCalPerf}
+ //  var cannualreturns = ${jsonAnnualReturns}
    
    factoryTable(choldings,"Holdings","ProductName");
-   factoryTable(cannualreturns,"Returns","ProductName");
-   factoryTable(ccalper,"PerformanceCalander","ProductName");
+  // factoryTable(cannualreturns,"Returns","ProductName");
+  // factoryTable(ccalper,"PerformanceCalander","ProductName");
    
    
  //  factoryTable(data,"basketball","ProductName");
