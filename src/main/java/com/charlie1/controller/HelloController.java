@@ -28,9 +28,15 @@ public class HelloController {
         String strCalPerf = thefund.getperfCalander();
         String strReturn =  thefund.getreturnsdataStr();
         
+        String jsonHolding = "{\"Holdings\": [";	
+        jsonHolding += strHolding + "]}";
         
         
-        mode.addAttribute("jsonHoldings",strHolding);
+        mode.addAttribute("jsonHoldings",jsonHolding);
+        
+        
+        
+        
         mode.addAttribute("jsonCalPerf",strCalPerf);
         mode.addAttribute("jsonAnnualReturns",strReturn);
 		mode.addAttribute("strJson", strRisk);
