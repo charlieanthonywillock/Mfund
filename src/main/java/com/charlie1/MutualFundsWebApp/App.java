@@ -28,7 +28,7 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-       /* 
+        
         String name = "{'risk1': '1', 'risk2': '4'}";
         
         
@@ -51,7 +51,7 @@ public class App
     		
     	}
         
-    	*/
+    	
   //  	JSONObject jsonObj = new JSONObject(name);
   //      String risk1 = jsonObj.getString("risk1");
   //      String risk2 = jsonObj.getString("risk2");
@@ -484,7 +484,7 @@ public class App
         
         
         
-        /*
+        
     	String sym ="";
 	    String fundname ="";
 	    String jsonstr="";
@@ -587,7 +587,7 @@ public class App
         
         
     	
-    	*/
+    	
     	
     	
     	
