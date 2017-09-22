@@ -8,6 +8,10 @@
 <link rel="stylesheet" href="<c:url value="/resources/css/main.css" />">
 <link rel="stylesheet" href="<c:url value="/resources/css/stylesheetperf.css" />">
 
+<script src="<c:url value="/resources/js/jquery.1.10.2.min.js" />"></script>
+<script src="<c:url value="/resources/js/jquery.popupWindow.js" />"></script>
+<script src="<c:url value="/resources/js/main.js" />"></script>
+
 
 
    </head>
@@ -27,10 +31,7 @@
 
 
 
- <script src="<c:url value="resources/js/jquery.1.10.2.min.js" />"></script>
- <script src="<c:url value="resources/js/jquery.popupWindow.js" />"></script>
- <script src="<c:url value="/resources/js/main.js" />"></script>
-
+ 
  <script type="text/javascript">
      $(function () {
          $('.RiskPopup').popupWindow({
