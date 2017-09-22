@@ -10,7 +10,9 @@
 
 <link rel="stylesheet" href="<c:url value="/resources/css/stylesheetperf.css" />">
 
-
+<script src="<c:url value="/resources/js/jquery.1.10.2.min.js" />"></script>
+<script src="<c:url value="/resources/js/jquery.popupWindow.js" />"></script>
+<script src="<c:url value="/resources/js/main.js" />"></script>
 
 
 </head>
@@ -651,7 +653,7 @@
 <p><a href="https://spring.io" id="Logo"><img src="Logo.png" id="logo" /></a></p>
                     <p style="font-size: 10px; padding-top: 10px; text-align: justify;">
                         
-            Website powered by <a href="https://spring.io" >
+            <div id="msg"></div> <a href="https://spring.io" >
                                     &copy; Spring Inc.
                                </a>
             <br />
